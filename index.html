@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--  meta nofollow   -->
     <meta name="robots" content="noindex, nofollow">
@@ -11,7 +12,8 @@
     <meta name="Daumoa" content="noindex, nofollow">
 
     <!--   css    -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
 
     <!--   title    -->
     <title>radiance</title>
@@ -19,13 +21,99 @@
     <!--   fontawesome    -->
     <script src="https://kit.fontawesome.com/cb0129dcda.js" crossorigin="anonymous"></script>
 
+    <!--   swiper    -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 </head>
 
 <body>
 
-<!--   ionicons    -->
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <div id="header">
+
+        <div class="header_wrap">
+
+            <a href="#" class="header_logo">
+                <img src="./images/logo_t1w.svg" alt="radiance">
+            </a>
+
+            <div class="category">
+                <ul>
+                    <li>notice</li>
+                    <li>about</li>
+                    <li>menu</li>
+                    <li>store</li>
+                    <li>contact us</li>
+                </ul>
+            </div>
+
+            <div class="lang">
+                <ul>
+                    <li class="on">ko</li>
+                    <li>en</li>
+                    <span></span>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container">
+
+        <!--   main    -->
+        <div id="main">
+
+            <div class="swiper main_swiper">
+
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#"></a>
+                    </div>
+                </div>
+
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+
+                <div class="swiper-pagination"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--   ionicons    -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+    <!--   swiper js    -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!--   initialize swiper    -->
+    <script>
+        var swiper = new Swiper(".main_swiper", {
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                type: "progressbar",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
 
 </body>
 
