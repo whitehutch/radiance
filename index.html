@@ -2,29 +2,32 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--  meta nofollow   -->
     <meta name="robots" content="noindex, nofollow">
-    <meta name="Googlebot" content="noindex, nofollow">
-    <meta name="Naverbot" content="noindex, nofollow">
-    <meta name="Daumoa" content="noindex, nofollow">
 
     <!--   css    -->
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
 
+    <!--   swiper css    -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <!--   title    -->
     <title>radiance</title>
+
+    <!--   jQuery    -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
     <!--   fontawesome    -->
     <script src="https://kit.fontawesome.com/cb0129dcda.js" crossorigin="anonymous"></script>
 
-    <!--   swiper    -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
 </head>
+
+
 
 <body>
 
@@ -38,11 +41,31 @@
 
             <div class="category">
                 <ul>
-                    <li>notice</li>
-                    <li>about</li>
-                    <li>menu</li>
-                    <li>store</li>
-                    <li>contact us</li>
+                    <li>
+                        <a href="#notice">
+                            notice
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about">
+                            about
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#menu">
+                            menu
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#store">
+                            store
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact">
+                            contact us
+                        </a>
+                    </li>
                 </ul>
             </div>
 
@@ -58,62 +81,103 @@
 
     </div>
 
-    <div class="container">
+    <div id="container">
 
         <!--   main    -->
-        <div id="main">
+        <div class="section" id="main">
 
-            <div class="swiper main_swiper">
+            <div class="main_scroll">
+                <p>scroll down</p>
+                <span class="mouse">
+                    <span class="wheel"></span>
+                </span>
+            </div>
 
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <a href="#"></a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#"></a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#"></a>
+            <div class="main_banner">
+
+                <div class="banner_nav">
+                    <div class="left"><ion-icon name="chevron-back-outline"></ion-icon></div>
+                    <div class="right"><ion-icon name="chevron-forward-outline"></ion-icon></div>
+                </div>
+                <div class="banner_progressbar">
+                    <div class="progressbar"></div>
+                </div>
+
+                <div class="banner_wrap">
+                    <div class="slide_wrap">
+                        <div class="banner_slide slide1"></div>
+                        <div class="banner_slide slide2"></div>
+                        <div class="banner_slide slide3"></div>
                     </div>
                 </div>
 
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-
-                <div class="swiper-pagination"></div>
-
             </div>
+
+        </div>
+        <!--   main end    -->
+
+
+
+        <!--   notice    -->
+        <div class="section" id="notice">
 
         </div>
 
     </div>
 
+<!--    <div class="footer">-->
+<!--        abcdfeu-->
+<!--    </div>-->
+
     <!--   ionicons    -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
+    <!--   app.js    -->
+    <script src="./js/app.js"></script>
 
-    <!--   swiper js    -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!--    &lt;!&ndash;   swiper js    &ndash;&gt;-->
+<!--    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>-->
 
-    <!--   initialize swiper    -->
-    <script>
-        var swiper = new Swiper(".main_swiper", {
-            loop: true,
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                type: "progressbar",
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
-    </script>
+<!--    &lt;!&ndash;   initialize swiper    &ndash;&gt;-->
+<!--    <script>-->
+<!--        var swiper = new Swiper(".swiper-basic", {-->
+<!--            loop: true,-->
+<!--            loopedSlides: 3,-->
+<!--            autoplay: {-->
+<!--                delay: 5000,-->
+<!--                disableOnInteraction: false,-->
+<!--            },-->
+<!--            pagination: {-->
+<!--                el: ".swiper-pagination",-->
+<!--                type: "progressbar",-->
+<!--            },-->
+<!--            navigation: {-->
+<!--                nextEl: ".swiper-button-next",-->
+<!--                prevEl: ".swiper-button-prev",-->
+<!--            },-->
+<!--            on: {-->
+<!--                slideChange: function () {-->
+<!--                    document.querySelectorAll(".swiper-slide").forEach((slide, index) => {-->
+<!--                        let realIndex = slide.getAttribute("data-swiper-slide-index");-->
+<!--                        slide.style.backgroundImage = `url('/images/bg_0${parseInt(realIndex) + 1}.png')`;-->
+<!--                    });-->
+<!--                }-->
+<!--            }-->
+
+
+<!--        });-->
+
+<!--        // swiper.el.addEventListener('mouseenter', function () {-->
+<!--        //     swiper.autoplay.stop();-->
+<!--        // });-->
+<!--        //-->
+<!--        // swiper.el.addEventListener('mouseleave', function () {-->
+<!--        //     swiper.autoplay.start();-->
+<!--        // });-->
+<!--        // hover event _ swiper autoplay stop-->
+
+<!--    </script>-->
 
 </body>
 
