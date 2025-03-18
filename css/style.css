@@ -220,20 +220,24 @@
     position: relative;
     width: 100%;
     height: 100%;
-    overflow: hidden;
 }
 
 .banner_wrap {
+    position: relative;
     display: flex;
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
 .slide_wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
     display: flex;
-    width: 300%;
+    width: 100%;
     height: 100%;
-    transition: transform 1s ease-in-out;
+    transition: 1s ease-in-out;
 }
 
 
@@ -295,7 +299,7 @@
     height: 100%;
     background-size: cover;
     background-position: center center;
-    background-attachment: fixed;
+    background-attachment: fixed, scroll;
     background-blend-mode: multiply;
 }
 
@@ -519,17 +523,18 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 62.5%;
+    width: 60%;
     height: 100%;
 }
 
 .notice_progressbar {
-    z-index: 1;
+    z-index: 2;
     position: absolute;
     left: 91px;
     bottom: 91px;
-    width: 770px;
+    width: 750px;
     height: 2px;
+    background-color: rgba( 255, 255, 255, 0.3 );
 }
 .notice_progressbar .progressbar {
     position: absolute;
@@ -542,34 +547,217 @@
 }
 
 
-
 .ntb_wrap {
     position: relative;
     display: flex;
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background-color: red;
+}
+
+.ntb_linear {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient( to left, rgba( 19, 19, 19, 1 ) 10%, rgba( 19, 19, 19, 0.5 ) 21%, rgba( 19, 19, 19, 0 ) 36% );
 }
 
 .ntb_slide_wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
     display: flex;
-    width: 300%;
+    width: 100%;
     height: 100%;
-    transition: transform 1s ease-in-out;
+    transition: transform 1s ease-in-out, left 1s ease-in-out;
 }
+
 
 
 .ntb_slide {
+    position: relative;
     flex-shrink: 0;
     width: 100%;
     height: 100%;
-    background-size: cover;
-    background-position: center center;
+    background-size: auto 100%;
+    background-position: left bottom;
+    mix-blend-mode: revert;
     background-attachment: fixed;
-    background-blend-mode: multiply;
+    background-repeat: no-repeat;
 }
 
-.ntb_slide.slide_1 { background-image: url("/images/bg_01.png"), linear-gradient( to top, rgba( 0, 0, 0, 0.7 ), rgba( 0, 0, 0, 0 ) 60% );}
-.ntb_slide.slide_2 { background-image: url("/images/bg_02.png"), linear-gradient( to top, rgba( 0, 0, 0, 0.7 ), rgba( 0, 0, 0, 0 ) 60% );}
-.ntb_slide.slide_3 { background-image: url("/images/bg_03.png"), linear-gradient( to top, rgba( 0, 0, 0, 0.7 ), rgba( 0, 0, 0, 0 ) 60% );}
+.ntb_slide.banner_1 { background-image: linear-gradient( to top, rgba( 19, 19, 19, 1 ) 0%, rgba( 19, 19, 19, 0.85 ) 21%, rgba( 19, 19, 19, 0 ) 41% ), url("/images/ntb_01.png");}
+.ntb_slide.banner_2 { background-image: linear-gradient( to top, rgba( 19, 19, 19, 1 ) 0%, rgba( 19, 19, 19, 0.85 ) 21%, rgba( 19, 19, 19, 0 ) 41% ), url("/images/ntb_02.png");}
+.ntb_slide.banner_3 { background-image: linear-gradient( to top, rgba( 19, 19, 19, 1 ) 0%, rgba( 19, 19, 19, 0.85 ) 21%, rgba( 19, 19, 19, 0 ) 41% ), url("/images/ntb_03.png");}
+
+.ntb_item {
+    z-index: 2;
+    position: absolute;
+    left: 92px;
+    bottom: 126px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 750px;
+    height: 100%;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.ntb_title {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.ntb_sub {
+    margin: 9px 0 0;
+    color: #cccccc;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.ntb_text {
+    margin: 21px 0 0;
+    color: rgba( 255, 255, 255, 0.6 );
+    font-weight: 300;
+    text-transform: uppercase;
+    transition: 0.35s ease-in-out;
+}
+
+.ntb_more {
+    display: flex;
+    justify-content: end;
+    margin: 11px 0 0;
+    width: calc( 100% - 16px );
+    color: rgba( 255, 255, 255, 0.6 );
+    text-transform: uppercase;
+    transition: 0.35s ease-in-out;
+}
+.ntb_more a {
+    display: flex;
+    gap: 6px;
+}
+.ntb_more a ion-icon { font-size: 17px; margin-bottom: -3px; }
+
+.ntb_item:hover .ntb_text,
+.ntb_item:hover .ntb_more { color: rgba( 255, 255, 255, 0.8 ); }
+/*      notice ends      */
+
+
+
+
+
+
+/*      about      */
+
+#about {
+    width: 100%;
+    height: 100%;
+    background: aliceblue;
+    /*overflow: hidden;*/
+}
+
+
+
+.about_wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("/images/about_bg01.png");
+}
+
+
+
+.about_section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+#about_01, #about_02 { color: #ffffff; }
+
+
+
+.about_scroll {
+    z-index: 10;
+    position: absolute;
+    left: 50%;
+    bottom: 171px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+    font-size: 13px;
+    letter-spacing: 0.05rem;
+    transform: translateX( -50% );
+}
+
+.about_scroll p { padding-bottom: 2px; }
+
+
+
+.scroll_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+}
+
+.scroll_wrap .mouse {
+    position: relative;
+    width: 14px;
+    height: 21px;
+    border: 1px solid rgba( 255, 255, 255, 1 );
+    border-radius: 100px;
+}
+
+.scroll_wrap .wheel {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    width: 2px;
+    height: 2px;
+    border-radius: 100px;
+    background: rgba( 255, 255, 255, 1 );
+    transform: translateX( -50% );
+    animation: wheel 1.75s ease-in-out infinite;
+}
+
+
+
+.scroll_chevron {
+    display: flex;
+    flex-direction: column;
+}
+.scroll_chevron .chevron { font-size: 21px; }
+
+
+
+
+.about_text {
+    z-index: 10;
+    text-align: center;
+    font-weight: 600;
+    line-height: 39px;
+}
+
+
+
+.about_light {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 875px;
+    transform: translateX( -50% ) translateY( -50% );
+    mix-blend-mode: screen;
+}
