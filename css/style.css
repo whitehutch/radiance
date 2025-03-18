@@ -110,7 +110,7 @@
     width: 90px;
     height: calc( 100% - 34px );
     margin-right: 31px;
-    color: rgba( 193, 193, 193, 1 );
+    color: #c1c1c1;
     font-size: 14px;
     border-radius: 100px;
     background: rgba( 58, 58, 58, 1 );
@@ -127,6 +127,7 @@
     width: 100%;
     height: 100%;
     padding-left: 2px;
+    cursor: pointer;
 }
 
 .lang li.on { color: rgba( 255, 255, 255, 1 ); }
@@ -274,12 +275,12 @@
     background-color: rgba( 255, 255, 255, 0.3 );
 }
 
-.progressbar {
+.banner_progressbar .progressbar {
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 2px;
+    height: 100%;
     background-color: rgba( 255, 255, 255, 1 );
     transition: 1s ease-in-out;
 }
@@ -298,9 +299,9 @@
     background-blend-mode: multiply;
 }
 
-.banner_slide.slide1 { background-image: url("/images/bg_01.png"), linear-gradient( to top, rgba( 0, 0, 0, 0.7 ), rgba( 0, 0, 0, 0 ) 60% );}
-.banner_slide.slide2 { background-image: url("/images/bg_02.png"), linear-gradient( to top, rgba( 0, 0, 0, 0.7 ), rgba( 0, 0, 0, 0 ) 60% );}
-.banner_slide.slide3 { background-image: url("/images/bg_03.png"), linear-gradient( to top, rgba( 0, 0, 0, 0.7 ), rgba( 0, 0, 0, 0 ) 60% );}
+.banner_slide.slide_1 { background-image: url("/images/bg_01.png"), linear-gradient( to top, rgba( 0, 0, 0, 0.7 ), rgba( 0, 0, 0, 0 ) 60% );}
+.banner_slide.slide_2 { background-image: url("/images/bg_02.png"), linear-gradient( to top, rgba( 0, 0, 0, 0.7 ), rgba( 0, 0, 0, 0 ) 60% );}
+.banner_slide.slide_3 { background-image: url("/images/bg_03.png"), linear-gradient( to top, rgba( 0, 0, 0, 0.7 ), rgba( 0, 0, 0, 0 ) 60% );}
 
 /*      main ends      */
 
@@ -311,4 +312,264 @@
 
 /*      notice      */
 
-.notice {}
+#notice {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #131313;
+}
+
+.notice_wrap {
+    z-index: 10;
+    position: absolute;
+    right: 96px;
+    top: 153px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/*      news      */
+
+.notice_news {
+    position: relative;
+    width: 860px;
+    height: 310px;
+    border-radius: 36px;
+    background: rgba( 255, 255, 255, 1 );
+    box-shadow: 0 -3px 16px rgba( 0, 0, 0, 0.31 ) inset,
+    0 6px 11px rgba( 0, 0, 0, 0.41 );
+}
+
+
+
+.more_btn {
+    position: absolute;
+    top: 39px;
+    right: -9px;
+    padding: 6px 7px 6px 10px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 6px;
+    background: rgba( 178, 238, 65, 1 );
+    box-shadow: 0 6px 11px rgba( 0, 0, 0, 0.21 );
+    cursor: pointer;
+}
+.more_btn ion-icon {
+    font-size: 13px;
+    margin-bottom: -2px;
+}
+
+
+
+/*      news list      */
+
+.news_list {
+    margin: 41px 46px;
+    width: 100%;
+    height: calc( 100% - 92px );
+    overflow: hidden;
+}
+
+
+
+.notice_title {
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.notice_title ion-icon {
+    font-size: 20px;
+    margin-left: 11px;
+    margin-bottom: -2px;
+}
+
+
+
+.news_list ul {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+    width: calc( 100% - 94px );
+    margin: 21px 0 0 1px;
+}
+
+.news_item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+}
+
+
+
+.news_title {
+    flex-shrink: 0;
+    width: 225px;
+    color: #333333;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.news_text {
+    width: 60%;
+    color: #888888;
+    font-size: 14px;
+    font-weight: 400;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.news_date {
+    position: absolute;
+    right: 0;
+    color: #b1b1b1;
+    font-size: 14px;
+    letter-spacing: 0.025rem;
+}
+
+
+
+/*      news banner      */
+
+.news_outline {
+    position: relative;
+    display: flex;
+    width: 860px;
+    height: 365px;
+    margin-top: 26px;
+    border-radius: 36px;
+    background: rgba( 255, 255, 255, 1 );
+    box-shadow: 0 -3px 16px rgba( 0, 0, 0, 0.31 ) inset,
+    0 6px 11px rgba( 0, 0, 0, 0.41 );
+}
+
+.news_thumb {
+    flex-shrink: 0;
+    width: 350px;
+    height: 100%;
+    border-radius: 33px 0 0 33px;
+    background-image: url("/images/outline_01.png");
+    background-size: cover;
+    background-position: center center;
+    mix-blend-mode: multiply;
+}
+
+.outline_wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+    margin: 31px 36px;
+}
+
+.outline_title {
+    margin: 0 0 3px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.outline_sub {
+    margin: 0 0 6px;
+    color: #aaaaaa;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.outline_text {
+    margin: 0 0 3px;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+}
+.outline_text:last-of-type { margin: 0 0 13px; }
+
+.outline_sub_text {
+    color: #aaaaaa;
+    font-size: 13px;
+}
+
+.outline_divider {
+    margin: 20px 0 10px;
+    border-top: 1px solid #f1f1f1;
+}
+
+.outline_more {
+    display: flex;
+    flex-direction: row-reverse;
+    color: #c1c1c1;
+    font-size: 13px;
+    cursor: pointer;
+}
+.outline_more ion-icon {
+    font-size: 15px;
+    margin-bottom: -3px;
+}
+
+
+
+/*      notice banner      */
+.notice_banner {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 62.5%;
+    height: 100%;
+}
+
+.notice_progressbar {
+    z-index: 1;
+    position: absolute;
+    left: 91px;
+    bottom: 91px;
+    width: 770px;
+    height: 2px;
+}
+.notice_progressbar .progressbar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba( 255, 255, 255, 1 );
+    transition: 1s ease-in-out;
+}
+
+
+
+.ntb_wrap {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: red;
+}
+
+.ntb_slide_wrap {
+    display: flex;
+    width: 300%;
+    height: 100%;
+    transition: transform 1s ease-in-out;
+}
+
+
+.ntb_slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+}
+
+.ntb_slide.slide_1 { background-image: url("/images/bg_01.png"), linear-gradient( to top, rgba( 0, 0, 0, 0.7 ), rgba( 0, 0, 0, 0 ) 60% );}
+.ntb_slide.slide_2 { background-image: url("/images/bg_02.png"), linear-gradient( to top, rgba( 0, 0, 0, 0.7 ), rgba( 0, 0, 0, 0 ) 60% );}
+.ntb_slide.slide_3 { background-image: url("/images/bg_03.png"), linear-gradient( to top, rgba( 0, 0, 0, 0.7 ), rgba( 0, 0, 0, 0 ) 60% );}

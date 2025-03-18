@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+    //      main banner
+
     const slideWrap = document.querySelector(".slide_wrap");
     const slides = document.querySelectorAll(".banner_slide");
     const prevBtn = document.querySelector(".banner_nav .left");
@@ -34,11 +37,11 @@ document.addEventListener("DOMContentLoaded", function () {
         clearInterval(autoSlide);
     }
 
-    //   button click event
+    //      button click event
     nextBtn.addEventListener("click", nextSlide);
     prevBtn.addEventListener("click", prevSlide);
 
-    //   drag event ( mouse + touch )
+    //       drag event ( mouse + touch )
     slideWrap.addEventListener("mousedown", (e) => {
         isDragging = true;
         startX = e.clientX;
@@ -63,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
         else if (diff < -50) prevSlide();
     });
 
-    //   autoplay ( + stop when mose over or slide )
+    //      autoplay ( + stop when mose over or slide )
     startAutoSlide();
     slideWrap.addEventListener("mouseenter", stopAutoSlide);
     slideWrap.addEventListener("mouseleave", startAutoSlide);
