@@ -41,6 +41,113 @@
 
 
 
+/*      about light animation      */
+@keyframes light {
+
+    0% {
+        opacity: 1;
+        transform: translateX( -50% ) translateY( -50% ) rotate( 0deg );
+    }
+
+    30% {
+        opacity: 0.6;
+        transform: translateX( -50% ) translateY( -47.5% ) scale( 0.9 ) rotate( 15deg );
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateX( -50% ) translateY( -50% ) scale( 1.15 ) rotate( -10deg );
+    }
+
+    80% {
+        opacity: 0.8;
+        transform: translateX( -50% ) translateY( -50% ) scale( 0.75 ) rotate( 5deg );
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX( -50% ) translateY( -50% ) rotate( 0deg );
+    }
+
+}
+
+
+
+/*      about ellipse animation      */
+@keyframes ellipse_01 {
+
+    0% {
+        opacity: 1;
+        transform: translateX( -50% ) translateY( -50% ) scale( 1 );
+    }
+
+    75% {
+        opacity: 0;
+        transform: translateX( -50% ) translateY( -50% ) scale( 1.5 );
+    }
+
+    90% {
+        opacity: 0;
+        transform: translateX( -50% ) translateY( -50% ) scale( 1 );
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX( -50% ) translateY( -50% ) scale( 1 );
+    }
+
+}
+
+@keyframes ellipse_02 {
+
+    0% {
+        opacity: 1;
+        transform: translateX( -50% ) translateY( -50% ) scale( 1 );
+    }
+
+    75% {
+        opacity: 0;
+        transform: translateX( -50% ) translateY( -50% ) scale( 1.5 );
+    }
+
+    90% {
+        opacity: 0;
+        transform: translateX( -50% ) translateY( -50% ) scale( 1 );
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX( -50% ) translateY( -50% ) scale( 1 );
+    }
+
+}
+
+@keyframes ellipse_03 {
+
+    0% {
+        box-shadow: 0 0 71px rgba( 255, 255, 255, 0.21 ),
+        0 0 31px rgba( 255, 255, 255, 0.6 ) inset;
+        filter: blur( 10px );
+        -webkit-filter: blur( 10px );
+    }
+
+    65% {
+        box-shadow: 0 0 91px rgba( 255, 255, 255, 0.21 ),
+        0 0 62px rgba( 255, 255, 255, 0.6 ) inset;
+        filter: blur( 10px );
+        -webkit-filter: blur( 10px );
+    }
+
+    100% {
+        box-shadow: 0 0 71px rgba( 255, 255, 255, 0.21 ),
+        0 0 31px rgba( 255, 255, 255, 0.6 ) inset;
+        filter: blur( 10px );
+        -webkit-filter: blur( 10px );
+    }
+
+}
+
+
 
 
 
@@ -769,6 +876,7 @@
 
 
 /*      about inner      */
+
 .about_text {
     z-index: 10;
     position: absolute;
@@ -787,6 +895,10 @@
     line-height: 26px;
 }
 
+
+
+/*      about_01 ~ 02      */
+
 .about_light {
     z-index: 1;
     position: absolute;
@@ -795,7 +907,12 @@
     width: 875px;
     transform: translateX( -50% ) translateY( -50% );
     mix-blend-mode: screen;
+    animation: light 60s ease-in-out infinite;
 }
+
+
+
+/*      about_03      */
 
 .about_ellipse {
     width: 100%;
@@ -811,22 +928,47 @@
     height: 800px;
     border-radius: 100%;
 }
+
 .about_ellipse .ellipse:nth-of-type(1) {
     box-shadow: 0 0 1px rgba( 255, 255, 255, 1 ) inset;
     filter: blur( 5px );
     -webkit-filter: blur( 5px );
+    animation: ellipse_01 7.5s ease-in-out infinite;
 }
 .about_ellipse .ellipse:nth-of-type(2) {
     box-shadow: 0 0 3px rgba( 255, 255, 255, 1 ) inset;
-    filter: blur( 20px );
-    -webkit-filter: blur( 20px );
+    filter: blur( 16px );
+    -webkit-filter: blur( 16px );
+    animation: ellipse_02 7.5s ease-in-out infinite;
 }
 .about_ellipse .ellipse:nth-of-type(3) {
     box-shadow: 0 0 71px rgba( 255, 255, 255, 0.21 ),
     0 0 31px rgba( 255, 255, 255, 0.6 ) inset;
     filter: blur( 10px );
     -webkit-filter: blur( 10px );
+    animation: ellipse_03 7.5s ease-in-out infinite;
 }
+.about_ellipse .ellipse:nth-of-type(4) {
+    box-shadow: 0 0 1px rgba( 255, 255, 255, 1 ) inset;
+    filter: blur( 5px );
+    -webkit-filter: blur( 3px );
+    animation: ellipse_01 5s ease-in-out infinite;
+}
+
+
+
+/*      about_04      */
+
+.about_circle {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+/*      about_05      */
 
 .about_logo {
     margin: 191px 0 0;
