@@ -150,16 +150,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //      notice more active
     const noticeNews = document.querySelector(".notice_news");
+    const newsList = document.querySelector(".news_list");
     const moreBtn = document.querySelector(".notice_news .more_btn");
     const moreWrap = document.querySelector(".more_btn .more_wrap")
-    const moreOpen = document.querySelector(".more_btn .open");
-    const moreClose = document.querySelector(".more_btn .close");
 
     moreBtn.addEventListener("click", function () {
         noticeNews.classList.toggle("active");
+        moreBtn.classList.toggle("active")
         moreWrap.classList.toggle("active");
-        moreOpen.classList.toggle("hide");
-        moreClose.classList.toggle("active");
+        newsList.classList.toggle("active");
     });
 
 });
