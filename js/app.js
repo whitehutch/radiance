@@ -143,4 +143,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
     updateSlidePosition();
 
+
+
+
+
+
+    //      notice more active
+    const noticeNews = document.querySelector(".notice_news");
+    const moreBtn = document.querySelector(".notice_news .more_btn");
+    const moreWrap = document.querySelector(".more_btn .more_wrap")
+    const moreOpen = document.querySelector(".more_btn .open");
+    const moreClose = document.querySelector(".more_btn .close");
+
+    moreBtn.addEventListener("click", function () {
+        noticeNews.classList.toggle("active");
+        moreWrap.classList.toggle("active");
+        moreOpen.classList.toggle("hide");
+        moreClose.classList.toggle("active");
+    });
+
 });
