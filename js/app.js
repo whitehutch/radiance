@@ -150,15 +150,46 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //      notice more active
     const noticeNews = document.querySelector(".notice_news");
-    const newsList = document.querySelector(".news_list");
+    const listWrap = document.querySelector(".list_wrap");
+    const listGradation = document.querySelector(".list_gradation")
     const moreBtn = document.querySelector(".notice_news .more_btn");
     const moreWrap = document.querySelector(".more_btn .more_wrap")
 
     moreBtn.addEventListener("click", function () {
+
+        const isActive = noticeNews.classList.contains("active");
+
         noticeNews.classList.toggle("active");
         moreBtn.classList.toggle("active")
         moreWrap.classList.toggle("active");
-        newsList.classList.toggle("active");
+        listWrap.classList.toggle("active");
+        listGradation.classList.toggle("active");
+
+        if (isActive) {
+            let start = listWrap.scrollTop;
+            let distance = start;
+            let duration = 500;
+            let startTime = performance.now();
+
+            function easeInOut(t) {
+                return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+            }
+
+            function smoothScroll(currentTime) {
+                let elapsedTime = currentTime - startTime;
+                let progress = Math.min(elapsedTime / duration, 1);
+
+                let easedProgress = easeInOut(progress);
+
+                listWrap.scrollTop = start - (distance * easedProgress);
+
+                if (progress < 1) {
+                    requestAnimationFrame(smoothScroll);
+                }
+            }
+
+            requestAnimationFrame(smoothScroll);
+        }
     });
 
 });

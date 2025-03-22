@@ -195,7 +195,7 @@
 @keyframes lightColumn {
     50% {
         opacity: 0.75;
-        transform: translateX( -50% ) scale( 1.015 );
+        transform: translateX( -50% ) scale( 0.975 );
     }
 }
 
@@ -587,17 +587,39 @@
 }
 
 
-
-.news_list ul {
-    display: flex;
-    flex-direction: column;
-    gap: 19px;
+.list_wrap {
+    position: relative;
     width: calc( 100% - 94px );
     height: calc( 100% - 41px );
     margin: 21px 0 0 1px;
     overflow: hidden;
 }
-.news_list.active ul { overflow-y: scroll; }
+.list_wrap.active { overflow-y: scroll; }
+
+
+.list_gradation {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient( to top, rgba( 255, 255, 255, 1 ), rgba( 255, 255, 255, 0 ));
+    transition: 0.35s ease-in-out;
+    pointer-events: none;
+
+}
+.list_gradation.active {
+    opacity: 1;
+}
+
+
+
+.news_list ul {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+}
 
 .news_item {
     position: relative;
@@ -1207,7 +1229,7 @@
 }
 
 .about_circle > span:nth-child(2) {
-    color: #999999;
+    color: #666666;
     opacity: .2;
     top: 24%;
     left: 85%;
@@ -1225,7 +1247,7 @@
 }
 
 .about_circle > span:nth-child(3) {
-    color: #cccccc;
+    color: #aaaaaa;
     opacity: .2;
     top: 41%;
     left: 38%;
@@ -1243,7 +1265,7 @@
 }
 
 .about_circle > span:nth-child(4) {
-    color: #cccccc;
+    color: #aaaaaa;
     opacity: .2;
     top: 31%;
     left: 36%;
@@ -1261,7 +1283,7 @@
 }
 
 .about_circle > span:nth-child(5) {
-    color: #cccccc;
+    color: #aaaaaa;
     opacity: .2;
     top: 82%;
     left: 36%;
@@ -1279,7 +1301,7 @@
 }
 
 .about_circle > span:nth-child(6) {
-    color: #cccccc;
+    color: #aaaaaa;
     opacity: .2;
     top: 69%;
     left: 33%;
@@ -1297,7 +1319,7 @@
 }
 
 .about_circle > span:nth-child(7) {
-    color: #999999;
+    color: #666666;
     opacity: .2;
     top: 5%;
     left: 35%;
@@ -1315,7 +1337,7 @@
 }
 
 .about_circle > span:nth-child(8) {
-    color: #cccccc;
+    color: #aaaaaa;
     top: 9%;
     left: 60%;
     -webkit-animation-duration: 31.5s;
@@ -1332,7 +1354,7 @@
 }
 
 .about_circle > span:nth-child(9) {
-    color: #cccccc;
+    color: #aaaaaa;
     top: 100%;
     left: 63%;
     -webkit-animation-duration: 30.4s;
@@ -1349,7 +1371,7 @@
 }
 
 .about_circle > span:nth-child(10) {
-    color: #cccccc;
+    color: #aaaaaa;
     top: 15%;
     left: 30%;
     -webkit-animation-duration: 29.4s;
@@ -1395,7 +1417,7 @@
     position: absolute;
     top: 171px;
     left: 50%;
-    width: 310px;
+    width: 330px;
     color: #ffffff;
     font-weight: 400;
     transform: translateX( -50% );
