@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //      notice more active
     const noticeNews = document.querySelector(".notice_news");
     const listWrap = document.querySelector(".list_wrap");
-    const listGradation = document.querySelector(".list_gradation")
+    const listLinear = document.querySelector(".list_wrap .linear_wrap")
     const moreBtn = document.querySelector(".notice_news .more_btn");
     const moreWrap = document.querySelector(".more_btn .more_wrap")
 
@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", function () {
         moreBtn.classList.toggle("active")
         moreWrap.classList.toggle("active");
         listWrap.classList.toggle("active");
-        listGradation.classList.toggle("active");
+        listLinear.classList.toggle("active");
 
         if (isActive) {
             let start = listWrap.scrollTop;
@@ -189,6 +189,20 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             requestAnimationFrame(smoothScroll);
+        }
+    });
+
+    listWrap.addEventListener("scroll", function () {
+        if (listWrap.classList.contains("active")) {
+            const isAtBottom = listWrap.scrollHeight - listWrap.scrollTop === listWrap.clientHeight;
+
+            if (isAtBottom) {
+                listLinear.style.top = "0";
+                listLinear.style.bottom = "auto";  // bottom 속성 제거
+            } else {
+                listLinear.style.bottom = "0";
+                listLinear.style.top = "auto";  // top 속성 제거
+            }
         }
     });
 

@@ -588,7 +588,6 @@
 
 
 .list_wrap {
-    position: relative;
     width: calc( 100% - 94px );
     height: calc( 100% - 41px );
     margin: 21px 0 0 1px;
@@ -596,21 +595,24 @@
 }
 .list_wrap.active { overflow-y: scroll; }
 
+.linear_wrap {
+    position: relative;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.35s ease-in-out;
+    pointer-events: none;
+}
+.linear_wrap.active { opacity: 1; }
+
 
 .list_gradation {
     position: absolute;
     left: 0;
     bottom: 0;
-    opacity: 0;
     width: 100%;
     height: 60px;
     background: linear-gradient( to top, rgba( 255, 255, 255, 1 ), rgba( 255, 255, 255, 0 ));
-    transition: 0.35s ease-in-out;
-    pointer-events: none;
-
-}
-.list_gradation.active {
-    opacity: 1;
 }
 
 
