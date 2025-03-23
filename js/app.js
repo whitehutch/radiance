@@ -150,10 +150,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //      notice more active
     const noticeNews = document.querySelector(".notice_news");
-    const listWrap = document.querySelector(".list_wrap");
-    const listLinear = document.querySelector(".list_wrap .linear_wrap")
     const moreBtn = document.querySelector(".notice_news .more_btn");
     const moreWrap = document.querySelector(".more_btn .more_wrap")
+    const listWrap = document.querySelector(".notice_news .list_wrap");
+    const linear = document.querySelector(".news_list .list_linear");
 
     moreBtn.addEventListener("click", function () {
 
@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", function () {
         moreBtn.classList.toggle("active")
         moreWrap.classList.toggle("active");
         listWrap.classList.toggle("active");
-        listLinear.classList.toggle("active");
+        linear.classList.toggle(".active");
 
         if (isActive) {
             let start = listWrap.scrollTop;
@@ -192,16 +192,16 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    listWrap.addEventListener("scroll", function () {
+    newsList.addEventListener("scroll", function () {
         if (listWrap.classList.contains("active")) {
-            const isAtBottom = listWrap.scrollHeight - listWrap.scrollTop === listWrap.clientHeight;
+            const isAtBottom = newsList.scrollHeight - newsList.scrollTop === newsList.clientHeight;
 
             if (isAtBottom) {
-                listLinear.style.top = "0";
-                listLinear.style.bottom = "auto";  // bottom 속성 제거
+                linear.style.top = "0";
+                linear.style.bottom = "auto";
             } else {
-                listLinear.style.bottom = "0";
-                listLinear.style.top = "auto";  // top 속성 제거
+                linear.style.bottom = "0";
+                linear.style.top = "auto";
             }
         }
     });
