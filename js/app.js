@@ -149,21 +149,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     //      notice more active
+    const noticeWrap = document.querySelector(".notice_wrap")
     const noticeNews = document.querySelector(".notice_news");
     const moreBtn = document.querySelector(".notice_news .more_btn");
     const moreWrap = document.querySelector(".more_btn .more_wrap")
     const listWrap = document.querySelector(".notice_news .list_wrap");
-    const linear = document.querySelector(".news_list .list_linear");
+    const linearTop = document.querySelector(".news_list .linear_top");
+    const linearBottom = document.querySelector(".news_list .linear_bottom");
+    const newsOutline = document.querySelector(".news_outline")
 
     moreBtn.addEventListener("click", function () {
 
         const isActive = noticeNews.classList.contains("active");
 
+        noticeWrap.classList.toggle("active");
         noticeNews.classList.toggle("active");
-        moreBtn.classList.toggle("active")
+        moreBtn.classList.toggle("active");
         moreWrap.classList.toggle("active");
         listWrap.classList.toggle("active");
-        linear.classList.toggle(".active");
+        linearBottom.classList.toggle("active");
+        newsOutline.classList.toggle("active");
+
+        if (!isActive) {
+            linearBottom.style.opacity = "1";
+        }
 
         if (isActive) {
             let start = listWrap.scrollTop;
@@ -184,6 +193,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 listWrap.scrollTop = start - (distance * easedProgress);
 
                 if (progress < 1) {
+                    linearTop.style.opacity = "0";
+                    linearBottom.style.opacity = "0";
                     requestAnimationFrame(smoothScroll);
                 }
             }
@@ -192,16 +203,20 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    newsList.addEventListener("scroll", function () {
+    listWrap.addEventListener("scroll", function () {
         if (listWrap.classList.contains("active")) {
-            const isAtBottom = newsList.scrollHeight - newsList.scrollTop === newsList.clientHeight;
+            const isAtTop = listWrap.scrollTop === 0;
+            const isAtBottom = listWrap.scrollHeight - listWrap.scrollTop === listWrap.clientHeight;
 
-            if (isAtBottom) {
-                linear.style.top = "0";
-                linear.style.bottom = "auto";
+            if (isAtTop) {
+                linearTop.style.opacity = "0";
+                linearBottom.style.opacity = "1";
+            } else if (isAtBottom) {
+                linearTop.style.opacity = "1";
+                linearBottom.style.opacity = "0";
             } else {
-                linear.style.bottom = "0";
-                linear.style.top = "auto";
+                linearTop.style.opacity = "1";
+                linearBottom.style.opacity = "1";
             }
         }
     });

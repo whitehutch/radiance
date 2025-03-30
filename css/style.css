@@ -480,17 +480,21 @@
     width: 100%;
     height: 100%;
     background-color: #131313;
+    overflow: hidden;
 }
 
 .notice_wrap {
     z-index: 10;
-    position: absolute;
-    right: 96px;
-    top: 143px;
     display: flex;
+    align-items: end;
     flex-direction: column;
-    height: calc( 100% - 215px );
+    gap: 26px;
+    width: calc( 100% - 96px );
+    height: 100%;
+    padding-top: 143px;
+    transition: 0.5s ease-in-out;
 }
+.notice_wrap.active { gap: 96px; }
 
 
 
@@ -498,25 +502,21 @@
 
 .notice_news {
     z-index: 1;
-    position: absolute;
-    top: 0;
-    right: 0;
+    position: relative;
     width: 810px;
-    height: 310px;
+    height: calc( 100% - 487px );
     border-radius: 36px;
     background: rgba( 255, 255, 255, 1 );
     box-shadow: 0 -3px 16px rgba( 0, 0, 0, 0.31 ) inset,
     0 6px 11px rgba( 0, 0, 0, 0.41 );
     transition: 0.5s ease-in-out;
 }
-.notice_news.active {
-    height: 100%;
-}
+.notice_news.active { height: calc( 100% - 96px ); }
 
 
 
 .more_btn {
-    z-index: 1;
+    z-index: 2;
     position: absolute;
     top: 39px;
     right: -9px;
@@ -597,8 +597,8 @@
     flex-direction: column;
     gap: 19px;
     width: calc( 100% - 94px );
-    height: calc( 100% - 54px );
-    margin: 26px 0 0 1px;
+    height: calc( 100% - 59px );
+    margin: 29px 0 0 1px;
     overflow: hidden;
 }
 .list_wrap.active { overflow-y: scroll; }
@@ -643,38 +643,46 @@
 
 
 
-.list_linear {
+.linear_top, .linear_bottom {
     z-index: 1;
-    opacity: 1;
+    opacity: 0;
     position: absolute;
     left: 0;
-    bottom: 0;
     width: calc( 100% - 94px );
     height: 60px;
     pointer-events: none;
-    transition: 0.35s ease-in-out;
-    background: linear-gradient( to top, rgba( 255, 255, 255, 1 ), rgba( 255, 255, 255, 0 ) );
+    transition: opacity 0.3s ease-in-out, top 0.3s ease-in-out, bottom 0.3s ease-in-out;
     /*background: red;*/
 }
-.list_linear.active { opacity: 1; }
+
+.linear_top {
+    top: 54px;
+    background: linear-gradient( to bottom, rgba( 255, 255, 255, 1 ), rgba( 255, 255, 255, 0 ) );
+}
+.linear_bottom {
+    bottom: 0;
+    background: linear-gradient( to top, rgba( 255, 255, 255, 1 ), rgba( 255, 255, 255, 0 ) );
+}
+.linear_bottom.active { opacity: 1; }
 
 
 
-/*      news banner      */
+/*      news outline      */
 
 .news_outline {
-    position: absolute;
-    right: 0;
-    bottom: 0;
+    z-index: 1;
+    opacity: 1;
     display: flex;
+    position: relative;
     width: 810px;
     height: 365px;
-    margin-top: 26px;
     border-radius: 36px;
     background: rgba( 255, 255, 255, 1 );
     box-shadow: 0 -3px 16px rgba( 0, 0, 0, 0.31 ) inset,
     0 6px 11px rgba( 0, 0, 0, 0.41 );
+    transition: 0.5s ease-in-out;
 }
+.news_outline.active { opacity: 0; }
 
 .news_thumb {
     flex-shrink: 0;
@@ -744,6 +752,7 @@
 
 
 /*      notice banner      */
+
 .notice_banner {
     z-index: 0;
     position: absolute;
@@ -897,6 +906,12 @@
     background-repeat: no-repeat;
     background-image: url("/images/about_bg01.png");
     overflow-y: scroll;
+}
+
+.light_wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 
