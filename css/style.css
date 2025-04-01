@@ -29,12 +29,12 @@
 
     80% {
         opacity: 0.3;
-        transform: translateX( -50% ) translateY( 7px );
+        transform: translateX( -50% ) translateY( 6px );
     }
 
     100% {
         opacity: 0;
-        transform: translateX( -50% ) translateY( 7px );
+        transform: translateX( -50% ) translateY( 6px );
     }
 
 }
@@ -345,26 +345,26 @@
     justify-content: center;
     gap: 16px;
     color: rgba( 255, 255, 255, 1 );
-    font-size: 16px;
+    font-size: 14px;
     letter-spacing: 0.05rem;
 }
 
-.main_scroll p { padding-top: 1px; }
+.main_scroll p { padding-top: 0; }
 
 .main_scroll .mouse {
     position: relative;
-    width: 19px;
-    height: 26px;
-    border: 2px solid rgba( 255, 255, 255, 1 );
+    width: 16px;
+    height: 24px;
+    border: 1px solid rgba( 255, 255, 255, 1 );
     border-radius: 100px;
 }
 
 .main_scroll .wheel {
     position: absolute;
-    top: 5px;
+    top: 6px;
     left: 50%;
-    width: 4px;
-    height: 4px;
+    width: 3px;
+    height: 3px;
     border-radius: 100px;
     background: rgba( 255, 255, 255, 1 );
     transform: translateX( -50% );
