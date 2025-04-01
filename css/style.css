@@ -486,15 +486,16 @@
 .notice_wrap {
     z-index: 10;
     display: flex;
-    align-items: end;
     flex-direction: column;
+    align-items: end;
+    justify-content: end;
     gap: 26px;
-    width: calc( 100% - 96px );
+    width: 1300px;
     height: 100%;
-    padding-top: 143px;
+    padding-bottom: 91px;
     transition: 0.5s ease-in-out;
 }
-.notice_wrap.active { gap: 96px; }
+/*.notice_wrap.active { gap: 96px; }*/
 
 
 
@@ -503,22 +504,22 @@
 .notice_news {
     z-index: 1;
     position: relative;
-    width: 810px;
-    height: calc( 100% - 487px );
+    width: 635px;
+    height: 300px;
     border-radius: 36px;
     background: rgba( 255, 255, 255, 1 );
     box-shadow: 0 -3px 16px rgba( 0, 0, 0, 0.31 ) inset,
     0 6px 11px rgba( 0, 0, 0, 0.41 );
     transition: 0.5s ease-in-out;
 }
-.notice_news.active { height: calc( 100% - 96px ); }
+/*.notice_news.active { height: calc( 100% - 96px ); }*/
 
 
 
 .more_btn {
     z-index: 2;
     position: absolute;
-    top: 39px;
+    top: 36px;
     right: -9px;
     width: 71px;
     padding: 6px 7px 6px 10px;
@@ -542,7 +543,8 @@
 
 .more_btn .close {
     color: #B2EE41;
-    transition: 0.35s ease-in-out;}
+    transition: 0.35s ease-in-out;
+}
 .more_btn.active .close {
     color: #ffffff;
     font-weight: 400;
@@ -571,21 +573,21 @@
 
 .news_list {
     position: relative;
-    margin: 41px 46px;
+    margin: 36px 41px;
     width: 100%;
-    height: calc( 100% - 82px );
+    /*height: calc( 100% - 82px );*/
 }
 
 
 
 .notice_title {
-    width: calc( 100% - 94px );
+    width: calc( 100% - 82px );
     font-weight: 800;
     text-transform: uppercase;
 }
 .notice_title ion-icon {
-    font-size: 20px;
-    margin-left: 11px;
+    font-size: 19px;
+    margin-left: 6px;
     margin-bottom: -2px;
 }
 
@@ -602,13 +604,15 @@
     overflow: hidden;
 }
 .list_wrap.active { overflow-y: scroll; }
+.list_wrap li, .list_wrap.active li:nth-child(2) { border-bottom: 1px solid #f1f1f1; }
+.list_wrap li:nth-child(2) { border-bottom: none; }
 
 
 
 .news_item {
     position: relative;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     width: 100%;
     cursor: pointer;
 }
@@ -623,6 +627,12 @@
     text-transform: uppercase;
 }
 
+.news_date {
+    color: #b1b1b1;
+    font-size: 14px;
+    letter-spacing: 0.025rem;
+}
+
 .news_text {
     width: 57.5%;
     color: #888888;
@@ -631,14 +641,6 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-}
-
-.news_date {
-    position: absolute;
-    right: 0;
-    color: #b1b1b1;
-    font-size: 14px;
-    letter-spacing: 0.025rem;
 }
 
 
@@ -889,46 +891,37 @@
 /*      about      */
 
 #about {
+    position: relative;
     width: 100%;
     height: 100%;
-    background: aliceblue;
+    background-color: #131313;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("/images/about_bg01.png");
     /*overflow: hidden;*/
 }
 
 
 
 .about_wrap {
+    z-index: 2;
     position: relative;
     width: 100%;
     height: 100%;
-    background-color: #131313;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url("/images/about_bg01.png");
     overflow-y: scroll;
 }
 
-.light_wrap {
+#about_01, #about_02, #about_03 {
     position: relative;
     width: 100%;
     height: 100%;
+    color: #ffffff;
 }
-
-
-
-.about_section {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-}
-
-#about_01, #about_02, #about_03 { color: #ffffff; }
 #about_03 {
     position: relative;
+    width: 100%;
+    height: 100%;
     background-color: #030303;
     overflow: hidden;
 }
@@ -936,15 +929,23 @@
     position: relative;
     width: 100%;
     height: 100%;
+    background-color: #ffffff;
     overflow: hidden;
 }
 #about_05 {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
     background-color: #131313;
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url("/images/about_bg02.png");
     background-position: center bottom;
+    background-attachment: fixed;
 }
 
 
