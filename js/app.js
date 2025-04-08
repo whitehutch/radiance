@@ -76,20 +76,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    //      notice banner
-
     const ntbWrap = document.querySelector(".ntb_slide_wrap");
     const ntbSlides = document.querySelectorAll(".ntb_slide");
     const ntbProgressBar = document.querySelector(".notice_progressbar .progressbar");
 
+    const ntbBgWrap = document.querySelector(".ntb_bg_wrap");
+    const ntbBgSlides = document.querySelectorAll(".ntb_slide_bg");
+
     let currentNtbIndex = 0;
-    let totalNtbSlides = ntbSlides.length;
+    const totalNtbSlides = ntbSlides.length;
     let startNtbX = 0;
     let isNtbDragging = false;
     let ntbAutoSlide;
 
+    ntbBgWrap.style.width = `${totalNtbSlides * 100}%`;
+    ntbBgSlides.forEach(slide => {
+        slide.style.width = `${100 / totalNtbSlides}%`;
+    });
+
     function updateSlidePosition() {
         ntbWrap.style.left = `-${currentNtbIndex * 100}%`;
+        ntbBgWrap.style.left = `-${currentNtbIndex * 100}%`;
         ntbProgressBar.style.width = `${((currentNtbIndex + 1) / totalNtbSlides) * 100}%`;
     }
 
@@ -111,36 +118,40 @@ document.addEventListener("DOMContentLoaded", function () {
         clearInterval(ntbAutoSlide);
     }
 
-    //       drag event ( mouse + touch )
+    //      mouse drag
     ntbWrap.addEventListener("mousedown", (e) => {
         isNtbDragging = true;
         startNtbX = e.clientX;
     });
 
     ntbWrap.addEventListener("mouseup", (e) => {
+        if (!isNtbDragging) return;
         isNtbDragging = false;
-        let diff = startNtbX - e.clientX;
+        const diff = startNtbX - e.clientX;
         if (diff > 50) nextSlide();
         else if (diff < -50) prevSlide();
     });
 
+    //      drag event
     ntbWrap.addEventListener("touchstart", (e) => {
         isNtbDragging = true;
         startNtbX = e.touches[0].clientX;
     });
 
     ntbWrap.addEventListener("touchend", (e) => {
+        if (!isNtbDragging) return;
         isNtbDragging = false;
-        let diff = startNtbX - e.changedTouches[0].clientX;
+        const diff = startNtbX - e.changedTouches[0].clientX;
         if (diff > 50) nextSlide();
         else if (diff < -50) prevSlide();
     });
 
-    //      autoplay ( + stop when mose over or slide )
+    //      auto slide play & pause
     startAutoSlide();
     ntbWrap.addEventListener("mouseenter", stopAutoSlide);
     ntbWrap.addEventListener("mouseleave", startAutoSlide);
 
+    //      reset
     updateSlidePosition();
 
 

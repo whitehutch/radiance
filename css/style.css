@@ -209,6 +209,7 @@
     z-index: 1000;
     position: fixed;
     width: 100%;
+    pointer-events: none;
 }
 
 .header_wrap {
@@ -221,6 +222,7 @@
     background: rgba( 19, 19, 19, 1 );
     box-shadow: 0 -3px 16px rgba( 255, 255, 255, 0.31 ) inset,
                 0 6px 11px rgba( 0, 0, 0, 0.41 );
+    pointer-events: all !important;
 }
 
 
@@ -489,14 +491,14 @@
     flex-direction: column;
     align-items: end;
     justify-content: end;
-    gap: 26px;
+    gap: 21px;
     width: 1300px;
     height: 100%;
     margin: 0 auto;
-    padding-bottom: 2.5%;
+    padding-bottom: 48px;
     transition: 0.5s ease-in-out;
 }
-/*.notice_wrap.active { gap: 96px; }*/
+.notice_wrap.active { gap: 48px; }
 
 
 
@@ -506,14 +508,14 @@
     z-index: 1;
     position: relative;
     width: 635px;
-    height: 310px;
+    height: 305px;
     border-radius: 36px;
     background: rgba( 255, 255, 255, 1 );
     box-shadow: 0 -3px 16px rgba( 0, 0, 0, 0.31 ) inset,
     0 6px 11px rgba( 0, 0, 0, 0.41 );
     transition: 0.5s ease-in-out;
 }
-/*.notice_news.active { height: calc( 100% - 96px ); }*/
+.notice_news.active { height: 701px; }
 
 
 
@@ -574,9 +576,9 @@
 
 .news_list {
     position: relative;
-    margin: 36px 41px;
+    margin: 36px 41px 39px;
     width: 100%;
-    height: calc( 100% - 72px );
+    height: calc( 100% - 71px );
 }
 
 
@@ -606,6 +608,8 @@
 }
 .list_wrap.active { overflow-y: scroll; }
 .list_wrap li, .list_wrap.active li:nth-child(2) { border-bottom: 1px solid #f1f1f1; }
+.list_wrap.active li:last-child { border-bottom: none; }
+.list_wrap.active li:last-child .news_text { margin: 11px 0 0; }
 
 
 
@@ -660,7 +664,7 @@
 }
 
 .linear_top {
-    top: 54px;
+    top: 46px;
     background: linear-gradient( to bottom, rgba( 255, 255, 255, 1 ), rgba( 255, 255, 255, 0 ) );
 }
 .linear_bottom {
@@ -685,30 +689,35 @@
     box-shadow: 0 -3px 16px rgba( 0, 0, 0, 0.31 ) inset,
     0 6px 11px rgba( 0, 0, 0, 0.41 );
     transition: 0.5s ease-in-out;
+    overflow: hidden;
 }
-.news_outline.active { opacity: 0; }
+.news_outline.active {
+    margin-bottom: -423px;
+    opacity: 0;
+}
 
 .news_thumb {
     position: relative;
-    flex-shrink: 0;
-    width: 325px;
+    width: 225px;
     height: 100%;
     border-radius: 33px 0 0 33px;
-    background-image: url("/images/outline_01.png");
+    background-image: linear-gradient( to right, rgba( 255, 255, 255, 0 ), rgba( 255, 255, 255, 1 )), url("/images/outline_01.png");
     background-size: cover;
     background-position: center center;
     mix-blend-mode: multiply;
     cursor: pointer;
+    transition: 0.35s ease-in-out;
 }
 
 .outline_wrap {
     position: absolute;
     top: 36px;
-    right: 41px;
+    left: 246px;
     display: flex;
     flex-direction: column;
     gap: 6px;
     width: 350px;
+    transition: 0.35s ease-in-out;
 }
 
 .outline_title {
@@ -765,16 +774,43 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 60%;
+    width: 100%;
     height: 100%;
+}
+
+.ntb_inner {
+    position: relative;
+    width: 1300px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.ntb_linear_l {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient( to right, rgba( 19, 19, 19, 1 ) 0%, rgba( 19, 19, 19, 0.5 ) 11%, rgba( 19, 19, 19, 0 ) 26% );
+}
+
+.ntb_linear_r {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1200px;
+    height: 100%;
+    background-image: linear-gradient( to left, rgba( 19, 19, 19, 1 ) 1%, rgba( 19, 19, 19, 0.5 ) 21%, rgba( 19, 19, 19, 0 ) 36% );
 }
 
 .notice_progressbar {
     z-index: 2;
     position: absolute;
-    left: 91px;
+    left: 0;
     bottom: 91px;
-    width: 800px;
+    width: 580px;
     height: 2px;
     background-color: rgba( 255, 255, 255, 0.3 );
 }
@@ -797,16 +833,6 @@
     overflow: hidden;
 }
 
-.ntb_linear {
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient( to left, rgba( 19, 19, 19, 1 ) 10%, rgba( 19, 19, 19, 0.5 ) 21%, rgba( 19, 19, 19, 0 ) 36% );
-}
-
 .ntb_slide_wrap {
     position: absolute;
     top: 0;
@@ -824,26 +850,17 @@
     flex-shrink: 0;
     width: 100%;
     height: 100%;
-    background-size: auto 100%;
-    background-position: left bottom;
-    mix-blend-mode: revert;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
 }
-
-.ntb_slide.banner_1 { background-image: linear-gradient( to top, rgba( 19, 19, 19, 1 ) 0%, rgba( 19, 19, 19, 0.85 ) 21%, rgba( 19, 19, 19, 0 ) 41% ), url("/images/ntb_01.png");}
-.ntb_slide.banner_2 { background-image: linear-gradient( to top, rgba( 19, 19, 19, 1 ) 0%, rgba( 19, 19, 19, 0.85 ) 21%, rgba( 19, 19, 19, 0 ) 41% ), url("/images/ntb_02.png");}
-.ntb_slide.banner_3 { background-image: linear-gradient( to top, rgba( 19, 19, 19, 1 ) 0%, rgba( 19, 19, 19, 0.85 ) 21%, rgba( 19, 19, 19, 0 ) 41% ), url("/images/ntb_03.png");}
 
 .ntb_item {
     z-index: 2;
     position: absolute;
-    left: 92px;
+    left: 0;
     bottom: 126px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    width: 800px;
+    width: 580px;
     height: 100%;
     color: #ffffff;
     cursor: pointer;
@@ -886,6 +903,41 @@
 
 .ntb_item:hover .ntb_text,
 .ntb_item:hover .ntb_more { color: rgba( 255, 255, 255, 0.8 ); }
+
+
+
+.ntb_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1200px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.ntb_bg_wrap {
+    display: flex;
+    transition: left 0.75s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+.ntb_slide_bg {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    background-size: auto 100%;
+    background-position: left bottom;
+    mix-blend-mode: revert;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.ntb_slide_bg.bg_1 { background-image: linear-gradient( to top, rgba( 19, 19, 19, 1 ) 0%, rgba( 19, 19, 19, 0.85 ) 21%, rgba( 19, 19, 19, 0 ) 41% ), url("/images/ntb_01.png");}
+.ntb_slide_bg.bg_2 { background-image: linear-gradient( to top, rgba( 19, 19, 19, 1 ) 0%, rgba( 19, 19, 19, 0.85 ) 21%, rgba( 19, 19, 19, 0 ) 41% ), url("/images/ntb_02.png");}
+.ntb_slide_bg.bg_3 { background-image: linear-gradient( to top, rgba( 19, 19, 19, 1 ) 0%, rgba( 19, 19, 19, 0.85 ) 21%, rgba( 19, 19, 19, 0 ) 41% ), url("/images/ntb_03.png");}
+
 /*      notice ends      */
 
 
@@ -914,7 +966,6 @@
     position: relative;
     width: 100%;
     height: 100%;
-    overflow-y: scroll;
 }
 
 #about_01, #about_02, #about_03 {
@@ -1448,3 +1499,15 @@
 }
 
 .light_column img { width: 100%; }
+
+
+
+
+
+
+/*      menu       */
+
+#menu {
+    position: relative;
+    display: flex;
+}
