@@ -328,6 +328,7 @@
 /*      main      */
 
 #main {
+    z-index: 2;
     position: relative;
     width: 100%;
     height: 100%;
@@ -478,6 +479,7 @@
 /*      notice      */
 
 #notice {
+    z-index: 2;
     position: relative;
     width: 100%;
     height: 100%;
@@ -530,7 +532,7 @@
     font-weight: 600;
     text-transform: uppercase;
     border-radius: 6px;
-    background: #B2EE41;
+    background: #b2ee41;
     box-shadow: 0 6px 11px rgba( 0, 0, 0, 0.21 );
     cursor: pointer;
     transition: 0.35s ease-in-out;
@@ -545,7 +547,7 @@
 .more_btn.active .open { color: #333; }
 
 .more_btn .close {
-    color: #B2EE41;
+    color: #b2ee41;
     transition: 0.35s ease-in-out;
 }
 .more_btn.active .close {
@@ -603,7 +605,7 @@
     gap: 19px;
     width: calc( 100% - 94px );
     height: calc( 100% - 59px );
-    margin: 29px 0 0 1px;
+    margin: 26px 0 0 1px;
     overflow: hidden;
 }
 .list_wrap.active { overflow-y: scroll; }
@@ -664,7 +666,7 @@
 }
 
 .linear_top {
-    top: 46px;
+    top: 49px;
     background: linear-gradient( to bottom, rgba( 255, 255, 255, 1 ), rgba( 255, 255, 255, 0 ) );
 }
 .linear_bottom {
@@ -947,55 +949,43 @@
 
 /*      about      */
 
-#about {
+
+
+.about_wrap {
     position: relative;
     width: 100%;
     height: 100%;
+}
+
+.about_01, .about_02, .about_03, .about_04, .about_05 {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.about_01, .about_02 {
     background-color: #131313;
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url("/images/about_bg01.png");
-    /*overflow: hidden;*/
 }
 
+.about_03, .about_04, .about_05 { z-index: 2; }
 
-
-.about_wrap {
-    z-index: 2;
-    position: relative;
-    width: 100%;
-    height: 100%;
+.about_03 { background-color: #030303; }
+.about_04 {
+    color: #131313;
+    background-color: #ffffff;=
 }
-
-#about_01, #about_02, #about_03 {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    color: #ffffff;
-}
-#about_03 {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background-color: #030303;
-    overflow: hidden;
-}
-#about_04 {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background-color: #ffffff;
-    overflow: hidden;
-}
-#about_05 {
-    position: relative;
+.about_05 {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100%;
     background-color: #131313;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1023,7 +1013,7 @@
     letter-spacing: 0.05rem;
     transform: translateX( -50% );
 }
-#about_04 .about_scroll { color: #131313; }
+.about_04 .about_scroll { color: #131313; }
 
 .about_scroll p { padding-bottom: 2px; }
 
@@ -1044,7 +1034,7 @@
     border: 1px solid rgba( 255, 255, 255, 1 );
     border-radius: 100px;
 }
-#about_04 .mouse { border: 1px solid rgba( 0, 0, 0, 1 ); }
+.about_04 .mouse { border: 1px solid rgba( 0, 0, 0, 1 ); }
 
 .scroll_wrap .wheel {
     position: absolute;
@@ -1057,7 +1047,7 @@
     transform: translateX( -50% );
     animation: wheel 1.75s ease-in-out infinite;
 }
-#about_04 .wheel { background: rgba( 0, 0, 0, 1 ); }
+.about_04 .wheel { background: rgba( 0, 0, 0, 1 ); }
 
 
 
@@ -1107,7 +1097,7 @@
 
 .about_light {
     z-index: 1;
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     width: 875px;
@@ -1506,8 +1496,64 @@
 
 
 /*      menu       */
-
 #menu {
-    position: relative;
     display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #ffffff;
 }
+
+.menu_intro {
+    position: relative;
+    width: 100%;
+    height: 590px;
+}
+
+.intro {
+    position: absolute;
+    left: 50%;
+    bottom: 56px;
+    text-align: center;
+    color: #ffffff;
+    transform: translateX( -50% );
+}
+
+
+
+.menu_list_wrap {
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    color: #ffffff;
+    background-color: #131313;
+    box-shadow: 0 -10px 111px rgba( 255, 255, 255, 0.6 );
+}
+
+.menu_scroll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    margin: 56px 0 81px;
+    color: #ffffff;
+    font-size: 13px;
+    letter-spacing: 0.05rem;
+}
+.menu_scroll p { padding-bottom: 2px; }
+
+.menu_logo {
+    width: 105px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu_best {
+    margin: 31px 0 46px;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+}
+.menu_best span { color: #b2ee41; }
