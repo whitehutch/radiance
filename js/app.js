@@ -234,3 +234,53 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+const sections = document.querySelectorAll('.section');
+let currentIndex = 0;
+let isScrolling = false;
+
+const duration = 1000;
+
+function easeInOutCubic(t) {
+    return t < 0.5
+        ? 4 * t * t * t
+        : 1 - Math.pow(-2 * t + 2, 3) / 2;
+}
+
+function scrollToSection(index) {
+    if (index < 0) index = 0;
+    if (index >= sections.length) index = sections.length - 1;
+
+    const targetOffset = index * window.innerHeight;
+    const startOffset = window.scrollY || window.pageYOffset;
+    const startTime = performance.now();
+
+    isScrolling = true;
+    currentIndex = index;
+
+    function animateScroll(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const easeProgress = easeInOutCubic(progress);
+        const scrollPosition = startOffset + (targetOffset - startOffset) * easeProgress;
+
+        window.scrollTo(0, scrollPosition);
+
+        if (progress < 1) {
+            requestAnimationFrame(animateScroll);
+        } else {
+            isScrolling = false;
+        }
+    }
+
+    requestAnimationFrame(animateScroll);
+}
+
+window.addEventListener('wheel', (e) => {
+    if (isScrolling) return;
+
+    if (e.deltaY > 30) {
+        scrollToSection(currentIndex + 1);
+    } else if (e.deltaY < -30) {
+        scrollToSection(currentIndex - 1);
+    }
+});
