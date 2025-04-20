@@ -61,3 +61,28 @@ h3 { font-size: 23px; }
 h4 { font-size: 21px; }
 h5 { font-size: 19px; }
 h6 { font-size: 16px; }
+
+.radius01 { border-radius: 36px; }
+.radius02 { border-radius: 31px; }
+.radius03 { border-radius: 26px; }
+.radius04 { border-radius: 21px; }
+
+.radius100 { border-radius: 100px; }
+
+.radius_circle { border-radius: 100%; }
+
+
+.emb {
+    box-shadow: 0 -3px 16px rgba( 0, 0, 0, 0.31 ) inset,
+    0 6px 11px rgba( 0, 0, 0, 0.41 );
+}
+
+.emb_d {
+    box-shadow: 0 3px 16px rgba( 255, 255, 255, 0.26 ) inset,
+    0 -6px 11px rgba( 255, 255, 255, 0.21 );
+}
+
+.emb_d02 {
+    box-shadow: 0 -3px 16px rgba( 255, 255, 255, 0.26 ) inset,
+    0 6px 11px rgba( 255, 255, 255, 0.21 );
+}
