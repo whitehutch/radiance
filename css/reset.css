@@ -86,3 +86,38 @@ h6 { font-size: 16px; }
     box-shadow: 0 -3px 16px rgba( 255, 255, 255, 0.26 ) inset,
     0 6px 11px rgba( 255, 255, 255, 0.21 );
 }
+
+
+/*      map      */
+
+.marker-wrap {
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 3px 11px rgba( 0, 0, 0, 0.16 );
+}
+
+.map-marker {
+    z-index: 3;
+    position: relative;
+    width: max-content;
+    padding: 9px 13px;
+    color: #b2ee41;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 8px;
+    background-color: #131313;
+    box-shadow: 0 -3px 13px rgba( 255, 255, 255, 0.61 ) inset;
+}
+
+.marker-tail {
+    z-index: 2;
+    position: absolute;
+    top: calc( 100% - 5px );
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background: #717171;
+    box-shadow: 1px 1px 11px rgba( 0, 0, 0, 0.16 );
+    transform: translate( -50%, -2px ) rotate( 45deg );
+}
