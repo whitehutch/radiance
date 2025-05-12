@@ -67,7 +67,7 @@ function buildContent(property) {
     <div class="highlight">
         <div class="hl_wrap">
             <div class="map_image">
-                <img src="../images/map_img.png" alt="">
+                <img src="/radiance/images/map_img.png" alt="">
             </div>
             <div class="map_text">
                 <h6 class="map_title">${property.title}</h6>
