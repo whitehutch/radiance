@@ -83,7 +83,7 @@ function buildContent(property) {
 
 const properties = [
     {
-        images: "/images/map_img.png",
+        images: "../images/map_img.png",
         title: "radiance",
         subTitle: "래디언스",
         address: "부산광역시 부산진구 서전로 37번길 18 2F",
