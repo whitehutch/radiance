@@ -67,7 +67,7 @@ function buildContent(property) {
     <div class="highlight">
         <div class="hl_wrap">
             <div class="map_image">
-                <img src="${property.images}" alt="">
+                <img src="../images/map_img.png" alt="">
             </div>
             <div class="map_text">
                 <h6 class="map_title">${property.title}</h6>
@@ -83,7 +83,6 @@ function buildContent(property) {
 
 const properties = [
     {
-        images: "../images/map_img.png",
         title: "radiance",
         subTitle: "래디언스",
         address: "부산광역시 부산진구 서전로 37번길 18 2F",
