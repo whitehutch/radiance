@@ -55,6 +55,16 @@
                         console.log('FAILED...', error);
                     });
             });
+            document.getElementById('subscribe-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('radiance', 'radiance_subscribe', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });
+            });
         }
     </script>
 
