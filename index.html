@@ -33,6 +33,31 @@
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpEQC2d9r8x_9kURyBZUR0aIJvk9HBGLU&callback=initMap"
     ></script>
 
+    <!--   email js    -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+                publicKey: "vTcf_OcU3i3h3rxek",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('radiance', 'radiance', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+
 </head>
 
 
@@ -1166,7 +1191,27 @@
                             당신과의 소통이 우리의 빛나는 하루를 만들어갑니다.
                         </p>
 
+                        <form id="contact-form" class="contact_form">
+                            <!-- To simplify the tutorial, the value is static. -->
+                            <input type="hidden" name="time" value="Mar 10 2025 08:46">
+
+                            <label for="name">name</label>
+                            <input type="text" id="name" name="name" required>
+
+                            <label for="phone">phone number</label>
+                            <input type="number" id="phone" name="phone" required>
+
+                            <label for="email">email</label>
+                            <input type="email" id="email" name="email" required>
+
+                            <label for="message">message</label>
+                            <textarea id="message" name="message" required></textarea>
+
+                            <input type="submit" value="submit">
+                        </form>
+
                     </div>
+
 
                 </div>
 
