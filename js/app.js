@@ -228,4 +228,54 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+
+    //    menu tab
+
+    const menuLists = document.querySelectorAll(".menu_tab li");
+    const menuBtn = document.querySelector(".menu_button");
+
+    function updateButtonStyle() {
+
+        menuLists.forEach((menuItem, index) => {
+            if (menuItem.classList.contains("on")) {
+
+                menuItem.addEventListener("click", () => {
+                    menuLists.forEach(item => item.classList.remove("on"));
+
+                    menuItem.classList.add("on");
+
+                });
+
+                switch (index) {
+                    case 0:
+                        menuBtn.style.left="6px";
+                        menuBtn.style.width="108px";
+                        break;
+                    case 1:
+                        menuBtn.style.left="114px";
+                        menuBtn.style.width="136px";
+                        break;
+                    case 2:
+                        menuBtn.style.left="251px";
+                        menuBtn.style.width="74px";
+                        break;
+                }
+            }
+
+        });
+
+
+
+    }
+
+    updateButtonStyle();
+
+    menuLists.forEach((menuItem) => {
+        menuItem.addEventListener("click", () => {
+            menuLists.forEach(item => item.classList.remove("on"));
+            menuItem.classList.add("on");
+            updateButtonStyle();
+        });
+    });
+
 });
