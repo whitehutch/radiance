@@ -1658,13 +1658,14 @@
 
 .menu_bg_cc {
     position: absolute;
-    top: 270px;
+    top: 100px;
     left: 0;
     display: flex;
     flex-direction: column;
-    gap: 124px;
+    gap: 750px;
     width: 100%;
     overflow: hidden;
+    pointer-events: none;
 }
 
 .menu_cc_wrap {
@@ -1679,19 +1680,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 1000px;
-    height: 1000px;
-    box-shadow: 0 0 100px rgba( 255, 255, 255, 0.4 ) inset;
+    width: 900px;
+    height: 900px;
+    box-shadow: 0 0 76px rgba( 255, 255, 255, 0.05 ) inset;
 }
 
 .menu_circle.left { left: -500px; }
 .menu_circle.right { right: -500px; }
 
 .cc_inner {
-    width: 825px;
-    height: 825px;
+    width: 725px;
+    height: 725px;
     background-color: #131313;
-    box-shadow: 0 0 100px rgba( 255, 255, 255, 1 ) inset;
+    box-shadow: 0 0 86px rgba( 255, 255, 255, 0.5 ) inset;
     opacity: 0.3;
 }
 
@@ -1703,8 +1704,8 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 100vh;
-    height: 100dvh;
+    height: calc( 100vh - 161px );
+    height: calc( 100dvh - 161px );
     color: #ffffff;
 }
 
@@ -1837,13 +1838,14 @@
 
 
 .best_scroll {
-    position: absolute;
-    bottom: 66px;
+    z-index: 5;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 11px;
+    margin-bottom: 66px;
+    padding-top: 31px;
     color: #ffffff;
     font-size: 13px;
     letter-spacing: 0.05rem;
@@ -1855,10 +1857,12 @@
 /*      menu list      */
 
 #menu_list {
+    z-index: 2;
     position: relative;
     width: 100%;
     height: 100vh;
     height: 100dvh;
+    overflow: hidden;
 }
 
 
@@ -1915,27 +1919,119 @@
 
 
 
+.list_linear {
+    z-index: 5;
+    position: absolute;
+    top: 230px;
+    width: 100vw;
+    height: 648px;
+    pointer-events: none;
+}
+
+.list_linear .ll_left, .list_linear .ll_right {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+}
+
+.list_linear .ll_left {
+    left: 0;
+    background: linear-gradient( to left, rgba( 19, 19, 19, 0 ), rgba( 19, 19, 19, 1 ) 85% );
+}
+
+.list_linear .ll_right {
+    right: 0;
+    background: linear-gradient( to right, rgba( 19, 19, 19, 0 ), rgba( 19, 19, 19, 1 ) 85% );
+}
+
+
+
 .drink_list {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 1300px;
-    margin: 41px auto 0;
+    margin: 28px auto 0;
 }
 
-
+.menu_swiper {
+    width: 1300px !important;
+    margin: 0 auto;
+    overflow: visible !important;
+}
 
 .coffee_list {
-    position: relative;
     display: flex;
-    gap: 21px;
+    flex-wrap: wrap;
 }
 
-.coffee_list li {
-    position: relative;
-    width: 260px;
-    height: 290px;
+.coffee_item {
+    position: relative !important;
+    margin-top: 24px !important;
+    width: 270px !important;
+    height: 290px !important;
+    cursor: pointer;
+    background-color: rgba( 19, 19, 19, 0.96 );
+}
+
+
+
+.menu_hover {
+    position: absolute;
+    bottom: 23px;
+    left: 50%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    width: calc( 100% - 36px );
+    height: calc( 100% - 46px );
+    text-align: center;
+    color: #ffffff;
+    background-color: rgba( 19, 19, 19, 0.6 );
+    backdrop-filter: blur( 13px );
+    transform: translateX( -50% );
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.425s ease-in-out;
+}
+
+
+
+.menu_text {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+.menu_text p {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 21px;
+}
+
+
+
+.menu_divider {
+    margin: 16px auto 19px;
+    width: 6px;
+    border-top: 2px solid #666666;
+}
+
+
+
+.name_ko {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 18px;
+    font-weight: 600;
+}
+
+.menu_tt { font-size: 16px; }
+.menu_sb {
+    color: #666666;
+    font-size: 15px;
 }
 
 
@@ -1973,20 +2069,6 @@
     color: #666666;
     font-size: 15px;
     font-weight: 600;
-}
-
-
-
-.menu_hover {
-    position: absolute;
-    top: 21px;
-    left: 50%;
-    display: flex;
-    flex-direction: column;
-    width: calc( 100% - 32px );
-    background-color: rgba( 19, 19, 19, 0.5 );
-    backdrop-filter: blur( 11px );
-    transform: translateX( -50% );
 }
 
 

@@ -278,4 +278,18 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    const coffeeItems = document.querySelectorAll('.coffee_item');
+
+    coffeeItems.forEach(item => {
+        const hoverEl = item.querySelector('.menu_hover');
+
+        item.addEventListener('mouseenter', () => {
+            hoverEl.style.opacity = '1';
+        });
+
+        item.addEventListener('mouseleave', () => {
+            hoverEl.style.opacity = '0';
+        });
+    });
+
 });
