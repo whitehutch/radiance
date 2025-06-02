@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+    console.log(window.scrollY)
+
     //      main banner
 
     const slideWrap = document.querySelector(".slide_wrap");
@@ -249,15 +251,15 @@ document.addEventListener("DOMContentLoaded", function () {
                 switch (index) {
                     case 0:
                         menuBtn.style.left="6px";
-                        menuBtn.style.width="108px";
+                        menuBtn.style.width="106px";
                         break;
                     case 1:
-                        menuBtn.style.left="114px";
-                        menuBtn.style.width="136px";
+                        menuBtn.style.left="112px";
+                        menuBtn.style.width="129px";
                         break;
                     case 2:
-                        menuBtn.style.left="251px";
-                        menuBtn.style.width="74px";
+                        menuBtn.style.left="241px";
+                        menuBtn.style.width="75px";
                         break;
                 }
             }
@@ -290,6 +292,18 @@ document.addEventListener("DOMContentLoaded", function () {
         item.addEventListener('mouseleave', () => {
             hoverEl.style.opacity = '0';
         });
+    });
+
+    window.addEventListener('scroll', () => {
+        const section = document.querySelector('#menu_list');
+        const target = document.querySelector('#menu_list .best_scroll');
+        const scrollY = window.scrollY;
+
+        if ( scrollY >= 7687 ) {
+            target.classList.add('active');
+        } else {
+            target.classList.remove('active');
+        }
     });
 
 });

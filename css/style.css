@@ -1844,12 +1844,14 @@
     align-items: center;
     justify-content: center;
     gap: 11px;
-    margin-bottom: 66px;
-    padding-top: 31px;
+    margin-bottom: 51px;
+    padding-top: 46px;
     color: #ffffff;
     font-size: 13px;
     letter-spacing: 0.05rem;
+    transition: 0.35s;
 }
+.best_scroll.active { margin-bottom: 41px; }
 .best_scroll p { padding-bottom: 2px; }
 
 
@@ -1880,8 +1882,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 332px;
-    height: 51px;
+    width: 323px;
+    height: 49px;
     padding: 6px;
     background-color: #3a3a3a;
     box-shadow: 3px 2px 9px rgba( 0, 0, 0, 0.4 ) inset;
@@ -1889,9 +1891,9 @@
 
 .menu_tab li {
     z-index: 2;
-    padding: 11px 21px 11px;
+    padding: 12px 21px 11px;
     color: #131313;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 600;
     letter-spacing: 0.05rem;
     text-transform: uppercase;
@@ -1910,8 +1912,8 @@
     position: absolute;
     top: 6px;
     left: 6px;
-    width: 110px;
-    height: 40px;
+    width: 115px;
+    height: 38px;
     background-color: #131313;
     box-shadow: 1px 2px 6px rgba( 0, 0, 0, 0.3 );
     transition: 0.3s ease-in-out;
@@ -1953,7 +1955,7 @@
     align-items: center;
     justify-content: center;
     width: 1300px;
-    margin: 28px auto 0;
+    margin: 13px auto 0;
 }
 
 .menu_swiper {
@@ -1970,8 +1972,8 @@
 .coffee_item {
     position: relative !important;
     margin-top: 24px !important;
-    width: 270px !important;
-    height: 290px !important;
+    width: 236px !important;
+    height: 241px !important;
     cursor: pointer;
     background-color: rgba( 19, 19, 19, 0.96 );
 }
@@ -1980,13 +1982,13 @@
 
 .menu_hover {
     position: absolute;
-    bottom: 23px;
+    bottom: 18px;
     left: 50%;
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
     width: calc( 100% - 36px );
-    height: calc( 100% - 46px );
+    height: calc( 100% - 39px );
     text-align: center;
     color: #ffffff;
     background-color: rgba( 19, 19, 19, 0.6 );
@@ -2002,20 +2004,22 @@
 .menu_text {
     display: flex;
     flex-direction: column;
-    gap: 11px;
+    gap: 6px;
 }
 .menu_text p {
-    font-size: 13px;
+    color: #d1d1d1;
+    font-size: 12px;
     font-weight: 300;
-    line-height: 21px;
+    line-height: 20px;
+    letter-spacing: -0.015rem;
 }
 
 
 
 .menu_divider {
-    margin: 16px auto 19px;
-    width: 6px;
-    border-top: 2px solid #666666;
+    margin: 9px auto 13px;
+    width: 3px;
+    border-top: 1px solid #515151;
 }
 
 
@@ -2028,10 +2032,10 @@
     font-weight: 600;
 }
 
-.menu_tt { font-size: 16px; }
+.menu_tt { font-size: 14px; }
 .menu_sb {
     color: #666666;
-    font-size: 15px;
+    font-size: 12px;
 }
 
 
@@ -2046,30 +2050,87 @@
 }
 
 .menu_img {
-    width: 104px;   /*   temporary   */
+    width: 81px;   /*   temporary   */
     height: auto;
 }
 
-.menu_img.mug { width: 104px; }
+.menu_img.mug { width: 81px; }
 .menu_img img {
     width: 100%;
     height: auto;
 }
 
 .menu_name {
-    margin-top: 21px;
+    margin-top: 24px;
     color: #ffffff;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
 }
 
 .menu_sub {
-    margin: 6px 0 41px;
+    margin: 6px 0 36px;
     color: #666666;
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 600;
 }
+
+
+
+.list_hover {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 21px;
+    margin-top: 51px;
+    color: #555555;
+}
+
+
+
+.click_ico {
+    position: relative;
+    padding-bottom: 6px;
+}
+
+.click_ani {
+    position: absolute;
+    left: 0;
+}
+.click_ani .click_cc:nth-of-type(1) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #292929;
+    transform: translateX( -50% ) translateY( -50% );
+}
+.click_ani .click_cc:nth-of-type(2) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    border: 2px solid #444444;
+    transform: translateX( -50% ) translateY( -50% );
+}
+
+
+
+.click_ico .fa-solid {
+    position: absolute;
+    z-index: 6;
+    top: 0;
+    left: 0;
+    font-size: 13px;
+    text-shadow: -2px 0 #131313, 0 2px #131313, 2px 0 #131313, 0 -2px #131313;
+}
+
+
+.click_text { font-weight: 600; }
 
 
 
