@@ -57,12 +57,16 @@
             });
             document.getElementById('subscribe-form').addEventListener('submit', function(event) {
                 event.preventDefault();
-                // these IDs from the previous steps
-                emailjs.sendForm('radiance', 'radiance_subscribe', this)
+
+                const emailValue = document.getElementById('subscribe').value;
+
+                emailjs.send("radiance", "radiance-subscribe", {
+                    email: emailValue,
+                })
                     .then(() => {
-                        console.log('SUCCESS!');
+                        console.log('SUBSCRIBE SUCCESS!');
                     }, (error) => {
-                        console.log('FAILED...', error);
+                        console.log('SUBSCRIBE FAILED...', error);
                     });
             });
         }
@@ -3624,41 +3628,65 @@
 
                 <div class="ctt_item">
 
-                    <div class="contact_us radius01">
+                    <div class="contact_us radius01 emb">
 
                         <div class="contact_logo">
                             <img src="./images/logo_b.svg" loading="lazy" alt=""></img>
                         </div>
 
-                        <h3 class="contact_tt">contact us</h3>
+                        <div class="contact_text">
 
-                        <p class="contact_sub">
-                            래디언스는 당신의 목소리에 귀 기울입니다.<br>
-                            궁금한 점이나 나누고 싶은 이야기가 있다면 언제든 편하게 알려주세요.<br>
-                            당신과의 소통이 우리의 빛나는 하루를 만들어갑니다.
-                        </p>
+                            <h3 class="contact_tt">contact us</h3>
+
+                            <p class="contact_sub">
+                                래디언스는 당신의 목소리에 귀 기울입니다.<br>
+                                궁금한 점이나 나누고 싶은 이야기가 있다면 언제든 편하게 알려주세요.<br>
+                                당신과의 소통이 우리의 빛나는 하루를 만들어갑니다.
+                            </p>
+
+                        </div>
 
                         <form id="contact-form" class="contact_form">
-                            <!-- To simplify the tutorial, the value is static. -->
                             <input type="hidden" name="time" value="Mar 10 2025 08:46">
 
                             <label for="name">name</label>
-                            <input type="text" id="name" name="name" required>
+                            <input type="text" id="name" name="name" placeholder="name" required>
 
                             <label for="phone">phone number</label>
-                            <input type="number" id="phone" name="phone" required>
+                            <input type="text" id="phone" name="phone" placeholder="phone number" required>
 
                             <label for="email">email</label>
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="email" name="email" placeholder="e-mail" required>
 
                             <label for="message">message</label>
-                            <textarea id="message" name="message" required></textarea>
+                            <div class="contact_msg">
+                                <div class="ctt_top"></div>
+                                <div class="ctt_bottom"></div>
+                                <textarea id="message" name="message" placeholder="message" required></textarea>
+                            </div>
 
                             <input type="submit" value="submit">
                         </form>
 
                     </div>
 
+                    <div class="subscribe radius01 emb">
+
+                        <h6>
+                            래디언스 뉴스를 놓치지 마세요!<br>
+                            새로운 소식과 함께 가장 먼저 특별한 혜택을 받아보세요.
+                        </h6>
+
+                        <form id="subscribe-form" class="subscribe_form">
+                            <input type="hidden" name="time" value="Mar 10 2025 08:46">
+
+                            <label for="subscribe">email</label>
+                            <input type="email" id="subscribe" name="email" placeholder="e-mail" required>
+
+                            <input type="submit" value="subscribe">
+                        </form>
+
+                    </div>
 
                 </div>
 
