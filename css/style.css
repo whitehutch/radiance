@@ -1949,13 +1949,29 @@
 
 
 
-.drink_list {
+.menu_list {
     position: relative;
+    width: 1300px;
+    margin: 13px auto 0;
+}
+
+
+
+.drink_list {
+    position: absolute;
+    top: 0;
+    left: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 1300px;
-    margin: 13px auto 0;
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+}
+.drink_list.active {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .menu_swiper {
@@ -1988,7 +2004,7 @@
     justify-content: flex-end;
     flex-direction: column;
     width: calc( 100% - 36px );
-    height: calc( 100% - 39px );
+    height: calc( 100% - 34px );
     text-align: center;
     color: #ffffff;
     background-color: rgba( 19, 19, 19, 0.6 );
@@ -2054,14 +2070,26 @@
     height: auto;
 }
 
-.menu_img.mug { width: 81px; }
+.menu_img.mug {
+    width: 81px;
+    margin-bottom: 4px;
+}
+.menu_img.vent { width: 46px; }
+.menu_img.tall { width: 49px; }
+.menu_img.wave { width: 53px; }
+.menu_img.glass { width: 56px; }
+.menu_img.flat { width: 59px; }
+.menu_img.mid { width: 63px; }
+.menu_img.shot { width: 66px; }
+.menu_img.cup { width: 76px; }
+
 .menu_img img {
     width: 100%;
     height: auto;
 }
 
 .menu_name {
-    margin-top: 24px;
+    margin-top: 19px;
     color: #ffffff;
     font-size: 14px;
     font-weight: 600;

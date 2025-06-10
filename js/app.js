@@ -306,4 +306,24 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    const tabs = document.querySelectorAll(".menu_tab li");
+    const drinkLists = document.querySelectorAll(".drink_list");
+
+    tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+            tabs.forEach((t) => t.classList.remove("on"));
+            tab.classList.add("on");
+
+            const tabClass = tab.classList[0].replace("_tab", "");
+
+            drinkLists.forEach((list) => {
+                if (list.classList.contains(tabClass)) {
+                    list.classList.add("active");
+                } else {
+                    list.classList.remove("active");
+                }
+            });
+        });
+    });
+
 });
