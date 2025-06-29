@@ -2074,15 +2074,26 @@
     width: 81px;
     margin-bottom: 4px;
 }
-.menu_img.vent { width: 46px; }
-.menu_img.tall { width: 49px; }
-.menu_img.grand { width: 51px; }
-.menu_img.wave { width: 53px; }
-.menu_img.glass { width: 56px; }
-.menu_img.flat { width: 59px; }
-.menu_img.mid { width: 63px; }
-.menu_img.shot { width: 66px; }
+.menu_img.pot {
+    width: 123px;
+    margin-left: 16px;
+}
+.menu_img.teacup {
+    width: 101px;
+    margin-left: 13px;
+}
+.menu_img.cera { width: 79px; }
 .menu_img.cup { width: 76px; }
+.menu_img.shot { width: 66px; }
+.menu_img.mid { width: 63px; }
+.menu_img.long { width: 61px; }
+.menu_img.flat { width: 59px; }
+.menu_img.glass { width: 56px; }
+.menu_img.wave { width: 53px; }
+.menu_img.grand { width: 51px; }
+.menu_img.tall { width: 49px; }
+.menu_img.vent { width: 46px; }
+.menu_img.onel { width: 43px; }
 
 .menu_img img {
     width: 100%;
