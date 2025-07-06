@@ -1952,7 +1952,8 @@
 .menu_list {
     position: relative;
     width: 1300px;
-    margin: 13px auto 0;
+    height: 530px;
+    margin: 21px auto 0;
 }
 
 
@@ -2124,7 +2125,7 @@
     align-items: center;
     justify-content: center;
     gap: 21px;
-    margin-top: 51px;
+    margin-top: 66px;
     color: #555555;
 }
 
