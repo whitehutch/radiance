@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
+    console.log(window.scrollY);
 
-    console.log(window.scrollY)
-
-    //      main banner
-
+    // ================================================================
+    // 메인 배너 (첫 번째 슬라이드 시스템)
+    // ================================================================
     const slideWrap = document.querySelector(".slide_wrap");
     const slides = document.querySelectorAll(".banner_slide");
     const prevBtn = document.querySelector(".banner_nav .left");
@@ -16,68 +16,74 @@ document.addEventListener("DOMContentLoaded", function () {
     let isDragging = false;
     let autoSlide;
 
-    function updateSlidePosition() {
+    function updateMainSlidePosition() {
         slideWrap.style.left = `-${currentIndex * 100}%`;
         progressBar.style.width = `${((currentIndex + 1) / totalSlides) * 100}%`;
     }
 
-    function nextSlide() {
+    function nextMainSlide() {
         currentIndex = (currentIndex + 1) % totalSlides;
-        updateSlidePosition();
+        updateMainSlidePosition();
     }
 
-    function prevSlide() {
+    function prevMainSlide() {
         currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-        updateSlidePosition();
+        updateMainSlidePosition();
     }
 
-    function startAutoSlide() {
-        autoSlide = setInterval(nextSlide, 5000);
+    function startMainAutoSlide() {
+        autoSlide = setInterval(nextMainSlide, 5000);
     }
 
-    function stopAutoSlide() {
+    function stopMainAutoSlide() {
         clearInterval(autoSlide);
     }
 
-    //      button click event
-    nextBtn.addEventListener("click", nextSlide);
-    prevBtn.addEventListener("click", prevSlide);
+    // 버튼 클릭 이벤트
+    nextBtn.addEventListener("click", nextMainSlide);
+    prevBtn.addEventListener("click", prevMainSlide);
 
-    //       drag event ( mouse + touch )
+    // 드래그 이벤트 (마우스 + 터치)
     slideWrap.addEventListener("mousedown", (e) => {
         isDragging = true;
         startX = e.clientX;
+        stopMainAutoSlide(); // 드래그 시작 시 자동 슬라이드 중지
     });
 
     slideWrap.addEventListener("mouseup", (e) => {
+        if (!isDragging) return; // 드래그 중이 아니면 리턴
         isDragging = false;
         let diff = startX - e.clientX;
-        if (diff > 50) nextSlide();
-        else if (diff < -50) prevSlide();
+        if (diff > 50) nextMainSlide();
+        else if (diff < -50) prevMainSlide();
+        startMainAutoSlide(); // 드래그 종료 시 자동 슬라이드 재시작
     });
 
     slideWrap.addEventListener("touchstart", (e) => {
         isDragging = true;
         startX = e.touches[0].clientX;
+        stopMainAutoSlide(); // 터치 드래그 시작 시 자동 슬라이드 중지
     });
 
     slideWrap.addEventListener("touchend", (e) => {
+        if (!isDragging) return; // 드래그 중이 아니면 리턴
         isDragging = false;
         let diff = startX - e.changedTouches[0].clientX;
-        if (diff > 50) nextSlide();
-        else if (diff < -50) prevSlide();
+        if (diff > 50) nextMainSlide();
+        else if (diff < -50) prevMainSlide();
+        startMainAutoSlide(); // 터치 드래그 종료 시 자동 슬라이드 재시작
     });
 
-    //      autoplay ( + stop when mose over or slide )
-    startAutoSlide();
-    slideWrap.addEventListener("mouseenter", stopAutoSlide);
-    slideWrap.addEventListener("mouseleave", startAutoSlide);
+    // 자동 재생 (마우스 오버 또는 슬라이드 시 중지)
+    startMainAutoSlide();
+    slideWrap.addEventListener("mouseenter", stopMainAutoSlide);
+    slideWrap.addEventListener("mouseleave", startMainAutoSlide);
 
-    updateSlidePosition();
-});
+    updateMainSlidePosition();
 
-document.addEventListener("DOMContentLoaded", function () {
-
+    // ================================================================
+    // 공지사항 배너 (두 번째 슬라이드 시스템: ntb_slide_wrap)
+    // ================================================================
     const ntbWrap = document.querySelector(".ntb_slide_wrap");
     const ntbSlides = document.querySelectorAll(".ntb_slide");
     const ntbProgressBar = document.querySelector(".notice_progressbar .progressbar");
@@ -96,79 +102,88 @@ document.addEventListener("DOMContentLoaded", function () {
         slide.style.width = `${100 / totalNtbSlides}%`;
     });
 
-    function updateSlidePosition() {
+    // ntb 슬라이드 위치 업데이트 함수 (이름 변경)
+    function updateNtbSlidePosition() {
         ntbWrap.style.left = `-${currentNtbIndex * 100}%`;
         ntbBgWrap.style.left = `-${currentNtbIndex * 100}%`;
         ntbProgressBar.style.width = `${((currentNtbIndex + 1) / totalNtbSlides) * 100}%`;
     }
 
-    function nextSlide() {
+    // ntb 다음 슬라이드 함수 (이름 변경)
+    function nextNtbSlide() {
         currentNtbIndex = (currentNtbIndex + 1) % totalNtbSlides;
-        updateSlidePosition();
+        updateNtbSlidePosition();
     }
 
-    function prevSlide() {
+    // ntb 이전 슬라이드 함수 (이름 변경)
+    function prevNtbSlide() {
         currentNtbIndex = (currentNtbIndex - 1 + totalNtbSlides) % totalNtbSlides;
-        updateSlidePosition();
+        updateNtbSlidePosition();
     }
 
-    function startAutoSlide() {
-        ntbAutoSlide = setInterval(nextSlide, 5000);
+    // ntb 자동 슬라이드 시작 함수 (이름 변경)
+    function startNtbAutoSlide() {
+        ntbAutoSlide = setInterval(nextNtbSlide, 5000);
     }
 
-    function stopAutoSlide() {
+    // ntb 자동 슬라이드 중지 함수 (이름 변경)
+    function stopNtbAutoSlide() {
         clearInterval(ntbAutoSlide);
     }
 
-    //      mouse drag
+    // 마우스 드래그
     ntbWrap.addEventListener("mousedown", (e) => {
         isNtbDragging = true;
         startNtbX = e.clientX;
+        stopNtbAutoSlide(); // 드래그 시작 시 자동 슬라이드 중지
     });
 
     ntbWrap.addEventListener("mouseup", (e) => {
         if (!isNtbDragging) return;
         isNtbDragging = false;
         const diff = startNtbX - e.clientX;
-        if (diff > 50) nextSlide();
-        else if (diff < -50) prevSlide();
+        if (diff > 50) nextNtbSlide();
+        else if (diff < -50) prevNtbSlide();
+        startNtbAutoSlide(); // 드래그 종료 시 자동 슬라이드 재시작
     });
 
-    //      drag event
+    // 터치 드래그 이벤트
     ntbWrap.addEventListener("touchstart", (e) => {
         isNtbDragging = true;
         startNtbX = e.touches[0].clientX;
+        stopNtbAutoSlide(); // 터치 드래그 시작 시 자동 슬라이드 중지
     });
 
     ntbWrap.addEventListener("touchend", (e) => {
         if (!isNtbDragging) return;
         isNtbDragging = false;
         const diff = startNtbX - e.changedTouches[0].clientX;
-        if (diff > 50) nextSlide();
-        else if (diff < -50) prevSlide();
+        if (diff > 50) nextNtbSlide();
+        else if (diff < -50) prevNtbSlide();
+        startNtbAutoSlide(); // 터치 드래그 종료 시 자동 슬라이드 재시작
     });
 
-    //      auto slide play & pause
-    startAutoSlide();
-    ntbWrap.addEventListener("mouseenter", stopAutoSlide);
-    ntbWrap.addEventListener("mouseleave", startAutoSlide);
+    // 자동 슬라이드 재생 및 일시정지
+    startNtbAutoSlide();
+    ntbWrap.addEventListener("mouseenter", stopNtbAutoSlide);
+    ntbWrap.addEventListener("mouseleave", startNtbAutoSlide);
 
-    //      reset
-    updateSlidePosition();
+    // 초기 위치 설정
+    updateNtbSlidePosition();
 
-
-    //      notice more active
-    const noticeWrap = document.querySelector(".notice_wrap")
+    // ================================================================
+    // 공지사항 더보기 (notice_more active)
+    // ================================================================
+    const noticeWrap = document.querySelector(".notice_wrap");
     const noticeNews = document.querySelector(".notice_news");
     const moreBtn = document.querySelector(".notice_news .more_btn");
-    const moreWrap = document.querySelector(".more_btn .more_wrap")
+    const moreWrap = document.querySelector(".more_btn .more_wrap");
     const listWrap = document.querySelector(".notice_news .list_wrap");
     const linearTop = document.querySelector(".news_list .linear_top");
     const linearBottom = document.querySelector(".news_list .linear_bottom");
-    const newsOutline = document.querySelector(".news_outline")
+    const newsOutline = document.querySelector(".news_outline");
 
     moreBtn.addEventListener("click", function () {
-
         const isActive = noticeNews.classList.contains("active");
 
         noticeWrap.classList.toggle("active");
@@ -207,7 +222,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     requestAnimationFrame(smoothScroll);
                 }
             }
-
             requestAnimationFrame(smoothScroll);
         }
     });
@@ -229,101 +243,4 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
     });
-
-
-    //    menu tab
-
-    const menuLists = document.querySelectorAll(".menu_tab li");
-    const menuBtn = document.querySelector(".menu_button");
-
-    function updateButtonStyle() {
-
-        menuLists.forEach((menuItem, index) => {
-            if (menuItem.classList.contains("on")) {
-
-                menuItem.addEventListener("click", () => {
-                    menuLists.forEach(item => item.classList.remove("on"));
-
-                    menuItem.classList.add("on");
-
-                });
-
-                switch (index) {
-                    case 0:
-                        menuBtn.style.left="6px";
-                        menuBtn.style.width="106px";
-                        break;
-                    case 1:
-                        menuBtn.style.left="112px";
-                        menuBtn.style.width="129px";
-                        break;
-                    case 2:
-                        menuBtn.style.left="241px";
-                        menuBtn.style.width="75px";
-                        break;
-                }
-            }
-
-        });
-
-
-
-    }
-
-    updateButtonStyle();
-
-    menuLists.forEach((menuItem) => {
-        menuItem.addEventListener("click", () => {
-            menuLists.forEach(item => item.classList.remove("on"));
-            menuItem.classList.add("on");
-            updateButtonStyle();
-        });
-    });
-
-    const coffeeItems = document.querySelectorAll('.coffee_item');
-
-    coffeeItems.forEach(item => {
-        const hoverEl = item.querySelector('.menu_hover');
-
-        item.addEventListener('mouseenter', () => {
-            hoverEl.style.opacity = '1';
-        });
-
-        item.addEventListener('mouseleave', () => {
-            hoverEl.style.opacity = '0';
-        });
-    });
-
-    window.addEventListener('scroll', () => {
-        const section = document.querySelector('#menu_list');
-        const target = document.querySelector('#menu_list .best_scroll');
-        const scrollY = window.scrollY;
-
-        if ( scrollY >= 7687 ) {
-            target.classList.add('active');
-        } else {
-            target.classList.remove('active');
-        }
-    });
-
-    const tabs = document.querySelectorAll(".menu_tab li");
-    const drinkLists = document.querySelectorAll(".drink_list");
-
-    tabs.forEach((tab) => {
-        tab.addEventListener("click", () => {
-            tabs.forEach((t) => t.classList.remove("on"));
-            tab.classList.add("on");
-
-            const tabClass = tab.classList[0].replace("_tab", "");
-
-            drinkLists.forEach((list) => {
-                if (list.classList.contains(tabClass)) {
-                    list.classList.add("active");
-                } else {
-                    list.classList.remove("active");
-                }
-            });
-        });
-    });
-
 });

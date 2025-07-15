@@ -1856,9 +1856,9 @@
 
 
 
-/*      menu list      */
+/*      drink list, bakery list      */
 
-#menu_list {
+#drink_list, #bakery_list {
     z-index: 2;
     position: relative;
     width: 100%;
@@ -1867,27 +1867,30 @@
     overflow: hidden;
 }
 
-
-
-.drink_tab {
+.drink_tab, .bakery_tab {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
 }
+.bakery_tab { margin-top: 173px; }
+
+
 
 .menu_tab {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 323px;
     height: 49px;
     padding: 6px;
     background-color: #3a3a3a;
     box-shadow: 3px 2px 9px rgba( 0, 0, 0, 0.4 ) inset;
 }
+
+.drink_tab .menu_tab { width: 323px; }
+.bakery_tab .menu_tab { width: 420px; }
 
 .menu_tab li {
     z-index: 2;
@@ -1903,7 +1906,7 @@
 }
 
 .menu_tab li.on {
-    color: #ffffff;
+    color: #ffffff !important;
     transition: 0.475s ease-in-out;
 }
 
@@ -1920,6 +1923,8 @@
 }
 
 
+
+/*      drink list      */
 
 .list_linear {
     z-index: 5;
@@ -2131,6 +2136,130 @@
 
 
 
+/*      bakery list      */
+
+#bakery_list { position: relative; }
+
+.bakery_scroll {
+    position: absolute;
+    left: 50%;
+    bottom: 76px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    color: #ffffff;
+    font-size: 13px;
+    letter-spacing: 0.05rem;
+    transform: translateX( -50% );
+}
+.bakery_scroll p { padding-bottom: 2px; }
+
+.bakery_wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 31px;
+    width: 100%;
+    color: #ffffff;
+}
+
+
+
+.swiper_btn {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    gap: 21px;
+    width: 275px;
+    height: 44px;
+    padding: 21px 3px 0;
+    border-top: 1px solid #333333;
+}
+
+.swiper_btn .swiper-button-prev,
+.swiper_btn .swiper-button-next {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    margin: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    color: #ffffff !important;
+}
+
+.swiper_btn .swiper-button-prev ion-icon,
+.swiper_btn .swiper-button-next ion-icon { font-size: 19px; }
+.swiper_btn .swiper-button-prev:after,
+.swiper_btn .swiper-button-next:after { content: '' !important; }
+
+
+
+.bakery_li_wrap {
+    width: 900px;
+    height: 525px;
+    padding: 76px 61px;
+}
+
+.bakery_swiper {
+    width: 100% !important;
+    height: 100% !important;
+}
+.bakery_swiper .swiper-slide { position: relative !important; }
+
+
+
+.bk_wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+}
+
+
+
+.bakery_ko { opacity: 0; }
+.bakery_tt {
+    position: relative;
+    width: 100%;
+    height: 31px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.bakery_sb {
+    position: relative;
+    width: 100%;
+    height: 19px;
+    font-size: 16px;
+}
+.bakery_ko, .bakery_en {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.bakery_img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 420px;
+    height: auto;
+}
+.bakery_img img {
+    width: 100% !important;
+    height: auto !important;
+}
+
+
+
+
+
+
+/*      click text      */
+
 .click_ico {
     position: relative;
     padding-bottom: 6px;
@@ -2172,6 +2301,8 @@
 
 
 .click_text { font-weight: 600; }
+
+
 
 
 
