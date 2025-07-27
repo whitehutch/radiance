@@ -1874,7 +1874,7 @@
     justify-content: center;
     width: 100%;
 }
-.bakery_tab { margin-top: 173px; }
+.bakery_tab { margin-top: 151px; }
 
 
 
@@ -2174,8 +2174,9 @@
     bottom: 0;
     display: flex;
     gap: 21px;
-    width: 275px;
+    width: 290px;
     height: 44px;
+    margin-left: 10px;
     padding: 21px 3px 0;
     border-top: 1px solid #333333;
 }
@@ -2190,6 +2191,13 @@
     width: auto !important;
     height: auto !important;
     color: #ffffff !important;
+    opacity: 0.3;
+    transition: 0.325s ease-in-out;
+}
+.swiper_btn .swiper-button-prev:hover,
+.swiper_btn .swiper-button-next:hover {
+    opacity: 1;
+    transition: 0.325s ease-in-out;
 }
 
 .swiper_btn .swiper-button-prev ion-icon,
@@ -2200,9 +2208,9 @@
 
 
 .bakery_li_wrap {
-    width: 900px;
+    width: 850px;
     height: 525px;
-    padding: 76px 61px;
+    padding: 76px 51px 76px 61px;
 }
 
 .bakery_swiper {
@@ -2210,6 +2218,11 @@
     height: 100% !important;
 }
 .bakery_swiper .swiper-slide { position: relative !important; }
+.bakery_swiper .swiper-wrapper {
+    width: 100% !important;
+    height: 100% !important;
+}
+
 
 
 
@@ -2217,12 +2230,13 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    padding-left: 20px;
+    padding-left: 15px;
 }
 
 
 
-.bakery_ko { opacity: 0; }
+.bakery_ko { opacity: 0; transition: 0.925s ; }
+.bakery_en { opacity: 1; transition: 0.925s ; }
 .bakery_tt {
     position: relative;
     width: 100%;
@@ -2232,20 +2246,35 @@
 }
 .bakery_sb {
     position: relative;
+    margin-top: 6px;
     width: 100%;
     height: 19px;
+    color: #555555;
     font-size: 16px;
+    font-weight: 600;
 }
 .bakery_ko, .bakery_en {
     position: absolute;
     top: 0;
     left: 0;
 }
+.bakery_text {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    margin-top: 21px;
+    color: #bbbbbb;
+}
+.bakery_text p {
+    font-size: 14px !important;
+    font-weight: 400;
+    line-height: 24px;
+}
 .bakery_img {
     position: absolute;
     top: 0;
     right: 0;
-    width: 420px;
+    width: 415px;
     height: auto;
 }
 .bakery_img img {
@@ -2567,7 +2596,7 @@
     border-radius: 16px;
     background-color: #f9f9f9;
     box-shadow: 0 3px 9px rgba( 0, 0, 0, 0.11 ) inset,
-                0 3px 11px rgba( 0, 0, 0, 0.06 );
+    0 3px 11px rgba( 0, 0, 0, 0.06 );
 }
 .ctt_item input::placeholder, .ctt_item textarea::placeholder { color: #cccccc; }
 
@@ -2625,7 +2654,7 @@
     color: #ffffff;
     background-color: #131313;
     box-shadow: 0 -4px 16px rgba( 255, 255, 255, 0.31 ) inset,
-                0 3px 11px rgba( 0, 0, 0, 0.06 );
+    0 3px 11px rgba( 0, 0, 0, 0.06 );
     cursor: pointer;
 }
 

@@ -88,6 +88,53 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    // swiper-slide hover 효과
+    const swiperSlides = document.querySelectorAll('.swiper-slide');
+
+    swiperSlides.forEach(slide => {
+        // bakery_tt 안의 요소들
+        const bakeryTtKo = slide.querySelector('.bakery_tt .bakery_ko');
+        const bakeryTtEn = slide.querySelector('.bakery_tt .bakery_en');
+
+        // bakery_sb 안의 요소들 (추가된 부분)
+        const bakerySbKo = slide.querySelector('.bakery_sb .bakery_ko');
+        const bakerySbEn = slide.querySelector('.bakery_sb .bakery_en');
+
+        slide.addEventListener('mouseenter', () => {
+            // bakery_tt 요소들
+            if (bakeryTtKo) {
+                bakeryTtKo.style.opacity = '1';
+            }
+            if (bakeryTtEn) {
+                bakeryTtEn.style.opacity = '0';
+            }
+            // bakery_sb 요소들
+            if (bakerySbKo) {
+                bakerySbKo.style.opacity = '1';
+            }
+            if (bakerySbEn) {
+                bakerySbEn.style.opacity = '0';
+            }
+        });
+
+        slide.addEventListener('mouseleave', () => {
+            // bakery_tt 요소들
+            if (bakeryTtKo) {
+                bakeryTtKo.style.opacity = '0';
+            }
+            if (bakeryTtEn) {
+                bakeryTtEn.style.opacity = '1';
+            }
+            // bakery_sb 요소들
+            if (bakerySbKo) {
+                bakerySbKo.style.opacity = '0';
+            }
+            if (bakerySbEn) {
+                bakerySbEn.style.opacity = '1';
+            }
+        });
+    });
+
     window.addEventListener('scroll', () => {
         const section = document.querySelector('#drink_list');
         const target = document.querySelector('#drink_list .best_scroll');
