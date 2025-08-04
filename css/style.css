@@ -2178,7 +2178,6 @@
     height: 44px;
     margin-left: 10px;
     padding: 21px 3px 0;
-    border-top: 1px solid #333333;
 }
 
 .swiper_btn .swiper-button-prev,
@@ -2217,10 +2216,10 @@
     width: 100% !important;
     height: 100% !important;
 }
-.bakery_swiper .swiper-slide { position: relative !important; }
-.bakery_swiper .swiper-wrapper {
-    width: 100% !important;
-    height: 100% !important;
+.bakery_swiper .swiper-wrapper { height: 100% !important; }
+.bakery_item {
+    position: relative !important;
+    width: 738px !important;
 }
 
 
@@ -2231,12 +2230,16 @@
     display: flex;
     flex-direction: column;
     padding-left: 15px;
+    opacity: 0;
+    transition: opacity 0.725s 0s ease-in-out;
+}
+.bakery_item.swiper-slide-active .bk_wrap {
+    opacity: 1;
+    transition: opacity 1.725s 0.125s ease-in-out;
 }
 
 
 
-.bakery_ko { opacity: 0; transition: 0.925s ; }
-.bakery_en { opacity: 1; transition: 0.925s ; }
 .bakery_tt {
     position: relative;
     width: 100%;
@@ -2253,11 +2256,17 @@
     font-size: 16px;
     font-weight: 600;
 }
+
+
 .bakery_ko, .bakery_en {
     position: absolute;
     top: 0;
     left: 0;
 }
+.bakery_ko { opacity: 0; transition: 0.925s ; }
+.bakery_en { opacity: 1; transition: 0.925s ; }
+
+
 .bakery_text {
     display: flex;
     flex-direction: column;
@@ -2270,18 +2279,32 @@
     font-weight: 400;
     line-height: 24px;
 }
+
+.bk_line {
+    margin-top: 84px;
+    width: 290px;
+    border-top: 1px solid #333333;
+}
+
+
 .bakery_img {
     position: absolute;
     top: 0;
     right: 0;
     width: 415px;
     height: auto;
+    opacity: 0;
+    transition: opacity 0.725s 0s ease-in-out;
 }
+.bakery_item.swiper-slide-active .bakery_img {
+    opacity: 1;
+    transition: opacity 1.725s 0.375s ease-in-out;
+}
+
 .bakery_img img {
     width: 100% !important;
     height: auto !important;
 }
-
 
 
 

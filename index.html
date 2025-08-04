@@ -3127,7 +3127,7 @@
 
                                 <div class="swiper-wrapper">
 
-                                    <div class="swiper-slide">
+                                    <div class="swiper-slide bakery_item">
 
                                         <div class="bk_wrap">
 
@@ -3169,6 +3169,8 @@
                                                 </p>
 
                                             </div>
+
+                                            <div class="bk_line"></div>
 
                                         </div>
 
@@ -3178,7 +3180,7 @@
 
                                     </div>
 
-                                    <div class="swiper-slide">
+                                    <div class="swiper-slide bakery_item">
 
                                         <div class="bk_wrap">
 
@@ -3220,6 +3222,8 @@
                                                 </p>
 
                                             </div>
+
+                                            <div class="bk_line"></div>
 
                                         </div>
 
@@ -3599,13 +3603,35 @@
             const rows = 2;
             const perRow = Math.ceil(total / rows);
 
-            new Swiper(".swiper", {
+            new Swiper(".menu_swiper", {
                 slidesPerView: 'auto',
                 grid: {
                     rows: rows,
                     fill: 'row'
                 },
                 spaceBetween: 26,
+            });
+
+            const totalBakeryItems = document.querySelectorAll('.bakery_item').length;
+            const rowsBakery = 1;
+            const perRowBakery = Math.ceil(totalBakeryItems / rowsBakery);
+
+            const bakerySwiper = new Swiper(".bakery_swiper", {
+                slidesPerView: 'auto',
+                grid: {
+                    rows: rowsBakery,
+                    fill: 'row'
+                },
+                spaceBetween: 26,
+                speed: 1325,
+                // effect: 'fade',
+                // fadeEffect: {
+                //     crossFade: true
+                // },
+                navigation: {
+                    nextEl: '.bakery_swiper .swiper-button-next',
+                    prevEl: '.bakery_swiper .swiper-button-prev',
+                },
             });
         });
     </script>
