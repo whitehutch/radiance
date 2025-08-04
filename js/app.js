@@ -1,9 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     console.log(window.scrollY);
 
-    // ================================================================
-    // 메인 배너 (첫 번째 슬라이드 시스템)
-    // ================================================================
     const slideWrap = document.querySelector(".slide_wrap");
     const slides = document.querySelectorAll(".banner_slide");
     const prevBtn = document.querySelector(".banner_nav .left");
