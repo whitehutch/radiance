@@ -11,11 +11,15 @@
 
     <!--   css    -->
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/map.css">
 
     <!--   swiper css    -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
 
     <!--   title    -->
     <title>radiance</title>
@@ -28,10 +32,8 @@
 
     <!--   google map    -->
     <script defer src="./js/map.js"></script>
-    <script
-            defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpEQC2d9r8x_9kURyBZUR0aIJvk9HBGLU&callback=initMap"
-    ></script>
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpEQC2d9r8x_9kURyBZUR0aIJvk9HBGLU&callback=initMap"
+            type="text/javascript"></script>
 
     <!--   email js    -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
@@ -130,432 +132,435 @@
 
     <div id="container">
 
-        <!--   main    -->
-        <div class="section" id="main">
+        <div class="swiper content">
 
-            <div class="main_scroll">
-                <p>scroll down</p>
-                <span class="mouse radius100">
-                    <span class="wheel radius100"></span>
-                </span>
-            </div>
+            <div class="swiper-wrapper">
 
-            <div class="main_banner">
+                <!--   main    -->
+                <div class="swiper-slide section" id="main">
 
-                <div class="banner_nav">
-                    <div class="left"><ion-icon name="chevron-back-outline"></ion-icon></div>
-                    <div class="right"><ion-icon name="chevron-forward-outline"></ion-icon></div>
-                </div>
-                <div class="banner_progressbar">
-                    <div class="progressbar"></div>
-                </div>
-
-                <div class="banner_wrap">
-                    <div class="slide_wrap">
-                        <div class="banner_slide slide_1"></div>
-                        <div class="banner_slide slide_2"></div>
-                        <div class="banner_slide slide_3"></div>
+                    <div class="main_scroll">
+                        <p>scroll down</p>
+                        <span class="mouse radius100">
+                            <span class="wheel radius100"></span>
+                        </span>
                     </div>
-                </div>
 
-            </div>
+                    <div class="swiper main_banner">
 
-        </div>
-        <!--   main end    -->
+                        <div class="swiper-wrapper slide_wrap">
 
+                            <div class="swiper-slide banner_slide"></div>
+                            <div class="swiper-slide banner_slide"></div>
+                            <div class="swiper-slide banner_slide"></div>
 
-
-        <!--   notice    -->
-        <div class="section" id="notice">
-
-            <div class="notice_wrap">
-
-                <div class="notice_news emb radius01">
-
-                    <div class="more_btn">
-                        <div class="btn_wrap">
-                            <div class="more_wrap">
-                            <span class="open">
-                                more <ion-icon name="chevron-forward-outline"></ion-icon>
-                            </span>
-                                <span class="close">
-                                close <ion-icon name="close-outline"></ion-icon>
-                            </span>
-                            </div>
                         </div>
+
                     </div>
 
-                    <div class="news_list">
+                    <div class="banner_nav">
 
-                        <h4 class="notice_title">
-                            radiance news <ion-icon name="newspaper"></ion-icon>
-                        </h4>
+                        <div class="main_left"><ion-icon name="chevron-back-outline"></ion-icon></div>
+                        <div class="main_right"><ion-icon name="chevron-forward-outline"></ion-icon></div>
 
-                        <ul class="list_wrap">
+                    </div>
 
-                            <li class="news_item">
-                                <h6 class="news_title">
-                                    radiance 어플리케이션 출시
-                                </h6>
-                                <p class="news_date">
-                                    24.10.09
-                                </p>
-                                <p class="news_text">
-                                    안녕하세요, 래디언스입니다. 래디언스를 더 가까이 만나보실 수 있는 래디언스 어플이 출시 되었습니다.
-                                </p>
-                            </li>
-
-                            <li class="news_item">
-                                <h6 class="news_title">
-                                    sns 리뷰 이벤트 공지
-                                </h6>
-                                <p class="news_date">
-                                    24.10.09
-                                </p>
-                                <p class="news_text">
-                                    안녕하세요, 래디언스입니다. 여러분의 사랑과 관심으로 래디언스가 정식 오픈을 하게 되었습니다.
-                                </p>
-                            </li>
-
-                            <li class="news_item">
-                                <h6 class="news_title">
-                                    radiance open party
-                                </h6>
-                                <p class="news_date">
-                                    24.10.09
-                                </p>
-                                <p class="news_text">
-                                    래디언스 정식 오픈, 그리고 당신의 찬연한 하루를 기념하며! 안녕하세요, 래디언스입니다.
-                                </p>
-                            </li>
-
-                            <li class="news_item">
-                                <h6 class="news_title">
-                                    베이커리 케이크 추가 개시
-                                </h6>
-                                <p class="news_date">
-                                    24.10.09
-                                </p>
-                                <p class="news_text">
-                                    안녕하세요, 래디언스입니다. 다가오는 연말을 위해 베이커리에 업데이트 된 새로운 케이크들을 만나보세요.
-                                </p>
-                            </li>
-
-                            <li class="news_item">
-                                <h6 class="news_title">
-                                    radiance 베이커리 오픈
-                                </h6>
-                                <p class="news_date">
-                                    24.10.09
-                                </p>
-                                <p class="news_text">
-                                    안녕하세요, 래디언스입니다. 기존 쿠키와 크로플에 이어 베이커리를 오픈했습니다.
-                                </p>
-                            </li>
-
-                            <li class="news_item">
-                                <h6 class="news_title">
-                                    radiance 어플리케이션 출시
-                                </h6>
-                                <p class="news_date">
-                                    24.10.09
-                                </p>
-                                <p class="news_text">
-                                    안녕하세요, 래디언스입니다. 래디언스를 더 가까이 만나보실 수 있는 래디언스 어플이 출시 되었습니다.
-                                </p>
-                            </li>
-
-                            <li class="news_item">
-                                <h6 class="news_title">
-                                    sns 리뷰 이벤트 공지
-                                </h6>
-                                <p class="news_date">
-                                    24.10.09
-                                </p>
-                                <p class="news_text">
-                                    안녕하세요, 래디언스입니다. 여러분의 사랑과 관심으로 래디언스가 정식 오픈을 하게 되었습니다.
-                                </p>
-                            </li>
-
-                            <li class="news_item">
-                                <h6 class="news_title">
-                                    radiance open party
-                                </h6>
-                                <p class="news_date">
-                                    24.10.09
-                                </p>
-                                <p class="news_text">
-                                    래디언스 정식 오픈, 그리고 당신의 찬연한 하루를 기념하며! 안녕하세요, 래디언스입니다.
-                                </p>
-                            </li>
-
-                            <li class="news_item">
-                                <h6 class="news_title">
-                                    베이커리 케이크 추가 개시
-                                </h6>
-                                <p class="news_date">
-                                    24.10.09
-                                </p>
-                                <p class="news_text">
-                                    안녕하세요, 래디언스입니다. 다가오는 연말을 위해 베이커리에 업데이트 된 새로운 케이크들을 만나보세요.
-                                </p>
-                            </li>
-
-                            <li class="news_item">
-                                <h6 class="news_title">
-                                    radiance 베이커리 오픈
-                                </h6>
-                                <p class="news_date">
-                                    24.10.09
-                                </p>
-                                <p class="news_text">
-                                    안녕하세요, 래디언스입니다. 기존 쿠키와 크로플에 이어 베이커리를 오픈했습니다.
-                                </p>
-                            </li>
-
-                            <li class="news_item">
-                                <h6 class="news_title">
-                                    radiance 어플리케이션 출시
-                                </h6>
-                                <p class="news_date">
-                                    24.10.09
-                                </p>
-                                <p class="news_text">
-                                    안녕하세요, 래디언스입니다. 래디언스를 더 가까이 만나보실 수 있는 래디언스 어플이 출시 되었습니다.
-                                </p>
-                            </li>
-
-                            <li class="news_item">
-                                <h6 class="news_title">
-                                    sns 리뷰 이벤트 공지
-                                </h6>
-                                <p class="news_date">
-                                    24.10.09
-                                </p>
-                                <p class="news_text">
-                                    안녕하세요, 래디언스입니다. 여러분의 사랑과 관심으로 래디언스가 정식 오픈을 하게 되었습니다.
-                                </p>
-                            </li>
-
-                            <li class="news_item">
-                                <h6 class="news_title">
-                                    radiance open party
-                                </h6>
-                                <p class="news_date">
-                                    24.10.09
-                                </p>
-                                <p class="news_text">
-                                    래디언스 정식 오픈, 그리고 당신의 찬연한 하루를 기념하며! 안녕하세요, 래디언스입니다.
-                                </p>
-                            </li>
-
-                            <li class="news_item">
-                                <h6 class="news_title">
-                                    베이커리 케이크 추가 개시
-                                </h6>
-                                <p class="news_date">
-                                    24.10.09
-                                </p>
-                                <p class="news_text">
-                                    안녕하세요, 래디언스입니다. 다가오는 연말을 위해 베이커리에 업데이트 된 새로운 케이크들을 만나보세요.
-                                </p>
-                            </li>
-
-                            <li class="news_item">
-                                <h6 class="news_title">
-                                    radiance 베이커리 오픈
-                                </h6>
-                                <p class="news_date">
-                                    24.10.09
-                                </p>
-                                <p class="news_text">
-                                    안녕하세요, 래디언스입니다. 기존 쿠키와 크로플에 이어 베이커리를 오픈했습니다.
-                                </p>
-                            </li>
-
-                            <li class="news_item">
-                                <h6 class="news_title">
-                                    radiance 어플리케이션 출시
-                                </h6>
-                                <p class="news_date">
-                                    24.10.09
-                                </p>
-                                <p class="news_text">
-                                    안녕하세요, 래디언스입니다. 래디언스를 더 가까이 만나보실 수 있는 래디언스 어플이 출시 되었습니다.
-                                </p>
-                            </li>
-
-                            <li class="news_item">
-                                <h6 class="news_title">
-                                    sns 리뷰 이벤트 공지
-                                </h6>
-                                <p class="news_date">
-                                    24.10.09
-                                </p>
-                                <p class="news_text">
-                                    안녕하세요, 래디언스입니다. 여러분의 사랑과 관심으로 래디언스가 정식 오픈을 하게 되었습니다.
-                                </p>
-                            </li>
-
-                            <li class="news_item">
-                                <h6 class="news_title">
-                                    radiance open party
-                                </h6>
-                                <p class="news_date">
-                                    24.10.09
-                                </p>
-                                <p class="news_text">
-                                    래디언스 정식 오픈, 그리고 당신의 찬연한 하루를 기념하며! 안녕하세요, 래디언스입니다.
-                                </p>
-                            </li>
-
-                            <li class="news_item">
-                                <h6 class="news_title">
-                                    베이커리 케이크 추가 개시
-                                </h6>
-                                <p class="news_date">
-                                    24.10.09
-                                </p>
-                                <p class="news_text">
-                                    안녕하세요, 래디언스입니다. 다가오는 연말을 위해 베이커리에 업데이트 된 새로운 케이크들을 만나보세요.
-                                </p>
-                            </li>
-
-                            <li class="news_item">
-                                <h6 class="news_title">
-                                    radiance 베이커리 오픈
-                                </h6>
-                                <p class="news_date">
-                                    24.10.09
-                                </p>
-                                <p class="news_text">
-                                    안녕하세요, 래디언스입니다. 기존 쿠키와 크로플에 이어 베이커리를 오픈했습니다.
-                                </p>
-                            </li>
-
-                        </ul>
-
-                        <div class="linear_top"></div>
-                        <div class="linear_bottom"></div>
-
+                    <div class="banner_progressbar">
+                        <div class="progressbar"></div>
                     </div>
 
                 </div>
-                
-                <div class="news_outline emb radius01">
+                <!--   main end    -->
 
-                    <div class="news_thumb">
-                        <img src="./images/news_outline.png" loading="lazy" alt="">
-                    </div>
+                <!--   notice    -->
+                <div class="swiper-slide section" id="notice">
 
-                    <div class="outline_wrap">
+                    <div class="notice_wrap">
 
-                        <h4 class="outline_title">sns에 리뷰를 남겨주세요!</h4>
-                        <h4 class="outline_sub">정식 오픈 이벤트</h4>
+                        <div class="news_wrap">
 
-                        <p class="outline_text">
-                            여러분의 사랑과 관심으로 래디언스가 정식 오픈을 하게 되었습니다! 가오픈 기간 방문해주신 모든 분들께 감사드리며, 정식 오픈을 기념으로 SNS 리뷰를 남겨주시는 분들께 음료 한 잔을 무료로 드리고 있습니다.
-                        </p>
+                            <div class="notice_news emb radius01">
 
-                        <p class="outline_text">
-                            다시 한 번 래디언스를 향한 사랑과 방문에 감사드리며,<br>
-                            오늘도 당신의 찬연한 하루를 응원합니다.
-                        </p>
+                                <div class="more_btn">
+                                    <div class="btn_wrap">
+                                        <div class="more_wrap">
+                                        <span class="open">
+                                            more <ion-icon name="chevron-forward-outline"></ion-icon>
+                                        </span>
+                                            <span class="close">
+                                            close <ion-icon name="close-outline"></ion-icon>
+                                        </span>
+                                        </div>
+                                    </div>
+                                </div>
 
-                        <span class="outline_sub_text">이벤트 기간: 24.11.11 ~ </span>
+                                <div class="news_list">
 
-                        <div class="outline_divider"></div>
+                                    <h4 class="notice_title">
+                                        radiance news <ion-icon name="newspaper"></ion-icon>
+                                    </h4>
 
-                        <div class="outline_more">
+                                    <ul class="list_wrap">
+
+                                        <li class="news_item">
+                                            <h6 class="news_title">
+                                                radiance 어플리케이션 출시
+                                            </h6>
+                                            <p class="news_date">
+                                                24.10.09
+                                            </p>
+                                            <p class="news_text">
+                                                안녕하세요, 래디언스입니다. 래디언스를 더 가까이 만나보실 수 있는 래디언스 어플이 출시 되었습니다.
+                                            </p>
+                                        </li>
+
+                                        <li class="news_item">
+                                            <h6 class="news_title">
+                                                sns 리뷰 이벤트 공지
+                                            </h6>
+                                            <p class="news_date">
+                                                24.10.09
+                                            </p>
+                                            <p class="news_text">
+                                                안녕하세요, 래디언스입니다. 여러분의 사랑과 관심으로 래디언스가 정식 오픈을 하게 되었습니다.
+                                            </p>
+                                        </li>
+
+                                        <li class="news_item">
+                                            <h6 class="news_title">
+                                                radiance open party
+                                            </h6>
+                                            <p class="news_date">
+                                                24.10.09
+                                            </p>
+                                            <p class="news_text">
+                                                래디언스 정식 오픈, 그리고 당신의 찬연한 하루를 기념하며! 안녕하세요, 래디언스입니다.
+                                            </p>
+                                        </li>
+
+                                        <li class="news_item">
+                                            <h6 class="news_title">
+                                                베이커리 케이크 추가 개시
+                                            </h6>
+                                            <p class="news_date">
+                                                24.10.09
+                                            </p>
+                                            <p class="news_text">
+                                                안녕하세요, 래디언스입니다. 다가오는 연말을 위해 베이커리에 업데이트 된 새로운 케이크들을 만나보세요.
+                                            </p>
+                                        </li>
+
+                                        <li class="news_item">
+                                            <h6 class="news_title">
+                                                radiance 베이커리 오픈
+                                            </h6>
+                                            <p class="news_date">
+                                                24.10.09
+                                            </p>
+                                            <p class="news_text">
+                                                안녕하세요, 래디언스입니다. 기존 쿠키와 크로플에 이어 베이커리를 오픈했습니다.
+                                            </p>
+                                        </li>
+
+                                        <li class="news_item">
+                                            <h6 class="news_title">
+                                                radiance 어플리케이션 출시
+                                            </h6>
+                                            <p class="news_date">
+                                                24.10.09
+                                            </p>
+                                            <p class="news_text">
+                                                안녕하세요, 래디언스입니다. 래디언스를 더 가까이 만나보실 수 있는 래디언스 어플이 출시 되었습니다.
+                                            </p>
+                                        </li>
+
+                                        <li class="news_item">
+                                            <h6 class="news_title">
+                                                sns 리뷰 이벤트 공지
+                                            </h6>
+                                            <p class="news_date">
+                                                24.10.09
+                                            </p>
+                                            <p class="news_text">
+                                                안녕하세요, 래디언스입니다. 여러분의 사랑과 관심으로 래디언스가 정식 오픈을 하게 되었습니다.
+                                            </p>
+                                        </li>
+
+                                        <li class="news_item">
+                                            <h6 class="news_title">
+                                                radiance open party
+                                            </h6>
+                                            <p class="news_date">
+                                                24.10.09
+                                            </p>
+                                            <p class="news_text">
+                                                래디언스 정식 오픈, 그리고 당신의 찬연한 하루를 기념하며! 안녕하세요, 래디언스입니다.
+                                            </p>
+                                        </li>
+
+                                        <li class="news_item">
+                                            <h6 class="news_title">
+                                                베이커리 케이크 추가 개시
+                                            </h6>
+                                            <p class="news_date">
+                                                24.10.09
+                                            </p>
+                                            <p class="news_text">
+                                                안녕하세요, 래디언스입니다. 다가오는 연말을 위해 베이커리에 업데이트 된 새로운 케이크들을 만나보세요.
+                                            </p>
+                                        </li>
+
+                                        <li class="news_item">
+                                            <h6 class="news_title">
+                                                radiance 베이커리 오픈
+                                            </h6>
+                                            <p class="news_date">
+                                                24.10.09
+                                            </p>
+                                            <p class="news_text">
+                                                안녕하세요, 래디언스입니다. 기존 쿠키와 크로플에 이어 베이커리를 오픈했습니다.
+                                            </p>
+                                        </li>
+
+                                        <li class="news_item">
+                                            <h6 class="news_title">
+                                                radiance 어플리케이션 출시
+                                            </h6>
+                                            <p class="news_date">
+                                                24.10.09
+                                            </p>
+                                            <p class="news_text">
+                                                안녕하세요, 래디언스입니다. 래디언스를 더 가까이 만나보실 수 있는 래디언스 어플이 출시 되었습니다.
+                                            </p>
+                                        </li>
+
+                                        <li class="news_item">
+                                            <h6 class="news_title">
+                                                sns 리뷰 이벤트 공지
+                                            </h6>
+                                            <p class="news_date">
+                                                24.10.09
+                                            </p>
+                                            <p class="news_text">
+                                                안녕하세요, 래디언스입니다. 여러분의 사랑과 관심으로 래디언스가 정식 오픈을 하게 되었습니다.
+                                            </p>
+                                        </li>
+
+                                        <li class="news_item">
+                                            <h6 class="news_title">
+                                                radiance open party
+                                            </h6>
+                                            <p class="news_date">
+                                                24.10.09
+                                            </p>
+                                            <p class="news_text">
+                                                래디언스 정식 오픈, 그리고 당신의 찬연한 하루를 기념하며! 안녕하세요, 래디언스입니다.
+                                            </p>
+                                        </li>
+
+                                        <li class="news_item">
+                                            <h6 class="news_title">
+                                                베이커리 케이크 추가 개시
+                                            </h6>
+                                            <p class="news_date">
+                                                24.10.09
+                                            </p>
+                                            <p class="news_text">
+                                                안녕하세요, 래디언스입니다. 다가오는 연말을 위해 베이커리에 업데이트 된 새로운 케이크들을 만나보세요.
+                                            </p>
+                                        </li>
+
+                                        <li class="news_item">
+                                            <h6 class="news_title">
+                                                radiance 베이커리 오픈
+                                            </h6>
+                                            <p class="news_date">
+                                                24.10.09
+                                            </p>
+                                            <p class="news_text">
+                                                안녕하세요, 래디언스입니다. 기존 쿠키와 크로플에 이어 베이커리를 오픈했습니다.
+                                            </p>
+                                        </li>
+
+                                        <li class="news_item">
+                                            <h6 class="news_title">
+                                                radiance 어플리케이션 출시
+                                            </h6>
+                                            <p class="news_date">
+                                                24.10.09
+                                            </p>
+                                            <p class="news_text">
+                                                안녕하세요, 래디언스입니다. 래디언스를 더 가까이 만나보실 수 있는 래디언스 어플이 출시 되었습니다.
+                                            </p>
+                                        </li>
+
+                                        <li class="news_item">
+                                            <h6 class="news_title">
+                                                sns 리뷰 이벤트 공지
+                                            </h6>
+                                            <p class="news_date">
+                                                24.10.09
+                                            </p>
+                                            <p class="news_text">
+                                                안녕하세요, 래디언스입니다. 여러분의 사랑과 관심으로 래디언스가 정식 오픈을 하게 되었습니다.
+                                            </p>
+                                        </li>
+
+                                        <li class="news_item">
+                                            <h6 class="news_title">
+                                                radiance open party
+                                            </h6>
+                                            <p class="news_date">
+                                                24.10.09
+                                            </p>
+                                            <p class="news_text">
+                                                래디언스 정식 오픈, 그리고 당신의 찬연한 하루를 기념하며! 안녕하세요, 래디언스입니다.
+                                            </p>
+                                        </li>
+
+                                        <li class="news_item">
+                                            <h6 class="news_title">
+                                                베이커리 케이크 추가 개시
+                                            </h6>
+                                            <p class="news_date">
+                                                24.10.09
+                                            </p>
+                                            <p class="news_text">
+                                                안녕하세요, 래디언스입니다. 다가오는 연말을 위해 베이커리에 업데이트 된 새로운 케이크들을 만나보세요.
+                                            </p>
+                                        </li>
+
+                                        <li class="news_item">
+                                            <h6 class="news_title">
+                                                radiance 베이커리 오픈
+                                            </h6>
+                                            <p class="news_date">
+                                                24.10.09
+                                            </p>
+                                            <p class="news_text">
+                                                안녕하세요, 래디언스입니다. 기존 쿠키와 크로플에 이어 베이커리를 오픈했습니다.
+                                            </p>
+                                        </li>
+
+                                    </ul>
+
+                                    <div class="linear_top radius01"></div>
+                                    <div class="linear_bottom radius01"></div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="news_outline emb radius01">
+
+                                <div class="news_thumb">
+                                    <img src="./images/news_outline.png" loading="lazy" alt="">
+                                </div>
+
+                                <div class="outline_wrap">
+
+                                    <h4 class="outline_title">sns에 리뷰를 남겨주세요!</h4>
+                                    <h4 class="outline_sub">정식 오픈 이벤트</h4>
+
+                                    <p class="outline_text">
+                                        여러분의 사랑과 관심으로 래디언스가 정식 오픈을 하게 되었습니다! 가오픈 기간 방문해주신 모든 분들께 감사드리며, 정식 오픈을 기념으로 SNS 리뷰를 남겨주시는 분들께 음료 한 잔을 무료로 드리고 있습니다.
+                                    </p>
+
+                                    <p class="outline_text">
+                                        다시 한 번 래디언스를 향한 사랑과 방문에 감사드리며,<br>
+                                        오늘도 당신의 찬연한 하루를 응원합니다.
+                                    </p>
+
+                                    <span class="outline_sub_text">이벤트 기간: 24.11.11 ~ </span>
+
+                                    <div class="outline_more">
                             <span>
                                 자세히 보기 <ion-icon name="chevron-forward-outline"></ion-icon>
                             </span>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
                         </div>
 
                     </div>
 
-                </div>
+                    <div class="notice_banner">
 
-            </div>
+                        <div class="ntb_linear_l"></div>
+                        <div class="ntb_linear_r"></div>
 
-            <div class="notice_banner">
+                        <div class="ntb_inner">
 
-                <div class="ntb_linear_l"></div>
-                <div class="ntb_linear_r"></div>
-
-                <div class="ntb_inner">
-                    <div class="notice_pgs_bar">
-                        <div class="notice_progressbar">
-                            <div class="progressbar"></div>
-                        </div>
-                    </div>
-
-                    <div class="ntb_wrap">
-
-                        <div class="ntb_slide_wrap">
-
-                            <div class="ntb_slide banner_1">
-                                <div class="ntb_item">
-
-                                    <h2 class="ntb_title">radiance open party</h2>
-                                    <h6 class="ntb_sub">24.11.15 fri 9:00pm ~ 1:00am</h6>
-                                    <p class="ntb_text">래디언스 정식 오픈, 그리고 당신의 찬란한 하루를 기념하며!</p>
-                                    <div class="ntb_more">
-                                        <a href="#">
-                                            more <ion-icon name="chevron-forward-outline"></ion-icon>
-                                        </a>
-                                    </div>
-
-                                </div>
+                            <div class="notice_pgs_bar">
+                                <div class="notice_progressbar"></div>
                             </div>
 
-                            <div class="ntb_slide banner_2">
-                                <div class="ntb_item">
+                            <div class="swiper nt_banner">
+                                <div class="swiper-wrapper">
 
-                                    <h2 class="ntb_title">radiance 베이커리 오픈</h2>
-                                    <h6 class="ntb_sub">24.10.14 mon 10:00am</h6>
-                                    <p class="ntb_text">쿠키와 크로플, 그리고 연말을 위한 케이크까지</p>
-                                    <div class="ntb_more">
-                                        <a href="#">
-                                            more <ion-icon name="chevron-forward-outline"></ion-icon>
-                                        </a>
+                                    <div class="swiper-slide ntb_item">
+
+                                        <h2 class="ntb_title">radiance open party</h2>
+                                        <h6 class="ntb_sub">24.11.15 fri 9:00pm ~ 1:00am</h6>
+                                        <p class="ntb_text">래디언스 정식 오픈, 그리고 당신의 찬란한 하루를 기념하며!</p>
+                                        <div class="ntb_more">
+                                            <a href="#">
+                                                more <ion-icon name="chevron-forward-outline"></ion-icon>
+                                            </a>
+                                        </div>
+
                                     </div>
 
-                                </div>
-                            </div>
+                                    <div class="swiper-slide ntb_item">
 
-                            <div class="ntb_slide banner_3">
-                                <div class="ntb_item">
+                                        <h2 class="ntb_title">radiance 베이커리 오픈</h2>
+                                        <h6 class="ntb_sub">24.10.14 mon 10:00am</h6>
+                                        <p class="ntb_text">쿠키와 크로플, 그리고 연말을 위한 케이크까지</p>
+                                        <div class="ntb_more">
+                                            <a href="#">
+                                                more <ion-icon name="chevron-forward-outline"></ion-icon>
+                                            </a>
+                                        </div>
 
-                                    <h2 class="ntb_title">sns 리뷰 이벤트 공지</h2>
-                                    <h6 class="ntb_sub">24.11.11 mon 10:00am</h6>
-                                    <p class="ntb_text">정식 오픈 기념 이벤트, sns에 리뷰를 남겨주세요!</p>
-                                    <div class="ntb_more">
-                                        <a href="#">
-                                            more <ion-icon name="chevron-forward-outline"></ion-icon>
-                                        </a>
+                                    </div>
+
+                                    <div class="swiper-slide ntb_item">
+
+                                        <h2 class="ntb_title">sns 리뷰 이벤트 공지</h2>
+                                        <h6 class="ntb_sub">24.11.11 mon 10:00am</h6>
+                                        <p class="ntb_text">정식 오픈 기념 이벤트, sns에 리뷰를 남겨주세요!</p>
+                                        <div class="ntb_more">
+                                            <a href="#">
+                                                more <ion-icon name="chevron-forward-outline"></ion-icon>
+                                            </a>
+                                        </div>
+
                                     </div>
 
                                 </div>
                             </div>
 
                         </div>
+
+                        <div class="swiper ntb_bg">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide ntb_bg_item"></div>
+                                <div class="swiper-slide ntb_bg_item"></div>
+                                <div class="swiper-slide ntb_bg_item"></div>
+                            </div>
+                        </div>
+
                     </div>
 
                 </div>
-
-                <div class="ntb_bg">
-                    <div class="ntb_bg_wrap">
-                        <div class="ntb_slide_bg bg_1"></div>
-                        <div class="ntb_slide_bg bg_2"></div>
-                        <div class="ntb_slide_bg bg_3"></div>
-                    </div>
-                </div>
+                <!--   notice end    -->
 
             </div>
 
         </div>
-        <!--   notice end    -->
 
 
 
@@ -978,7 +983,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img mug">
-                                            <img src="./images/iced_americano.png" loading="lazy" alt="">
+                                            <img src="./images/coffee/iced_americano.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">ethereal brew</p>
@@ -1018,7 +1023,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img mug">
-                                            <img src="./images/iced_coffee_latte.png" loading="lazy" alt="">
+                                            <img src="./images/coffee/iced_coffee_latte.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">harmony cup</p>
@@ -1058,7 +1063,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img flat">
-                                            <img src="./images/iced_flat_white.png" loading="lazy" alt="">
+                                            <img src="./images/coffee/iced_flat_white.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">silky wave</p>
@@ -1098,7 +1103,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img flat">
-                                            <img src="./images/dolce_latte.png" loading="lazy" alt="">
+                                            <img src="./images/coffee/dolce_latte.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">sweet symphony</p>
@@ -1138,7 +1143,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img flat">
-                                            <img src="./images/brown_sugar_einspanner.png" loading="lazy" alt="">
+                                            <img src="./images/coffee/brown_sugar_einspanner.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">golden hour</p>
@@ -1178,7 +1183,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img flat">
-                                            <img src="./images/brown_sugar_latte.png" loading="lazy" alt="">
+                                            <img src="./images/coffee/brown_sugar_latte.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">amber soul</p>
@@ -1218,7 +1223,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img flat">
-                                            <img src="./images/caramel_macchiato.png" loading="lazy" alt="">
+                                            <img src="./images/coffee/caramel_macchiato.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">honey drizzle</p>
@@ -1258,7 +1263,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img shot">
-                                            <img src="./images/iced_caffe_mocha.png" loading="lazy" alt="">
+                                            <img src="./images/coffee/iced_caffe_mocha.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">velvet mocha</p>
@@ -1298,7 +1303,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img mid">
-                                            <img src="./images/ice_cream_latte.png" loading="lazy" alt="">
+                                            <img src="./images/coffee/ice_cream_latte.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">frosted delight</p>
@@ -1338,7 +1343,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img glass">
-                                            <img src="./images/einspanner.png" loading="lazy" alt="">
+                                            <img src="./images/coffee/einspanner.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">heritage blend</p>
@@ -1378,7 +1383,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img mug">
-                                            <img src="./images/espresso_con_panna.png" loading="lazy" alt="">
+                                            <img src="./images/coffee/espresso_con_panna.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">noir crest</p>
@@ -1418,7 +1423,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img mug">
-                                            <img src="./images/cappuccino.png" loading="lazy" alt="">
+                                            <img src="./images/coffee/cappuccino.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">soft cloud</p>
@@ -1458,7 +1463,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img cup">
-                                            <img src="./images/toffee_nut_latte.png" loading="lazy" alt="">
+                                            <img src="./images/coffee/toffee_nut_latte.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">toasted bliss</p>
@@ -1498,7 +1503,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img glass">
-                                            <img src="./images/black_sesame_einspanner.png" loading="lazy" alt="">
+                                            <img src="./images/coffee/black_sesame_einspanner.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">obsidian veil</p>
@@ -1538,7 +1543,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img mid">
-                                            <img src="./images/black_sesame_latte.png" loading="lazy" alt="">
+                                            <img src="./images/coffee/black_sesame_latte.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">midnight mist</p>
@@ -1578,7 +1583,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img vent">
-                                            <img src="./images/matcha_cafe_latte.png" loading="lazy" alt="">
+                                            <img src="./images/coffee/matcha_cafe_latte.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">jade essence</p>
@@ -1618,7 +1623,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img vent">
-                                            <img src="./images/summer_latte.png" loading="lazy" alt="">
+                                            <img src="./images/coffee/summer_latte.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">tropical haze</p>
@@ -1658,7 +1663,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img wave">
-                                            <img src="./images/chocolate_orange_bianco.png" loading="lazy" alt="">
+                                            <img src="./images/coffee/chocolate_orange_bianco.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">citrus beam</p>
@@ -1698,7 +1703,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img vent">
-                                            <img src="./images/iced_cortado.png" loading="lazy" alt="">
+                                            <img src="./images/coffee/iced_cortado.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">mellow shot</p>
@@ -1738,7 +1743,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img vent">
-                                            <img src="./images/wave_latte.png" loading="lazy" alt="">
+                                            <img src="./images/coffee/wave_latte.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">cream tide</p>
@@ -1753,7 +1758,6 @@
                         </div>
 
                     </div>
-
 
                     <div class="drink_list beverage">
 
@@ -1791,7 +1795,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img cera">
-                                            <img src="./images/strawberry_ade.png" loading="lazy" alt="">
+                                            <img src="./images/beverage/strawberry_ade.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">pink fields</p>
@@ -1831,7 +1835,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img long">
-                                            <img src="./images/grapefruits_ade.png" loading="lazy" alt="">
+                                            <img src="./images/beverage/grapefruits_ade.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">coral punch</p>
@@ -1871,7 +1875,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img grand">
-                                            <img src="./images/afternoon_ade.png" loading="lazy" alt="">
+                                            <img src="./images/beverage/afternoon_ade.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">holiday dawn</p>
@@ -1911,7 +1915,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img flat">
-                                            <img src="./images/peach_ade.png" loading="lazy" alt="">
+                                            <img src="./images/beverage/peach_ade.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">peach dew</p>
@@ -1951,7 +1955,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img flat">
-                                            <img src="./images/orange_juice.png" loading="lazy" alt="">
+                                            <img src="./images/beverage/orange_juice.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">solar pulp</p>
@@ -1991,7 +1995,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img grand">
-                                            <img src="./images/before_sunset.png" loading="lazy" alt="">
+                                            <img src="./images/beverage/before_sunset.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">shimmer dawn</p>
@@ -2031,7 +2035,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img glass">
-                                            <img src="./images/fashionfruits_ade.png" loading="lazy" alt="">
+                                            <img src="./images/beverage/fashionfruits_ade.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">sunny fizz</p>
@@ -2071,7 +2075,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img flat">
-                                            <img src="./images/lemon_ade.png" loading="lazy" alt="">
+                                            <img src="./images/beverage/lemon_ade.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">wink flow</p>
@@ -2111,7 +2115,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img onel">
-                                            <img src="./images/lime_ade.png" loading="lazy" alt="">
+                                            <img src="./images/beverage/lime_ade.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">cool twine</p>
@@ -2151,7 +2155,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img cera">
-                                            <img src="./images/greengrape_ade.png" loading="lazy" alt="">
+                                            <img src="./images/beverage/greengrape_ade.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">green halo</p>
@@ -2191,7 +2195,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img shot">
-                                            <img src="./images/chocolate_latte.png" loading="lazy" alt="">
+                                            <img src="./images/beverage/chocolate_latte.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">crispy russet</p>
@@ -2231,7 +2235,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img mug">
-                                            <img src="./images/mugwort_latte.png" loading="lazy" alt="">
+                                            <img src="./images/beverage/mugwort_latte.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">meadow ash</p>
@@ -2271,7 +2275,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img shot">
-                                            <img src="./images/matcha_latte.png" loading="lazy" alt="">
+                                            <img src="./images/beverage/matcha_latte.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">moonlit forest</p>
@@ -2311,7 +2315,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img shot">
-                                            <img src="./images/blue_lemon_ade.png" loading="lazy" alt="">
+                                            <img src="./images/beverage/blue_lemon_ade.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">ocean zenith</p>
@@ -2351,7 +2355,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img mid">
-                                            <img src="./images/soda_smoothie.png" loading="lazy" alt="">
+                                            <img src="./images/beverage/soda_smoothie.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">milky blue</p>
@@ -2391,7 +2395,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img mid">
-                                            <img src="./images/sweet_potato_latte.png" loading="lazy" alt="">
+                                            <img src="./images/beverage/sweet_potato_latte.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">lilac cushion</p>
@@ -2431,7 +2435,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img mid">
-                                            <img src="./images/strawberry_smoothie.png" loading="lazy" alt="">
+                                            <img src="./images/beverage/strawberry_smoothie.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">blush swirl</p>
@@ -2471,7 +2475,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img mid">
-                                            <img src="./images/strawberry_latte.png" loading="lazy" alt="">
+                                            <img src="./images/beverage/strawberry_latte.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">scarlet rose</p>
@@ -2511,7 +2515,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img grand">
-                                            <img src="./images/yogurt_smoothie.png" loading="lazy" alt="">
+                                            <img src="./images/beverage/yogurt_smoothie.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">snow rise</p>
@@ -2551,7 +2555,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img wave">
-                                            <img src="./images/milk.png" loading="lazy" alt="">
+                                            <img src="./images/beverage/milk.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">pure fold</p>
@@ -2566,7 +2570,6 @@
                         </div>
 
                     </div>
-
 
                     <div class="drink_list tea">
 
@@ -2604,7 +2607,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img pot">
-                                            <img src="./images/dandelion_tea.png" loading="lazy" alt="">
+                                            <img src="./images/tea/dandelion_tea.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">fairy whisper</p>
@@ -2644,7 +2647,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img teacup">
-                                            <img src="./images/citrus_tea.png" loading="lazy" alt="">
+                                            <img src="./images/tea/citrus_tea.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">citrine drop</p>
@@ -2684,7 +2687,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img vent">
-                                            <img src="./images/lemon_tea.png" loading="lazy" alt="">
+                                            <img src="./images/tea/lemon_tea.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">sunshine grove</p>
@@ -2724,7 +2727,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img mid">
-                                            <img src="./images/marigold_tea.png" loading="lazy" alt="">
+                                            <img src="./images/tea/marigold_tea.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">floral ember</p>
@@ -2764,7 +2767,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img mid">
-                                            <img src="./images/greengrape_tea.png" loading="lazy" alt="">
+                                            <img src="./images/tea/greengrape_tea.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">misty glow</p>
@@ -2804,7 +2807,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img mid">
-                                            <img src="./images/mugwort_tea.png" loading="lazy" alt="">
+                                            <img src="./images/tea/mugwort_tea.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">mossy haven</p>
@@ -2844,7 +2847,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img mid">
-                                            <img src="./images/peach_iced_tea.png" loading="lazy" alt="">
+                                            <img src="./images/tea/peach_iced_tea.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">melting hush</p>
@@ -2884,7 +2887,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img mid">
-                                            <img src="./images/hibiscus_tea.png" loading="lazy" alt="">
+                                            <img src="./images/tea/hibiscus_tea.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">ruby trace</p>
@@ -2924,7 +2927,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img mid">
-                                            <img src="./images/rose_hip_tea.png" loading="lazy" alt="">
+                                            <img src="./images/tea/rose_hip_tea.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">july nostalgia</p>
@@ -2964,7 +2967,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img mid">
-                                            <img src="./images/rooibos_tea.png" loading="lazy" alt="">
+                                            <img src="./images/tea/rooibos_tea.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">nighty night</p>
@@ -3004,7 +3007,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img mid">
-                                            <img src="./images/peppermint_tea.png" loading="lazy" alt="">
+                                            <img src="./images/tea/peppermint_tea.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">mint tinge</p>
@@ -3044,7 +3047,7 @@
                                     <div class="menu_wrap">
 
                                         <div class="menu_img mid">
-                                            <img src="./images/camomile_tea.png" loading="lazy" alt="">
+                                            <img src="./images/tea/camomile_tea.png" loading="lazy" alt="">
                                         </div>
 
                                         <p class="menu_name">comfort bloom</p>
@@ -3059,7 +3062,6 @@
                         </div>
 
                     </div>
-
 
                 </div>
 
@@ -3112,9 +3114,9 @@
 
                 <div class="bakery_wrap">
 
-                    <div class="bakery_list cookie active">
+                    <div class="bakery_list emb_d02 radius05">
 
-                        <div class="bakery_li_wrap emb_d02 radius05">
+                        <div class="bakery_li_wrap cookie active">
 
                             <div class="swiper bakery_swiper">
 
@@ -3134,10 +3136,10 @@
                                             <div class="bakery_tt">
 
                                                 <h2 class="bakery_ko">
-                                                    허니 스파
+                                                    루비 필로우
                                                 </h2>
                                                 <h2 class="bakery_en">
-                                                    honey spa
+                                                    ruby pillow
                                                 </h2>
 
                                             </div>
@@ -3145,10 +3147,10 @@
                                             <div class="bakery_sb">
 
                                                 <div class="bakery_ko">
-                                                    배싱베어 버터 쿠키
+                                                    레드벨벳 스모어 쿠키
                                                 </div>
                                                 <div class="bakery_en">
-                                                    bathing bear butter cookie
+                                                    red velvet s’mores cookie
                                                 </div>
 
                                             </div>
@@ -3156,16 +3158,16 @@
                                             <div class="bakery_text">
 
                                                 <p>
-                                                    따뜻한 버터와 달콤한 마시멜로우 속에서<br>
-                                                    휴식을 즐기는 작은 곰돌이.
+                                                    루비처럼 반짝이는 붉은색 속,<br>
+                                                    부드러운 마시멜로를 담은 쿠키.
                                                 </p>
                                                 <p>
-                                                    촉촉하고 부드러운 쿠키 한 입이<br>
-                                                    달콤한 휴식을 선물합니다.
+                                                    따뜻하게 녹아내리는 마시멜로와<br>
+                                                    레드벨벳의 달콤함이 섬세한 조화를 이룹니다.
                                                 </p>
                                                 <p>
-                                                    곰돌이의 스파 데이처럼<br>
-                                                    여유롭고 행복한 순간을 느껴보세요.
+                                                    루비처럼 붉은 레드벨벳 쿠션에 기대어<br>
+                                                    부드럽고 편안한 디저트 시간을 가져보세요.
                                                 </p>
 
                                             </div>
@@ -3175,7 +3177,484 @@
                                         </div>
 
                                         <div class="bakery_img">
-                                            <img src="./images/bathing_bear.png" loading="lazy" alt="">
+                                            <img src="./images/cookie/red_velvet_smores_cookie.png" loading="lazy" alt="">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="swiper-slide bakery_item">
+
+                                        <div class="bk_wrap">
+
+                                            <div class="bakery_tt">
+
+                                                <h2 class="bakery_ko">
+                                                    베리 키세스
+                                                </h2>
+                                                <h2 class="bakery_en">
+                                                    berry kisses
+                                                </h2>
+
+                                            </div>
+
+                                            <div class="bakery_sb">
+
+                                                <div class="bakery_ko">
+                                                    초콜릿 & 베리 치즈케이크 쿠키
+                                                </div>
+                                                <div class="bakery_en">
+                                                    chocolate&berry cheesecake cookie
+                                                </div>
+
+                                            </div>
+
+                                            <div class="bakery_text">
+
+                                                <p>
+                                                    달콤한 초콜릿과 상큼한 딸기,<br>
+                                                    그리고 치즈 케이크 한 스푼.
+                                                </p>
+                                                <p>
+                                                    초콜릿의 진한 맛과 딸기의 새콤함,<br>
+                                                    치즈의 부드러움이 입 안에서 조화를 이룹니다.
+                                                </p>
+                                                <p>
+                                                    하루를 달콤하고 상큼하게 물들일<br>
+                                                    사랑스러운 순간을 즐겨보세요.
+                                                </p>
+
+                                            </div>
+
+                                            <div class="bk_line"></div>
+
+                                        </div>
+
+                                        <div class="bakery_img">
+                                            <img src="./images/cookie/chocolate_berry_cheesecake_cookie.png" loading="lazy" alt="">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="swiper-slide bakery_item">
+
+                                        <div class="bk_wrap">
+
+                                            <div class="bakery_tt">
+
+                                                <h2 class="bakery_ko">
+                                                    티라미수 퍼프
+                                                </h2>
+                                                <h2 class="bakery_en">
+                                                    tiramisu puff
+                                                </h2>
+
+                                            </div>
+
+                                            <div class="bakery_sb">
+
+                                                <div class="bakery_ko">
+                                                    브라우니 티라미수 쿠키
+                                                </div>
+                                                <div class="bakery_en">
+                                                    brownie tiramisu cookie
+                                                </div>
+
+                                            </div>
+
+                                            <div class="bakery_text">
+
+                                                <p>
+                                                    브라우니의 진한 달콤함과 티라미수가<br>
+                                                    서로를 포근하게 감싸주는 특별한 쿠키.
+                                                </p>
+                                                <p>
+                                                    꾸덕한 브라우니의 식감 속 티라미수를 담고,<br>
+                                                    코코아 파우더로 마무리했습니다.
+                                                </p>
+                                                <p>
+                                                    브라우니와 티라미수 중에서 골라야 한다면,<br>
+                                                    티라미수 퍼프 한 입 어떠신가요?
+                                                </p>
+
+                                            </div>
+
+                                            <div class="bk_line"></div>
+
+                                        </div>
+
+                                        <div class="bakery_img">
+                                            <img src="./images/cookie/brownie_tiramisu_cookie.png" loading="lazy" alt="">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="swiper-slide bakery_item">
+
+                                        <div class="bk_wrap">
+
+                                            <div class="bakery_tt">
+
+                                                <h2 class="bakery_ko">
+                                                    밀키 웨이
+                                                </h2>
+                                                <h2 class="bakery_en">
+                                                    milky way
+                                                </h2>
+
+                                            </div>
+
+                                            <div class="bakery_sb">
+
+                                                <div class="bakery_ko">
+                                                    오레오 스모어 쿠키
+                                                </div>
+                                                <div class="bakery_en">
+                                                    oreo s’mores cookie
+                                                </div>
+
+                                            </div>
+
+                                            <div class="bakery_text">
+
+                                                <p>
+                                                    밤하늘 가득한 별들 사이에 쏟은 우유처럼,<br>
+                                                    은하수를 닮은 오레오 스모어 쿠키.
+                                                </p>
+                                                <p>
+                                                    따뜻하게 녹아내리는 마시멜로와 바삭한<br>
+                                                    오레오 쿠키가 달콤한 경험을 선사합니다.
+                                                </p>
+                                                <p>
+                                                    지친 하루, 모든 것을 잊고<br>
+                                                    무한한 달콤함 속에 빠져들어 보세요.
+                                                </p>
+
+                                            </div>
+
+                                            <div class="bk_line"></div>
+
+                                        </div>
+
+                                        <div class="bakery_img">
+                                            <img src="./images/cookie/oreo_smores_cookie.png" loading="lazy" alt="">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="swiper-slide bakery_item">
+
+                                        <div class="bk_wrap">
+
+                                            <div class="bakery_tt">
+
+                                                <h2 class="bakery_ko">
+                                                    오처드 로드
+                                                </h2>
+                                                <h2 class="bakery_en">
+                                                    orchard road
+                                                </h2>
+
+                                            </div>
+
+                                            <div class="bakery_sb">
+
+                                                <div class="bakery_ko">
+                                                    무화과 크림치즈 쿠키
+                                                </div>
+                                                <div class="bakery_en">
+                                                    fig cream cheese cookie
+                                                </div>
+
+                                            </div>
+
+                                            <div class="bakery_text">
+
+                                                <p>
+                                                    여름을 시원하게 해줄 탄산처럼,<br>
+                                                    톡톡 터지는 무화과 씨앗 한 스푼.
+                                                </p>
+                                                <p>
+                                                    부드러운 크림치즈 위 무화과 잼이<br>
+                                                    과수원을 걷는 듯한 풍요로움을 전합니다.
+                                                </p>
+                                                <p>
+                                                    크림치즈와 무화과 한 스푼으로<br>
+                                                    여름이 생각나는 한 입 어떠신가요?
+                                                </p>
+
+                                            </div>
+
+                                            <div class="bk_line"></div>
+
+                                        </div>
+
+                                        <div class="bakery_img">
+                                            <img src="./images/cookie/fig_cream_chesse_cookie.png" loading="lazy" alt="">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="swiper-slide bakery_item">
+
+                                        <div class="bk_wrap">
+
+                                            <div class="bakery_tt">
+
+                                                <h2 class="bakery_ko">
+                                                    코스믹 더스트
+                                                </h2>
+                                                <h2 class="bakery_en">
+                                                    cosmic dust
+                                                </h2>
+
+                                            </div>
+
+                                            <div class="bakery_sb">
+
+                                                <div class="bakery_ko">
+                                                    흑임자 크림 쿠키
+                                                </div>
+                                                <div class="bakery_en">
+                                                    black sesame cream cookie
+                                                </div>
+
+                                            </div>
+
+                                            <div class="bakery_text">
+
+                                                <p>
+                                                    우주의 가장 고요한 조각처럼,<br>
+                                                    부드럽게 흩날리는 흑임자 크림.
+                                                </p>
+                                                <p>
+                                                    쿠키 사이로 고운 흑임자 가루와<br>
+                                                    크림이 스며들어 고소함을 가득 채워줍니다.
+                                                </p>
+                                                <p>
+                                                    소란한 하루의 틈 사이 잠시 멈춰,<br>
+                                                    우주의 숨결처럼 조용한 한 입을 느껴보세요.
+                                                </p>
+
+                                            </div>
+
+                                            <div class="bk_line"></div>
+
+                                        </div>
+
+                                        <div class="bakery_img">
+                                            <img src="./images/cookie/black_sesame_cream_cookie.png" loading="lazy" alt="">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="swiper-slide bakery_item">
+
+                                        <div class="bk_wrap">
+
+                                            <div class="bakery_tt">
+
+                                                <h2 class="bakery_ko">
+                                                    어슬리 잼
+                                                </h2>
+                                                <h2 class="bakery_en">
+                                                    earthly gem
+                                                </h2>
+
+                                            </div>
+
+                                            <div class="bakery_sb">
+
+                                                <div class="bakery_ko">
+                                                    르뱅 쿠키
+                                                </div>
+                                                <div class="bakery_en">
+                                                    levain cookie
+                                                </div>
+
+                                            </div>
+
+                                            <div class="bakery_text">
+
+                                                <p>
+                                                    대지의 보석처럼 투박하지만<br>
+                                                    깊은 가치를 지닌, 풍성한 맛의 쿠키.
+                                                </p>
+                                                <p>
+                                                    묵직한 질감 속에 박힌 초콜릿과 견과류가<br>
+                                                    씹을수록 진정한 풍미를 드러냅니다.
+                                                </p>
+                                                <p>
+                                                    풍미있는 한 조각과 함께,<br>
+                                                    자연의 본연이 주는 충만함을 경험하세요.
+                                                </p>
+
+                                            </div>
+
+                                            <div class="bk_line"></div>
+
+                                        </div>
+
+                                        <div class="bakery_img">
+                                            <img src="./images/cookie/levain_cookie.png" loading="lazy" alt="">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="swiper-slide bakery_item">
+
+                                        <div class="bk_wrap">
+
+                                            <div class="bakery_tt">
+
+                                                <h2 class="bakery_ko">
+                                                    포리지 테일
+                                                </h2>
+                                                <h2 class="bakery_en">
+                                                    forage tale
+                                                </h2>
+
+                                            </div>
+
+                                            <div class="bakery_sb">
+
+                                                <div class="bakery_ko">
+                                                    믹스 넛츠 쿠키
+                                                </div>
+                                                <div class="bakery_en">
+                                                    mixed nuts cookie
+                                                </div>
+
+                                            </div>
+
+                                            <div class="bakery_text">
+
+                                                <p>
+                                                    다람쥐가 모아둔 보물처럼,<br>
+                                                    견과류를 가득 담은 영양 만점 쿠키.
+                                                </p>
+                                                <p>
+                                                    다채로운 견과류의 고소함과<br>
+                                                    바삭한 쿠키의 만남이 씹는 즐거움을 줍니다.
+                                                </p>
+                                                <p>
+                                                    숲속 다람쥐가 소중히 모은<br>
+                                                    작고 포근한 이야기를 들려 드릴게요.
+                                                </p>
+
+                                            </div>
+
+                                            <div class="bk_line"></div>
+
+                                        </div>
+
+                                        <div class="bakery_img">
+                                            <img src="./images/cookie/mixed_nuts_cookie.png" loading="lazy" alt="">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="swiper-slide bakery_item">
+
+                                        <div class="bk_wrap">
+
+                                            <div class="bakery_tt">
+
+                                                <h2 class="bakery_ko">
+                                                    킨들링 허스
+                                                </h2>
+                                                <h2 class="bakery_en">
+                                                    kindling hearth
+                                                </h2>
+
+                                            </div>
+
+                                            <div class="bakery_sb">
+
+                                                <div class="bakery_ko">
+                                                    로투스 스모어 쿠키
+                                                </div>
+                                                <div class="bakery_en">
+                                                    lotus s'mores cookie
+                                                </div>
+
+                                            </div>
+
+                                            <div class="bakery_text">
+
+                                                <p>
+                                                    벽난로에서 따스한 불꽃이 피어오르듯,<br>
+                                                    달콤하게 녹아내리는 마시멜로 속 로투스 쿠키.
+                                                </p>
+                                                <p>
+                                                    따뜻하고 부드러운 맛과 향이 입안 가득 퍼지며<br>
+                                                    온기가 마음 깊이 스며드는 편안함을 선물합니다.
+                                                </p>
+                                                <p>
+                                                    포근한 아궁이 앞에 조용히 앉아,<br>
+                                                    지친 하루를 달래는 휴식을 가져보세요.
+                                                </p>
+
+                                            </div>
+
+                                            <div class="bk_line"></div>
+
+                                        </div>
+
+                                        <div class="bakery_img">
+                                            <img src="./images/cookie/lotus_smores_cookie.png" loading="lazy" alt="">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="swiper-slide bakery_item">
+
+                                        <div class="bk_wrap">
+
+                                            <div class="bakery_tt">
+
+                                                <h2 class="bakery_ko">
+                                                    썬릿 타르트
+                                                </h2>
+                                                <h2 class="bakery_en">
+                                                    sunlit tart
+                                                </h2>
+
+                                            </div>
+
+                                            <div class="bakery_sb">
+
+                                                <div class="bakery_ko">
+                                                    에그 타르트 쿠키
+                                                </div>
+                                                <div class="bakery_en">
+                                                    egg tart cookie
+                                                </div>
+
+                                            </div>
+
+                                            <div class="bakery_text">
+
+                                                <p>
+                                                    바삭한 껍질 속, 황금빛으로<br>
+                                                    부드럽게 빚어진 에그 크림이 가득한 쿠키.
+                                                </p>
+                                                <p>
+                                                    입 안에서 사르르 녹아내리는 커스터드와<br>
+                                                    고소한 쿠키가 완벽한 맛을 선사합니다.
+                                                </p>
+                                                <p>
+                                                    부드러운 에그타르트 한 입에<br>
+                                                    포근한 위로를 담았습니다.
+                                                </p>
+
+                                            </div>
+
+                                            <div class="bk_line"></div>
+
+                                        </div>
+
+                                        <div class="bakery_img">
+                                            <img src="./images/cookie/egg_tart_cookie.png" loading="lazy" alt="">
                                         </div>
 
                                     </div>
@@ -3228,7 +3707,1442 @@
                                         </div>
 
                                         <div class="bakery_img">
-                                            <img src="./images/bathing_bear.png" loading="lazy" alt="">
+                                            <img src="./images/cookie/bathing_bear.png" loading="lazy" alt="">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="swiper-slide bakery_item">
+
+                                        <div class="bk_wrap">
+
+                                            <div class="bakery_tt">
+
+                                                <h2 class="bakery_ko">
+                                                    모스 맨틀
+                                                </h2>
+                                                <h2 class="bakery_en">
+                                                    moss mantle
+                                                </h2>
+
+                                            </div>
+
+                                            <div class="bakery_sb">
+
+                                                <div class="bakery_ko">
+                                                    쑥 스모어 쿠키
+                                                </div>
+                                                <div class="bakery_en">
+                                                    mugwort s'mores cookie
+                                                </div>
+
+                                            </div>
+
+                                            <div class="bakery_text">
+
+                                                <p>
+                                                    이끼로 덮인 숲처럼 쑥 향이 가득한<br>
+                                                    쿠키 속으로 녹아내리는 마시멜로.
+                                                </p>
+                                                <p>
+                                                    달콤한 마시멜로와 화이트 초콜릿이<br>
+                                                    쌉쌀한 쑥의 풍미를 더 깊게 만들어 줍니다.
+                                                </p>
+                                                <p>
+                                                    차분히 퍼지는 이끼의 숨결처럼,<br>
+                                                    한 입에 스며드는 평온함을 느껴보세요.
+                                                </p>
+
+                                            </div>
+
+                                            <div class="bk_line"></div>
+
+                                        </div>
+
+                                        <div class="bakery_img">
+                                            <img src="./images/cookie/mugwort_smores_cookie.png" loading="lazy" alt="">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="swiper-slide bakery_item">
+
+                                        <div class="bk_wrap">
+
+                                            <div class="bakery_tt">
+
+                                                <h2 class="bakery_ko">
+                                                    포기 그로브
+                                                </h2>
+                                                <h2 class="bakery_en">
+                                                    foggy grove
+                                                </h2>
+
+                                            </div>
+
+                                            <div class="bakery_sb">
+
+                                                <div class="bakery_ko">
+                                                    말차 크림 쿠키
+                                                </div>
+                                                <div class="bakery_en">
+                                                    bmatcha cream cookie
+                                                </div>
+
+                                            </div>
+
+                                            <div class="bakery_text">
+
+                                                <p>
+                                                    부드럽고 깊은 말차 크림 속에<br>
+                                                    안개 깔린 숲이 촉촉하게 녹아든 쿠키.
+                                                </p>
+                                                <p>
+                                                    쌉쌀한 말차의 깊은 맛과 이를 그대로 담은<br>
+                                                    부드러운 크림이 은은한 여운을 남깁니다.
+                                                </p>
+                                                <p>
+                                                    고요함이 가득한 이른 아침 숲길처럼,<br>
+                                                    잔잔한 풍미가 마음을 포근히 감싸줍니다.
+                                                </p>
+
+                                            </div>
+
+                                            <div class="bk_line"></div>
+
+                                        </div>
+
+                                        <div class="bakery_img">
+                                            <img src="./images/cookie/matcha_cream_cookie.png" loading="lazy" alt="">
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="bakery_li_wrap bread">
+
+                            <div class="swiper bakery_swiper">
+
+                                <div class="swiper_btn">
+
+                                    <div class="swiper-button-prev"><ion-icon name="chevron-back-outline"></ion-icon></div>
+                                    <div class="swiper-button-next"><ion-icon name="chevron-forward-outline"></ion-icon></div>
+
+                                </div>
+
+                                <div class="swiper-wrapper">
+
+                                    <div class="swiper-slide bakery_item">
+
+                                        <div class="bk_wrap">
+
+                                            <div class="bakery_tt">
+
+                                                <h2 class="bakery_ko">
+                                                    플리티드 실크
+                                                </h2>
+                                                <h2 class="bakery_en">
+                                                    pleated silk
+                                                </h2>
+
+                                            </div>
+
+                                            <div class="bakery_sb">
+
+                                                <div class="bakery_ko">
+                                                    대니쉬 식빵
+                                                </div>
+                                                <div class="bakery_en">
+                                                    danish loaf bread
+                                                </div>
+
+                                            </div>
+
+                                            <div class="bakery_text">
+
+                                                <p>
+                                                    바스락한 식감과 은은한 버터 향이 어우러져,<br>
+                                                    작은 조각에 풍성한 만족감을 주는 식빵.
+                                                </p>
+                                                <p>
+                                                    실크를 겹겹이 엮은 듯 부드럽고 섬세한 결이<br>
+                                                    작지만 우아한 아름다움을 완성합니다.
+                                                </p>
+                                                <p>
+                                                    한 조각의 빵에서 느껴지는 우아함과<br>
+                                                    부드러운 결을 느껴보세요.
+                                                </p>
+
+                                            </div>
+
+                                            <div class="bk_line"></div>
+
+                                        </div>
+
+                                        <div class="bakery_img">
+                                            <img src="./images/bread/mini_danish_loaf.png" loading="lazy" alt="">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="swiper-slide bakery_item">
+
+                                        <div class="bk_wrap">
+
+                                            <div class="bakery_tt">
+
+                                                <h2 class="bakery_ko">
+                                                    알파인 글린트
+                                                </h2>
+                                                <h2 class="bakery_en">
+                                                    alpine glint
+                                                </h2>
+
+                                            </div>
+
+                                            <div class="bakery_sb">
+
+                                                <div class="bakery_ko">
+                                                    소금빵
+                                                </div>
+                                                <div class="bakery_en">
+                                                    sea salt butter roll
+                                                </div>
+
+                                            </div>
+
+                                            <div class="bakery_text">
+
+                                                <p>
+                                                    알프스 산봉우리의 소금 결정처럼,<br>
+                                                    빵 위의 소금이 은은하게 빛나는 버터롤.
+                                                </p>
+                                                <p>
+                                                    바삭한 겉과, 쫄깃한 속의 깊은 버터향이<br>
+                                                    촉촉하게 어우러져 순수한 맛을 완성합니다.
+                                                </p>
+                                                <p>
+                                                    담백함 속에 숨겨진<br>
+                                                    온전한 만족감을 경험해 보세요.
+                                                </p>
+
+                                            </div>
+
+                                            <div class="bk_line"></div>
+
+                                        </div>
+
+                                        <div class="bakery_img">
+                                            <img src="./images/bread/sea_salt_butter_roll.png" loading="lazy" alt="">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="swiper-slide bakery_item">
+
+                                        <div class="bk_wrap">
+
+                                            <div class="bakery_tt">
+
+                                                <h2 class="bakery_ko">
+                                                    세이버리 렐릭
+                                                </h2>
+                                                <h2 class="bakery_en">
+                                                    savory relic
+                                                </h2>
+
+                                            </div>
+
+                                            <div class="bakery_sb">
+
+                                                <div class="bakery_ko">
+                                                    햄치즈 토스트
+                                                </div>
+                                                <div class="bakery_en">
+                                                    ham & cheese toast
+                                                </div>
+
+                                            </div>
+
+                                            <div class="bakery_text">
+
+                                                <p>
+                                                    바삭하게 구운 모짜렐라 치즈가<br>
+                                                    고소한 보물을 품고 있는 듯한 토스트.
+                                                </p>
+                                                <p>
+                                                    겉의 짭짤한 풍미를 지나면, 따뜻한 햄과<br>
+                                                    체다치즈가 겹겹이 녹아듭니다.
+                                                </p>
+                                                <p>
+                                                    겉모습의 바삭함 속에 감춰진<br>
+                                                    든든하고 맛있는 보물을 탐험해 보세요.
+                                                </p>
+
+                                            </div>
+
+                                            <div class="bk_line"></div>
+
+                                        </div>
+
+                                        <div class="bakery_img">
+                                            <img src="./images/bread/ham_cheese_sandwich.png" loading="lazy" alt="">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="swiper-slide bakery_item">
+
+                                        <div class="bk_wrap">
+
+                                            <div class="bakery_tt">
+
+                                                <h2 class="bakery_ko">
+                                                    선레이 몬
+                                                </h2>
+                                                <h2 class="bakery_en">
+                                                    sunray morn
+                                                </h2>
+
+                                            </div>
+
+                                            <div class="bakery_sb">
+
+                                                <div class="bakery_ko">
+                                                    프렌치 치즈 토스트
+                                                </div>
+                                                <div class="bakery_en">
+                                                    french cheese toast
+                                                </div>
+
+                                            </div>
+
+                                            <div class="bakery_text">
+
+                                                <p>
+                                                    벨벳처럼 매끄럽고 부드러운 식감 속,<br>
+                                                    고요한 아침의 평온함을 담은 토스트.
+                                                </p>
+                                                <p>
+                                                    달콤한 시럽과 진한 버터가 스며들어,<br>
+                                                    갓 구운 빵의 따스함이 입안을 감쌉니다.
+                                                </p>
+                                                <p>
+                                                    부드러운 깊은 햇살 한 입이,<br>
+                                                    아침을 더 깊고 온화하게 열어줍니다.
+                                                </p>
+
+                                            </div>
+
+                                            <div class="bk_line"></div>
+
+                                        </div>
+
+                                        <div class="bakery_img">
+                                            <img src="./images/bread/french_cheese_toast.png" loading="lazy" alt="">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="swiper-slide bakery_item">
+
+                                        <div class="bk_wrap">
+
+                                            <div class="bakery_tt">
+
+                                                <h2 class="bakery_ko">
+                                                    허니 룸
+                                                </h2>
+                                                <h2 class="bakery_en">
+                                                    honey loom
+                                                </h2>
+
+                                            </div>
+
+                                            <div class="bakery_sb">
+
+                                                <div class="bakery_ko">
+                                                    허니 버터 브레드
+                                                </div>
+                                                <div class="bakery_en">
+                                                    honey butter bread
+                                                </div>
+
+                                            </div>
+
+                                            <div class="bakery_text">
+
+                                                <p>
+                                                    황금빛 꿀실로 곱게 직조한 듯,<br>
+                                                    달콤함이 발린 폭신한 토스트.
+                                                </p>
+                                                <p>
+                                                    폭신한 빵에 스며든 신선한 우유와 꿀,<br>
+                                                    향긋한 버터가 부드럽고 깊은 맛을 냅니다.
+                                                </p>
+                                                <p>
+                                                    한 올 한 올 부드럽게 풀리며 퍼지는 풍미가<br>
+                                                    하루를 가장 따뜻한 기억으로 물들입니다.
+                                                </p>
+
+                                            </div>
+
+                                            <div class="bk_line"></div>
+
+                                        </div>
+
+                                        <div class="bakery_img">
+                                            <img src="./images/bread/honey_toast.png" loading="lazy" alt="">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="swiper-slide bakery_item">
+
+                                        <div class="bk_wrap">
+
+                                            <div class="bakery_tt">
+
+                                                <h2 class="bakery_ko">
+                                                    아만데 왈츠
+                                                </h2>
+                                                <h2 class="bakery_en">
+                                                    amande waltz
+                                                </h2>
+
+                                            </div>
+
+                                            <div class="bakery_sb">
+
+                                                <div class="bakery_ko">
+                                                    아몬드 팡 오 쇼콜라
+                                                </div>
+                                                <div class="bakery_en">
+                                                    almond pain au chocolat
+                                                </div>
+
+                                            </div>
+
+                                            <div class="bakery_text">
+
+                                                <p>
+                                                    고소한 아몬드와 진한 초콜릿의 풍미가<br>
+                                                    우아한 왈츠를 이루는 페스트리.
+                                                </p>
+                                                <p>
+                                                    섬세한 맛의 리듬 위에 살포시 내려앉은<br>
+                                                    슈가파우더가 왈츠를 아름답게 합니다.
+                                                </p>
+                                                <p>
+                                                    섬세한 맛의 리듬을 느끼며<br>
+                                                    특별한 순간을 온전히 즐겨보세요.
+                                                </p>
+
+                                            </div>
+
+                                            <div class="bk_line"></div>
+
+                                        </div>
+
+                                        <div class="bakery_img">
+                                            <img src="./images/bread/almond_pain_au_chocolat.png" loading="lazy" alt="">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="swiper-slide bakery_item">
+
+                                        <div class="bk_wrap">
+
+                                            <div class="bakery_tt">
+
+                                                <h2 class="bakery_ko">
+                                                    파이어사이드 페이블
+                                                </h2>
+                                                <h2 class="bakery_en">
+                                                    fireside fable
+                                                </h2>
+
+                                            </div>
+
+                                            <div class="bakery_sb">
+
+                                                <div class="bakery_ko">
+                                                    브라우니
+                                                </div>
+                                                <div class="bakery_en">
+                                                    brownie
+                                                </div>
+
+                                            </div>
+
+                                            <div class="bakery_text">
+
+                                                <p>
+                                                    따뜻한 벽난로 옆에서 읽는 동화처럼,<br>
+                                                    포근하고 달콤한 맛이 마음을 감싸는 브라우니.
+                                                </p>
+                                                <p>
+                                                    진득한 식감 속, 진한 초콜릿의 풍미가<br>
+                                                    오랜 추억처럼 잔잔한 행복을 전합니다.
+                                                </p>
+                                                <p>
+                                                    입안 가득 퍼지는 진한 풍미와 함께,<br>
+                                                    따스한 추억 한 입 어떠신가요?
+                                                </p>
+
+                                            </div>
+
+                                            <div class="bk_line"></div>
+
+                                        </div>
+
+                                        <div class="bakery_img">
+                                            <img src="./images/bread/brownie.png" loading="lazy" alt="">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="swiper-slide bakery_item">
+
+                                        <div class="bk_wrap">
+
+                                            <div class="bakery_tt">
+
+                                                <h2 class="bakery_ko">
+                                                    새틴 캐스케이드
+                                                </h2>
+                                                <h2 class="bakery_en">
+                                                    satin cascade
+                                                </h2>
+
+                                            </div>
+
+                                            <div class="bakery_sb">
+
+                                                <div class="bakery_ko">
+                                                    팡 오 쇼콜라
+                                                </div>
+                                                <div class="bakery_en">
+                                                    pain au chocolat
+                                                </div>
+
+                                            </div>
+
+                                            <div class="bakery_text">
+
+                                                <p>
+                                                    겹겹이 쌓인 부드러움이 비단결처럼<br>
+                                                    초콜릿을 감싸 안는 프리미엄 페스트리.
+                                                </p>
+                                                <p>
+                                                    바삭한 페스트리 결 사이로 진한 초콜릿이<br>
+                                                    폭포처럼 쏟아져 달콤하고 깊은 맛을 선사합니다.
+                                                </p>
+                                                <p>
+                                                    부드러움, 바삭함, 달콤함이 서로를 품어<br>
+                                                    잊지 못할 맛의 순간을 만듭니다.
+                                                </p>
+
+                                            </div>
+
+                                            <div class="bk_line"></div>
+
+                                        </div>
+
+                                        <div class="bakery_img">
+                                            <img src="./images/bread/pain_au_chocolat.png" loading="lazy" alt="">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="swiper-slide bakery_item">
+
+                                        <div class="bk_wrap">
+
+                                            <div class="bakery_tt">
+
+                                                <h2 class="bakery_ko">
+                                                    러스틱 하임
+                                                </h2>
+                                                <h2 class="bakery_en">
+                                                    rustic hymn
+                                                </h2>
+
+                                            </div>
+
+                                            <div class="bakery_sb">
+
+                                                <div class="bakery_ko">
+                                                    갈릭 버터 브레드
+                                                </div>
+                                                <div class="bakery_en">
+                                                    garlic butter bread
+                                                </div>
+
+                                            </div>
+
+                                            <div class="bakery_text">
+
+                                                <p>
+                                                    겉은 바삭하면서도 속은 촉촉하게 살아있는,<br>
+                                                    정직하고 담백한 마늘빵.
+                                                </p>
+                                                <p>
+                                                    깊고 진하게 스며든 마늘 버터가<br>
+                                                    고소하고 짭짤한 풍미를 선사합니다.
+                                                </p>
+                                                <p>
+                                                    소박하지만 진솔한 맛이 마음 깊이 닿아,<br>
+                                                    따뜻한 위로를 선사합니다.
+                                                </p>
+
+                                            </div>
+
+                                            <div class="bk_line"></div>
+
+                                        </div>
+
+                                        <div class="bakery_img">
+                                            <img src="./images/bread/garlic_butter_breads.png" loading="lazy" alt="">
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="bakery_li_wrap croffle">
+
+                            <div class="swiper bakery_swiper">
+
+                                <div class="swiper_btn">
+
+                                    <div class="swiper-button-prev"><ion-icon name="chevron-back-outline"></ion-icon></div>
+                                    <div class="swiper-button-next"><ion-icon name="chevron-forward-outline"></ion-icon></div>
+
+                                </div>
+
+                                <div class="swiper-wrapper">
+
+                                    <div class="swiper-slide bakery_item">
+
+                                        <div class="bk_wrap">
+
+                                            <div class="bakery_tt">
+
+                                                <h2 class="bakery_ko">
+                                                    모리온 그릿
+                                                </h2>
+                                                <h2 class="bakery_en">
+                                                    morion grit
+                                                </h2>
+
+                                            </div>
+
+                                            <div class="bakery_sb">
+
+                                                <div class="bakery_ko">
+                                                    누텔라 크런치 크로플 바
+                                                </div>
+                                                <div class="bakery_en">
+                                                    nutella crunch croffle bar
+                                                </div>
+
+                                            </div>
+
+                                            <div class="bakery_text">
+
+                                                <p>
+                                                    어둠처럼 깊은 누텔라 코팅 위,<br>
+                                                    바삭한 크런치가 보석처럼 박힌 크로플바.
+                                                </p>
+                                                <p>
+                                                    한 입 베어 물면, 누텔라 속 크로플의<br>
+                                                    겹겹이 살아있는 부드러움이 퍼집니다.
+                                                </p>
+                                                <p>
+                                                    강렬한 바삭함과 부드러움이 교차하는<br>
+                                                    반전의 매력을 온전히 즐겨보세요.
+                                                </p>
+
+                                            </div>
+
+                                            <div class="bk_line"></div>
+
+                                        </div>
+
+                                        <div class="bakery_img">
+                                            <img src="./images/croffle/crispy_crunch_croffle_bar.png" loading="lazy" alt="">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="swiper-slide bakery_item">
+
+                                        <div class="bk_wrap">
+
+                                            <div class="bakery_tt">
+
+                                                <h2 class="bakery_ko">
+                                                    노바 더스트
+                                                </h2>
+                                                <h2 class="bakery_en">
+                                                    nova dust
+                                                </h2>
+
+                                            </div>
+
+                                            <div class="bakery_sb">
+
+                                                <div class="bakery_ko">
+                                                    초콜릿 오레오 크로플 바
+                                                </div>
+                                                <div class="bakery_en">
+                                                    chocolate oreo croffle bar
+                                                </div>
+
+                                            </div>
+
+                                            <div class="bakery_text">
+
+                                                <p>
+                                                    오레오 행성의 충돌로 흩어진<br>
+                                                    별먼지 크럼블이 가득한 초코 크로플 바.
+                                                </p>
+                                                <p>
+                                                    진한 초콜릿 코팅과 바삭한 크럼블이 만나<br>
+                                                    운석 충돌같은 달콤한 풍미를 선사합니다.
+                                                </p>
+                                                <p>
+                                                    베어무는 순간, 입안 가득 퍼지는<br>
+                                                    깊고 강렬한 우주의 맛을 경험해 보세요.
+                                                </p>
+
+                                            </div>
+
+                                            <div class="bk_line"></div>
+
+                                        </div>
+
+                                        <div class="bakery_img">
+                                            <img src="./images/croffle/oreo_croffle_bar.png" loading="lazy" alt="">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="swiper-slide bakery_item">
+
+                                        <div class="bk_wrap">
+
+                                            <div class="bakery_tt">
+
+                                                <h2 class="bakery_ko">
+                                                    폰스 갬빗
+                                                </h2>
+                                                <h2 class="bakery_en">
+                                                    pawn's gambit
+                                                </h2>
+
+                                            </div>
+
+                                            <div class="bakery_sb">
+
+                                                <div class="bakery_ko">
+                                                    오레오 크림 크로플
+                                                </div>
+                                                <div class="bakery_en">
+                                                    oreo cream croffle
+                                                </div>
+
+                                            </div>
+
+                                            <div class="bakery_text">
+
+                                                <p>
+                                                    체스에서 폰이 감행하는 달콤한 희생처럼,<br>
+                                                    크로플 위에 펼쳐진 치밀하고 달콤한 맛의 전략.
+                                                </p>
+                                                <p>
+                                                    크로플 위, 생크림과 오레오 토핑들이<br>
+                                                    모든 수를 계산한 듯 게임을 완성합니다.
+                                                </p>
+                                                <p>
+                                                    치밀하게 계산된 달콤함 속에서<br>
+                                                    세련된 맛의 여운을 천천히 음미해 보세요.
+                                                </p>
+
+                                            </div>
+
+                                            <div class="bk_line"></div>
+
+                                        </div>
+
+                                        <div class="bakery_img">
+                                            <img src="./images/croffle/oreo_cream_croffle.png" loading="lazy" alt="">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="swiper-slide bakery_item">
+
+                                        <div class="bk_wrap">
+
+                                            <div class="bakery_tt">
+
+                                                <h2 class="bakery_ko">
+                                                    골든 레버리
+                                                </h2>
+                                                <h2 class="bakery_en">
+                                                    golden reverie
+                                                </h2>
+
+                                            </div>
+
+                                            <div class="bakery_sb">
+
+                                                <div class="bakery_ko">
+                                                    로투스 크림 크로플
+                                                </div>
+                                                <div class="bakery_en">
+                                                    lotus cream croffle
+                                                </div>
+
+                                            </div>
+
+                                            <div class="bakery_text">
+
+                                                <p>
+                                                    황금빛 꿈같이, 부드러운 생크림에<br>
+                                                    달콤한 로투스 크럼블이 어우러진 크로플.
+                                                </p>
+                                                <p>
+                                                    캐러멜라이즈된 로투스 쿠키의 깊은 풍미가<br>
+                                                    달콤한 백일몽 같은 맛을 느끼게 해줍니다.
+                                                </p>
+                                                <p>
+                                                    크리스피하고 크리미함이 동시에 느껴지는<br>
+                                                    텍스처의 완벽한 조화를 느껴보세요.
+                                                </p>
+
+                                            </div>
+
+                                            <div class="bk_line"></div>
+
+                                        </div>
+
+                                        <div class="bakery_img">
+                                            <img src="./images/croffle/lotus_cream_croffle.png" loading="lazy" alt="">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="swiper-slide bakery_item">
+
+                                        <div class="bk_wrap">
+
+                                            <div class="bakery_tt">
+
+                                                <h2 class="bakery_ko">
+                                                    스위트 패러독스
+                                                </h2>
+                                                <h2 class="bakery_en">
+                                                    sweet paradox
+                                                </h2>
+
+                                            </div>
+
+                                            <div class="bakery_sb">
+
+                                                <div class="bakery_ko">
+                                                    로투스 크로플 바
+                                                </div>
+                                                <div class="bakery_en">
+                                                    lotus croffle bar
+                                                </div>
+
+                                            </div>
+
+                                            <div class="bakery_text">
+
+                                                <p>
+                                                    땅콩버터의 짭짤함과 로투스의 달콤함이<br>
+                                                    완벽하게 어우러지는 모순적 조화.
+                                                </p>
+                                                <p>
+                                                    바삭한 크로플 바 위에서 펼쳐지는 달콤한 역설이<br>
+                                                    예상을 뒤엎는 놀라운 풍미의 반전을 선사합니다.
+                                                </p>
+                                                <p>
+                                                    한 입 베어물 때마다 단짠의 경계를 넘나드는<br>
+                                                    디저트의 새로운 패러다임입니다.
+                                                </p>
+
+                                            </div>
+
+                                            <div class="bk_line"></div>
+
+                                        </div>
+
+                                        <div class="bakery_img">
+                                            <img src="./images/croffle/lotus_croffle_bar.png" loading="lazy" alt="">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="swiper-slide bakery_item">
+
+                                        <div class="bk_wrap">
+
+                                            <div class="bakery_tt">
+
+                                                <h2 class="bakery_ko">
+                                                    애플 트리
+                                                </h2>
+                                                <h2 class="bakery_en">
+                                                    apple tree
+                                                </h2>
+
+                                            </div>
+
+                                            <div class="bakery_sb">
+
+                                                <div class="bakery_ko">
+                                                    애플 시나몬 크로플 바
+                                                </div>
+                                                <div class="bakery_en">
+                                                    apple cinnamon croffle bar
+                                                </div>
+
+                                            </div>
+
+                                            <div class="bakery_text">
+
+                                                <p>
+                                                    꾸덕한 사과잼 위로 시나몬 한 꼬집,<br>
+                                                    어디서 옛날 향수가 느껴지지 않나요?
+                                                </p>
+                                                <p>
+                                                    겉바속촉 크로플 위에 얹은 사과 한 스푼과<br>
+                                                    계피향이 입 안을 따스하게 채웁니다.
+                                                </p>
+                                                <p>
+                                                    정성을 담아 만든 수제 디저트 한 입으로<br>
+                                                    빛바랜 추억을 회상 해보세요.
+                                                </p>
+
+                                            </div>
+
+                                            <div class="bk_line"></div>
+
+                                        </div>
+
+                                        <div class="bakery_img">
+                                            <img src="./images/croffle/apple_jam_croffle_bar.png" loading="lazy" alt="">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="swiper-slide bakery_item">
+
+                                        <div class="bk_wrap">
+
+                                            <div class="bakery_tt">
+
+                                                <h2 class="bakery_ko">
+                                                    모카 벨루어
+                                                </h2>
+                                                <h2 class="bakery_en">
+                                                    mocha velour
+                                                </h2>
+
+                                            </div>
+
+                                            <div class="bakery_sb">
+
+                                                <div class="bakery_ko">
+                                                    티라미수 크로플
+                                                </div>
+                                                <div class="bakery_en">
+                                                    tiramisu croffle
+                                                </div>
+
+                                            </div>
+
+                                            <div class="bakery_text">
+
+                                                <p>
+                                                    부드러운 크림치즈와 코코아 파우더가<br>
+                                                    벨루어처럼 매끄러운 모카빛 풍미의 크로플.
+                                                </p>
+                                                <p>
+                                                    그 위에 수놓인 이탈리아 티라미수가<br>
+                                                    입안을 은밀하고도 우아하게 감쌉니다.
+                                                </p>
+                                                <p>
+                                                    혀끝에서 녹아내리는 달콤한 황혼과<br>
+                                                    그 뒤를 잇는 은은한 쌉싸름을 즐겨보세요.
+                                                </p>
+
+                                            </div>
+
+                                            <div class="bk_line"></div>
+
+                                        </div>
+
+                                        <div class="bakery_img">
+                                            <img src="./images/croffle/tiramisu_croffle.png" loading="lazy" alt="">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="swiper-slide bakery_item">
+
+                                        <div class="bk_wrap">
+
+                                            <div class="bakery_tt">
+
+                                                <h2 class="bakery_ko">
+                                                    몰튼 포에트리
+                                                </h2>
+                                                <h2 class="bakery_en">
+                                                    molten poetry
+                                                </h2>
+
+                                            </div>
+
+                                            <div class="bakery_sb">
+
+                                                <div class="bakery_ko">
+                                                    브라운 치즈 크로플 바
+                                                </div>
+                                                <div class="bakery_en">
+                                                    brown cheese croffle bar
+                                                </div>
+
+                                            </div>
+
+                                            <div class="bakery_text">
+
+                                                <p>
+                                                    입안에서 시를 쓰듯, 브라운 치즈와<br>
+                                                    황금빛 꿀이 깊게 스며드는 크로플.
+                                                </p>
+                                                <p>
+                                                    짭짤함과 달콤함이 빚어낸<br>
+                                                    서정적 만남이 미각을 울립니다.
+                                                </p>
+                                                <p>
+                                                    이 달콤한 운율에 몸을 맡기고,<br>
+                                                    번져가는 여운을 천천히 음미하세요.
+                                                </p>
+
+                                            </div>
+
+                                            <div class="bk_line"></div>
+
+                                        </div>
+
+                                        <div class="bakery_img">
+                                            <img src="./images/croffle/brown_cheese_croffle_bar.png" loading="lazy" alt="">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="swiper-slide bakery_item">
+
+                                        <div class="bk_wrap">
+
+                                            <div class="bakery_tt">
+
+                                                <h2 class="bakery_ko">
+                                                    리치 세레니티
+                                                </h2>
+                                                <h2 class="bakery_en">
+                                                    rich serenity
+                                                </h2>
+
+                                            </div>
+
+                                            <div class="bakery_sb">
+
+                                                <div class="bakery_ko">
+                                                    브라운 치즈 크로플
+                                                </div>
+                                                <div class="bakery_en">
+                                                    brown cheese croffle
+                                                </div>
+
+                                            </div>
+
+                                            <div class="bakery_text">
+
+                                                <p>
+                                                    황금빛 꿀과 부드러운 바닐라 아이스크림,<br>
+                                                    브라운 치즈가 빚은 깊고 평온한 크로플.
+                                                </p>
+                                                <p>
+                                                    차가운 아이스크림과 따뜻한 크로플의<br>
+                                                    온도 대비가 마음을 고요하게 감싸 안습니다.
+                                                </p>
+                                                <p>
+                                                    이 깊은 평온 속에서 번져가는 달콤함을,<br>
+                                                    마치 시간을 잊은 듯 천천히 음미해 보세요.
+                                                </p>
+
+                                            </div>
+
+                                            <div class="bk_line"></div>
+
+                                        </div>
+
+                                        <div class="bakery_img">
+                                            <img src="./images/croffle/brown_cheese_croffle.png" loading="lazy" alt="">
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="bakery_li_wrap cake">
+
+                            <div class="swiper bakery_swiper">
+
+                                <div class="swiper_btn">
+
+                                    <div class="swiper-button-prev"><ion-icon name="chevron-back-outline"></ion-icon></div>
+                                    <div class="swiper-button-next"><ion-icon name="chevron-forward-outline"></ion-icon></div>
+
+                                </div>
+
+                                <div class="swiper-wrapper">
+
+                                    <div class="swiper-slide bakery_item">
+
+                                        <div class="bk_wrap">
+
+                                            <div class="bakery_tt">
+
+                                                <h2 class="bakery_ko">
+                                                    시크릿 가든
+                                                </h2>
+                                                <h2 class="bakery_en">
+                                                    secret garden
+                                                </h2>
+
+                                            </div>
+
+                                            <div class="bakery_sb">
+
+                                                <div class="bakery_ko">
+                                                    레드벨벳 케이크
+                                                </div>
+                                                <div class="bakery_en">
+                                                    red velvet cake
+                                                </div>
+
+                                            </div>
+
+                                            <div class="bakery_text">
+
+                                                <p>
+                                                    레드벨벳의 붉은 비밀과 부드러운 크림치즈가<br>
+                                                    숨겨진 정원처럼 고요히 피어난 케이크.
+                                                </p>
+                                                <p>
+                                                    한 입 머금는 순간, 벨벳 같은 촉촉함 속에서<br>
+                                                    달콤한 비밀이 꽃잎처럼 차례로 펼쳐집니다.
+                                                </p>
+                                                <p>
+                                                    이 은밀하고 향기로운 정원에서<br>
+                                                    당신만의 특별한 순간을 천천히 음미하세요.
+                                                </p>
+
+                                            </div>
+
+                                            <div class="bk_line"></div>
+
+                                        </div>
+
+                                        <div class="bakery_img">
+                                            <img src="./images/cake/red_velvet_cake.png" loading="lazy" alt="">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="swiper-slide bakery_item">
+
+                                        <div class="bk_wrap">
+
+                                            <div class="bakery_tt">
+
+                                                <h2 class="bakery_ko">
+                                                    사일런트 랩처
+                                                </h2>
+                                                <h2 class="bakery_en">
+                                                    silent rapture
+                                                </h2>
+
+                                            </div>
+
+                                            <div class="bakery_sb">
+
+                                                <div class="bakery_ko">
+                                                    티라미수 타르트
+                                                </div>
+                                                <div class="bakery_en">
+                                                    tiramisu tart
+                                                </div>
+
+                                            </div>
+
+                                            <div class="bakery_text">
+
+                                                <p>
+                                                    부드러운 마스카포네와 진한 커피 향이<br>
+                                                    초콜릿 타르트 쉘에 은은히 스며든 타르트.
+                                                </p>
+                                                <p>
+                                                    깊은 초콜릿 쌉싸름과 마스카포네의 부드러움이<br>
+                                                    말없이 입안을 감동으로 채웁니다.
+                                                </p>
+                                                <p>
+                                                    고요한 황홀경 속에서<br>
+                                                    진정한 달콤함에 천천히 빠져보세요.
+                                                </p>
+
+                                            </div>
+
+                                            <div class="bk_line"></div>
+
+                                        </div>
+
+                                        <div class="bakery_img">
+                                            <img src="./images/cake/chocolate_tiramisu_tart.png" loading="lazy" alt="">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="swiper-slide bakery_item">
+
+                                        <div class="bk_wrap">
+
+                                            <div class="bakery_tt">
+
+                                                <h2 class="bakery_ko">
+                                                    크리미 위스퍼
+                                                </h2>
+                                                <h2 class="bakery_en">
+                                                    creamy whisper
+                                                </h2>
+
+                                            </div>
+
+                                            <div class="bakery_sb">
+
+                                                <div class="bakery_ko">
+                                                    티라미수 케이크
+                                                </div>
+                                                <div class="bakery_en">
+                                                    tiramisu cake
+                                                </div>
+
+                                            </div>
+
+                                            <div class="bakery_text">
+
+                                                <p>
+                                                    층층이 쌓인 스펀지와 마스카포네 크림이<br>
+                                                    입안 가득 크리미한 속삭임을 전하는 케이크.
+                                                </p>
+                                                <p>
+                                                    부드럽게 녹아드는 질감과 은은한 커피 향이<br>
+                                                    조용히 어우러져 온화한 달콤함을 품습니다.
+                                                </p>
+                                                <p>
+                                                    부드러운 속삭임에 마음을 기대어<br>
+                                                    평온한 순간을 천천히 음미해보세요.
+                                                </p>
+
+                                            </div>
+
+                                            <div class="bk_line"></div>
+
+                                        </div>
+
+                                        <div class="bakery_img">
+                                            <img src="./images/cake/tiramisu_cake.png" loading="lazy" alt="">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="swiper-slide bakery_item">
+
+                                        <div class="bk_wrap">
+
+                                            <div class="bakery_tt">
+
+                                                <h2 class="bakery_ko">
+                                                    코튼 클라우드
+                                                </h2>
+                                                <h2 class="bakery_en">
+                                                    cotton cloud
+                                                </h2>
+
+                                            </div>
+
+                                            <div class="bakery_sb">
+
+                                                <div class="bakery_ko">
+                                                    치즈케이크
+                                                </div>
+                                                <div class="bakery_en">
+                                                    cheesecake
+                                                </div>
+
+                                            </div>
+
+                                            <div class="bakery_text">
+
+                                                <p>
+                                                    솜구름처럼 부드럽고 하얀 치즈케이크가<br>
+                                                    입안 가득 포근하게 녹아드는 지금.
+                                                </p>
+                                                <p>
+                                                    크리미한 질감과 은은한 달콤함이<br>
+                                                    마치 구름 위를 걷는 듯한 행복을 선사합니다.
+                                                </p>
+                                                <p>
+                                                    포근한 구름 속에서 즐기는<br>
+                                                    달콤한 휴식 한 입, 어떠신가요?
+                                                </p>
+
+                                            </div>
+
+                                            <div class="bk_line"></div>
+
+                                        </div>
+
+                                        <div class="bakery_img">
+                                            <img src="./images/cake/cheesecake.png" loading="lazy" alt="">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="swiper-slide bakery_item">
+
+                                        <div class="bk_wrap">
+
+                                            <div class="bakery_tt">
+
+                                                <h2 class="bakery_ko">
+                                                    번트 크림
+                                                </h2>
+                                                <h2 class="bakery_en">
+                                                    burnt cream
+                                                </h2>
+
+                                            </div>
+
+                                            <div class="bakery_sb">
+
+                                                <div class="bakery_ko">
+                                                    바스크 치즈케이크
+                                                </div>
+                                                <div class="bakery_en">
+                                                    basque cheesecake
+                                                </div>
+
+                                            </div>
+
+                                            <div class="bakery_text">
+
+                                                <p>
+                                                    진하게 그을려 깊은 풍미를 머금은,<br>
+                                                    구름처럼 부드러운 속살의 바스크 케이크.
+                                                </p>
+                                                <p>
+                                                    고온에서 구워낸 진한 크림치즈가<br>
+                                                    입안에서 벨벳결로 부드럽게 녹아내립니다.
+                                                </p>
+                                                <p>
+                                                    첫 숟가락에 반하는 이 짧은 순간,<br>
+                                                    하루의 작은 사치를 스스로에게 선물하세요.
+                                                </p>
+
+                                            </div>
+
+                                            <div class="bk_line"></div>
+
+                                        </div>
+
+                                        <div class="bakery_img">
+                                            <img src="./images/cake/basque_cheesecake.png" loading="lazy" alt="">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="swiper-slide bakery_item">
+
+                                        <div class="bk_wrap">
+
+                                            <div class="bakery_tt">
+
+                                                <h2 class="bakery_ko">
+                                                    로밧 레인
+                                                </h2>
+                                                <h2 class="bakery_en">
+                                                    lovat rain
+                                                </h2>
+
+                                            </div>
+
+                                            <div class="bakery_sb">
+
+                                                <div class="bakery_ko">
+                                                    머그워트 크림 케이크
+                                                </div>
+                                                <div class="bakery_en">
+                                                    mugwort cream cake
+                                                </div>
+
+                                            </div>
+
+                                            <div class="bakery_text">
+
+                                                <p>
+                                                    은은한 회록빛으로 물들인,<br>
+                                                    보슬비처럼 촉촉한 쑥 향의 케이크.
+                                                </p>
+                                                <p>
+                                                    부드러운 쑥 크림이 입안에 스며들어<br>
+                                                    자연의 단맛과 향이 조화롭게 퍼집니다.
+                                                </p>
+                                                <p>
+                                                    고요한 오후, 지친 마음에<br>
+                                                    평온한 단비 한 조각을 전합니다.
+                                                </p>
+
+                                            </div>
+
+                                            <div class="bk_line"></div>
+
+                                        </div>
+
+                                        <div class="bakery_img">
+                                            <img src="./images/cake/mugwort_cream_cake.png" loading="lazy" alt="">
                                         </div>
 
                                     </div>
@@ -3504,7 +5418,7 @@
                     <div class="contact_us radius01 emb">
 
                         <div class="contact_logo">
-                            <img src="./images/logo_b.svg" loading="lazy" alt=""></img>
+                            <img src="./images/logo_b.svg" loading="lazy" alt="">
                         </div>
 
                         <div class="contact_text">
@@ -3538,26 +5452,124 @@
                                 <textarea id="message" name="message" placeholder="message" required></textarea>
                             </div>
 
+                            <div class="contact_agree">
+
+                                <input type="checkbox" id="agree" name="agree" placeholder="agree" required>
+                                <label for="agree">
+                                    <span><i class="fa-solid fa-check"></i></span>
+                                </label>
+
+                                <div class="agree_wrap">
+                                    <p class="agree_en">
+                                        i have read the <a href="">
+                                        <span>privacy policy</span>
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    </a> and agree</p>
+                                    <p class="agree_ko">이용 약관 및 개인정보 보호정책에 동의합니다.</p>
+                                </div>
+
+                            </div>
+
                             <input type="submit" value="submit">
                         </form>
 
                     </div>
 
-                    <div class="subscribe radius01 emb">
+                    <div class="subscribe radius01">
 
                         <h6>
                             래디언스 뉴스를 놓치지 마세요!<br>
                             새로운 소식과 함께 가장 먼저 특별한 혜택을 받아보세요.
                         </h6>
 
-                        <form id="subscribe-form" class="subscribe_form">
-                            <input type="hidden" name="time" value="Mar 10 2025 08:46">
+                        <button class="sub_btn emb">
+                            subscribe
+                            <ion-icon name="chevron-forward-outline"></ion-icon>
+                        </button>
 
-                            <label for="subscribe">email</label>
-                            <input type="email" id="subscribe" name="email" placeholder="e-mail" required>
+                        <div class="sub_blur radius01 emb_d02"></div>
 
-                            <input type="submit" value="subscribe">
-                        </form>
+                    </div>
+
+                </div>
+
+                <div class="ctt_side">
+
+                    <div class="contact_banner radius01 emb_d02">
+
+                        <div class="ctt_box_shadow emb_d02"></div>
+
+                        <div class="swiper ctt_banner">
+
+                            <div class="swiper-wrapper">
+
+                                <div class="swiper-slide ctt_bn_item">
+                                    <div class="ctt_bn_wrap">
+
+                                        <h4 class="ctt_tt">
+                                            stamp your moments
+                                        </h4>
+                                        <p class="ctt_sb">
+                                            한 잔의 여유, 한 걸음의 설렘. 모을 수록 더 특별한 혜택을 만나보새요.
+                                        </p>
+
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide ctt_bn_item">
+                                    <div class="ctt_bn_wrap">
+
+                                        <h4 class="ctt_tt">
+                                            stamp your moments
+                                        </h4>
+                                        <p class="ctt_sb">
+                                            한 잔의 여유, 한 걸음의 설렘. 모을 수록 더 특별한 혜택을 만나보새요.
+                                        </p>
+
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide ctt_bn_item">
+                                    <div class="ctt_bn_wrap">
+
+                                        <h4 class="ctt_tt">
+                                            stamp your moments
+                                        </h4>
+                                        <p class="ctt_sb">
+                                            한 잔의 여유, 한 걸음의 설렘. 모을 수록 더 특별한 혜택을 만나보새요.
+                                        </p>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="swiper-pagination ctt_pagination"></div>
+                        </div>
+
+                    </div>
+
+                    <div class="ctt_sns_wrap">
+
+                        <div class="ctt_instagram radius01 emb_d02">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                            <h6>
+                                radiance in your hands
+                            </h6>
+                            <p>
+                                더 쉽고 가까워진 래디언스
+                            </p>
+                        </div>
+
+                        <div class="ctt_youtube radius01 emb_d02">
+                            <ion-icon name="logo-youtube"></ion-icon>
+                            <h6>
+                                glow together; Opening
+                            </h6>
+                            <p>
+                                함께 하는 순간, 가장 빛났던 밤
+                            </p>
+                        </div>
 
                     </div>
 
@@ -3573,9 +5585,128 @@
 
     </div>
 
-<!--    <div class="footer">-->
-<!--        abcdfeu-->
-<!--    </div>-->
+    <div id="footer emb">
+
+        <div class="footer_main">
+
+            <div class="footer_logo">
+                <img src="./images/logo_t1w.svg" loading="lazy" alt="">
+            </div>
+
+            <div class="footer_menu">
+
+                <div class="footer_info">
+
+                    <p class="address_ko">
+                        부산광역시 부산진구 서전로 37번길 18 2f
+                    </p>
+
+                    <p class="address_en">
+                        busanjin-gu seojeon-ro 37beon-gil 18 2f
+                    </p>
+
+                    <p class="tel">
+                        <span>+82</span>51 133 036
+                    </p>
+
+                    <p class="email">
+                        radiance.kr<span>@</span>gmail.com
+                    </p>
+
+                    <ul class="footer_time">
+                        <li class="footer_open">
+                            <p>
+                                open<span>10.00</span><span>am</span>
+                            </p>
+                        </li>
+                        <li class="footer_close">
+                            <p>
+                                close<span>21.00</span><span>pm</span>
+                            </p>
+                        </li>
+                        <li class="footer_holiday">
+                            <p>
+                                sun, mon off
+                            </p>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="footer_tool">
+
+                    <ul>
+                        <li>
+                            <a href="">
+                                agreements
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                terms & conditions
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                customer center
+                            </a>
+                        </li>
+                    </ul>
+
+                    <p class="copyright">
+                        ⓒ RADIANCE. ALL RIGHT RESERVED.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer_side">
+
+            <ul class="footer_sns">
+                <li>
+                    <a href="" class="insta">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="thread">
+                        <i class="fa-brands fa-threads"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="youtube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="kakao">
+                        <i class="fa-brands fa-kakao-talk"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="footer_text">
+                <p class="footer_txt_ko">
+                    sns를 팔로우하고, 빛나는 순간을 함께!<br>
+                    래디언스의 최신 소식을 빠르게 만나보세요.
+                </p>
+                <p class="footer_txt_en">
+                    stay connected, be part of our glowing community!<br>
+                    discover the latest updates from radiance.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
 
     <!--   google map : prettier-ignore    -->
     <script>
@@ -3595,46 +5726,121 @@
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/swiper.js"></script>
+
+    <script>
+        const cntSwiper = new Swiper(".content", {
+            direction: "vertical",
+            speed: 1250,
+            slidesPerView: 1,
+            spaceBetween: 0,
+            mousewheel: true,
+            nested: true,
+            freeMode: false,
+            touchStartPreventDefault: false,
+        });
+
+        const mainBanner = new Swiper(".main_banner", {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            speed: 1725,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false
+            },
+            effect: "fade",
+            loop: true,
+            navigation: {
+                nextEl: ".main_right",
+                prevEl: ".main_left",
+            },
+            pagination: {
+                el: '.banner_progressbar',
+                type: 'progressbar',
+            },
+            observer: true,
+            observeParents: true,
+        });
+
+
+
+        const noticeBanner = new Swiper(".nt_banner", {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            speed: 1725,
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false
+            },
+            observer: true,
+            observeParents: true,
+            watchSlidesProgress: true,
+            pagination: {
+                el: '.notice_progressbar',
+                type: 'progressbar',
+            },
+        });
+
+        const noticeBg = new Swiper(".ntb_bg", {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            speed: 1725,
+            loop: true,
+            allowTouchMove: false,
+            observer: true,
+            observeParents: true,
+            watchSlidesProgress: true,
+        });
+
+        noticeBanner.controller.control = noticeBg;
+
+
+
+        const coffeeSwiper = new Swiper(".menu_swiper", {
+            slidesPerView: "auto",
+            grid: {
+                rows: 2,
+                fill: "row",
+            },
+            spaceBetween: 26,
+        });
+
+        const bakerySwiper = new Swiper(".bakery_swiper", {
+            slidesPerView: "auto",
+            spaceBetween: 26,
+            speed: 1325,
+            loop: true,
+            navigation: {
+                nextEl: ".bakery_swiper .swiper-button-next",
+                prevEl: ".bakery_swiper .swiper-button-prev",
+            },
+        });
+
+
+
+        const cttSwiper = new Swiper(".ctt_banner", {
+            slidesPerView: "auto",
+            speed: 1250,
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false
+            },
+            effect: "fade",
+            fadeEffect: {
+                crossFade: true,
+            },
+            pagination: {
+                el: ".ctt_pagination",
+            },
+        });
+
+    </script>
 
     <!-- Initialize Swiper -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const total = document.querySelectorAll('.coffee_item').length;
-            const rows = 2;
-            const perRow = Math.ceil(total / rows);
 
-            new Swiper(".menu_swiper", {
-                slidesPerView: 'auto',
-                grid: {
-                    rows: rows,
-                    fill: 'row'
-                },
-                spaceBetween: 26,
-            });
 
-            const totalBakeryItems = document.querySelectorAll('.bakery_item').length;
-            const rowsBakery = 1;
-            const perRowBakery = Math.ceil(totalBakeryItems / rowsBakery);
-
-            const bakerySwiper = new Swiper(".bakery_swiper", {
-                slidesPerView: 'auto',
-                grid: {
-                    rows: rowsBakery,
-                    fill: 'row'
-                },
-                spaceBetween: 26,
-                speed: 1325,
-                // effect: 'fade',
-                // fadeEffect: {
-                //     crossFade: true
-                // },
-                navigation: {
-                    nextEl: '.bakery_swiper .swiper-button-next',
-                    prevEl: '.bakery_swiper .swiper-button-prev',
-                },
-            });
-        });
-    </script>
 
 </body>
 

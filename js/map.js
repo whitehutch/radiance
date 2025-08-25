@@ -17,7 +17,7 @@ async function initMap() {
     mapMarker.className = "map-marker";
     markerTail.className = "marker-tail";
     // mapMarker.innerHTML = '<span>here<ion-icon name="cafe"></ion-icon></span>';
-    mapMarker.innerHTML = '<ion-icon name="cafe"></ion-icon>';
+    mapMarker.innerHTML = '<div class="click_wrap"><ion-icon name="cafe"></ion-icon><p class="map_click">click here !</p></div>';
 
     mapWrap.appendChild(mapMarker);
     mapWrap.appendChild(markerTail);

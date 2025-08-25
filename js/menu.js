@@ -4,9 +4,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const menuLists = document.querySelectorAll(".drink_tab .menu_tab li");
     const menuBtn = document.querySelector(".drink_tab .menu_button");
+    const drinkContents = document.querySelectorAll(".menu_list .drink_list");
 
-    const bkLists = document.querySelectorAll(".bakery_tab .menu_tab > li");
+    const bkLists = document.querySelectorAll(".bakery_tab .menu_tab li");
     const bakeryBtn = document.querySelector(".bakery_tab .menu_button");
+    const bakeryContents = document.querySelectorAll(".bakery_list .bakery_li_wrap"); // 누락된 변수 추가
 
     // updateButtonStyle 함수는 'on' 클래스를 가진 탭에 따라 버튼 스타일만 업데이트합니다.
     function updateButtonStyle() {
@@ -38,38 +40,55 @@ document.addEventListener("DOMContentLoaded", function () {
                         break;
                     case 1:
                         bakeryBtn.style.left = "112px";
-                        bakeryBtn.style.width = "129px";
+                        bakeryBtn.style.width = "97px";
                         break;
                     case 2:
-                        bakeryBtn.style.left = "241px";
-                        bakeryBtn.style.width = "75px";
+                        bakeryBtn.style.left = "209px";
+                        bakeryBtn.style.width = "116px";
                         break;
-                    case 3: // 탭이 4개일 경우를 대비하여 추가했습니다.
-                        bakeryBtn.style.left = "262px"; // 예시 위치
-                        bakeryBtn.style.width = "75px"; // 예시 너비
+                    case 3:
+                        bakeryBtn.style.left = "325px";
+                        bakeryBtn.style.width = "87px";
                         break;
                 }
             }
         });
     }
 
-    // 초기 로드 시 버튼 스타일 업데이트
     updateButtonStyle();
 
-    menuLists.forEach((menuList) => {
+    menuLists.forEach((menuList, index) => {
         menuList.addEventListener("click", () => {
             menuLists.forEach((ml) => ml.classList.remove("on"));
+            drinkContents.forEach((dc) => dc.classList.remove("active"));
+
             menuList.classList.add("on");
+
+            drinkContents[index].classList.add("active");
+
             updateButtonStyle();
         });
     });
 
-    // menuList_top 스크롤 효과
+    bkLists.forEach((bkList, index) => {
+        bkList.addEventListener("click", () => {
+            bkLists.forEach((bl) => bl.classList.remove("on"));
+            bakeryContents.forEach((bc) => bc.classList.remove("active"));
+
+            bkList.classList.add("on");
+
+            bakeryContents[index].classList.add("active");
+
+            updateButtonStyle();
+        });
+    });
+
+
     const menuListTop = document.querySelector(".menuList_top");
     const linearTop = document.querySelector(".ctt_top");
     const linearBottom = document.querySelector(".ctt_bottom");
 
-    if (menuListTop && linearTop && linearBottom) { // null 체크 추가
+    if (menuListTop && linearTop && linearBottom) {
         menuListTop.addEventListener("scroll", function () {
             const isAtTop = menuListTop.scrollTop === 0;
             const isAtBottom = menuListTop.scrollHeight - menuListTop.scrollTop === menuListTop.clientHeight;
@@ -86,7 +105,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        // 초기 로드 시 스크롤바 상태에 따른 투명도 조절
         const isInitialAtTop = menuListTop.scrollTop === 0;
         const isInitialAtBottom = menuListTop.scrollHeight - menuListTop.scrollTop === menuListTop.clientHeight;
 
@@ -103,12 +121,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    // drinkList_top 스크롤 효과
     const drinkListTop = document.querySelector(".drinkList_top");
     const drinkLiTop = document.querySelector(".drinkLi_top");
     const drinkLiBottom = document.querySelector(".drinkLi_bottom");
 
-    if (drinkListTop && drinkLiTop && drinkLiBottom) { // null 체크 추가
+    if (drinkListTop && drinkLiTop && drinkLiBottom) {
         drinkListTop.addEventListener("scroll", function () {
             const isAtTop = drinkListTop.scrollTop === 0;
             const isAtBottom = drinkListTop.scrollHeight - drinkListTop.scrollTop === drinkListTop.clientHeight;
@@ -125,7 +142,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        // 초기 로드 시 스크롤바 상태에 따른 투명도 조절
         const isInitialDrinkAtTop = drinkListTop.scrollTop === 0;
         const isInitialDrinkAtBottom = drinkListTop.scrollHeight - drinkListTop.scrollTop === drinkListTop.clientHeight;
 
@@ -142,7 +158,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    // category tab
     const categoryTabs = document.querySelectorAll(".category_tab > li");
     const categoryLists = document.querySelectorAll(".category_list");
 
@@ -163,7 +178,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // categoryList_top 스크롤 효과
     const categoryListTop = document.querySelector(".categoryList_top");
     const categoryLiTop = document.querySelector(".categoryLi_top");
     const categoryLiBottom = document.querySelector(".categoryLi_bottom");
@@ -185,7 +199,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        // 초기 로드 시 스크롤바 상태에 따른 투명도 조절
         const isInitialCategoryAtTop = categoryListTop.scrollTop === 0;
         const isInitialCategoryAtBottom = categoryListTop.scrollHeight - categoryListTop.scrollTop === categoryListTop.clientHeight;
 
@@ -202,7 +215,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    // best_scroll 스크롤 효과
     const bestScroll = document.querySelector(".best_scroll");
     const bestSbTop = document.querySelector(".bestSb_top");
     const bestSbBottom = document.querySelector(".bestSb_bottom");
@@ -224,7 +236,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        // 초기 로드 시 스크롤바 상태에 따른 투명도 조절
         const isInitialBestAtTop = bestScroll.scrollTop === 0;
         const isInitialBestAtBottom = bestScroll.scrollHeight - bestScroll.scrollTop === bestScroll.clientHeight;
 
@@ -240,12 +251,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // new_scroll 스크롤 효과
     const newScroll = document.querySelector(".new_scroll");
     const newSbTop = document.querySelector(".newSb_top");
     const newSbBottom = document.querySelector(".newSb_bottom");
 
-    if (newScroll && newSbTop && newSbBottom) { // null 체크 추가
+    if (newScroll && newSbTop && newSbBottom) {
         newScroll.addEventListener("scroll", function () {
             const isAtTop = newScroll.scrollTop === 0;
             const isAtBottom = newScroll.scrollHeight - newScroll.scrollTop === newScroll.clientHeight;
@@ -262,7 +272,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        // 초기 로드 시 스크롤바 상태에 따른 투명도 조절
         const isInitialNewAtTop = newScroll.scrollTop === 0;
         const isInitialNewAtBottom = newScroll.scrollHeight - newScroll.scrollTop === newScroll.clientHeight;
 
@@ -279,12 +288,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    // bakery_scroll 스크롤 효과 (현재는 CSS에서 스크롤바를 숨기고 있으므로, 이 효과는 보이지 않을 수 있습니다.)
     const bakeryScroll = document.querySelector(".bakery_scroll");
     const bakerySbTop = document.querySelector(".bakerySb_top");
-    const bakerySbEn = document.querySelector(".bakerySb_en"); // 이 변수명은 아마 bakerySbBottom을 의도한 것 같습니다.
+    const bakerySbEn = document.querySelector(".bakerySb_en");
 
-    if (bakeryScroll && bakerySbTop && bakerySbEn) { // null 체크 추가
+    if (bakeryScroll && bakerySbTop && bakerySbEn) {
         bakeryScroll.addEventListener("scroll", function () {
             const isAtTop = bakeryScroll.scrollTop === 0;
             const isAtBottom = bakeryScroll.scrollHeight - bakeryScroll.scrollTop === bakeryScroll.clientHeight;
@@ -301,7 +309,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        // 초기 로드 시 스크롤바 상태에 따른 투명도 조절
         const isInitialBakeryAtTop = bakeryScroll.scrollTop === 0;
         const isInitialBakeryAtBottom = bakeryScroll.scrollHeight - bakeryScroll.scrollTop === bakeryScroll.clientHeight;
 
@@ -317,15 +324,12 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // 전역 스크롤 이벤트 (best_scroll 활성화)
     window.addEventListener('scroll', () => {
         const section = document.querySelector('#drink_list'); // #drink_list 섹션의 위치에 따라 best_scroll이 활성화되는 로직
         const target = document.querySelector('#drink_list .best_scroll');
         const scrollY = window.scrollY;
 
-        // target 요소가 존재하는지 확인
         if (target) {
-            // 스크롤 위치 (7687)는 페이지 레이아웃에 따라 조정해야 할 수 있습니다.
             if (scrollY >= 7687) {
                 target.classList.add('active');
             } else {
@@ -334,10 +338,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // drinkLists는 menuLists와 연동됩니다. (변수 정의는 유지)
     const drinkLists = document.querySelectorAll(".drink_list");
 
-    // bakeryTabs (베이커리 탭)에 대한 클릭 이벤트 리스너
     const bakeryTabs = document.querySelectorAll(".bakery_tab>.menu_tab>li");
     const bakeryLists = document.querySelectorAll(".bakery_list"); // 실제 베이커리 콘텐츠 목록
 
@@ -346,20 +348,14 @@ document.addEventListener("DOMContentLoaded", function () {
     // 베이커리 Swiper 관련 코드
     // ===================================================================
 
-    // window.bakerySwiperInstance가 이미 index.html에서 초기화되었다고 가정합니다.
-    // 해당 인스턴스에 필요한 이벤트 리스너를 추가합니다.
     if (window.bakerySwiperInstance) {
         const bakerySwiper = window.bakerySwiperInstance;
 
-        // Swiper 속도 및 loop 설정 (index.html에서 설정한 것을 덮어쓸 수 있습니다)
-        // CSS transition이 0.8s 이므로 Swiper speed도 800ms로 맞춥니다.
         bakerySwiper.params.speed = 800;
-        bakerySwiper.params.loop = true; // 필요하다면 loop 설정 추가
-        bakerySwiper.update(); // 변경된 파라미터 적용
+        bakerySwiper.params.loop = true;
+        bakerySwiper.update();
 
-        // .on 클래스 추가/제거를 위한 Swiper 이벤트 핸들러 추가
         bakerySwiper.on('init', function () {
-            // 초기화 시 활성 슬라이드의 .bakery_item에 .on 클래스 추가
             if (this.slides.length > 0) {
                 const activeSlide = this.slides[this.activeIndex];
                 const activeBakeryItem = activeSlide.querySelector('.bakery_item');
@@ -370,8 +366,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         bakerySwiper.on('slideChange', function () {
-            // 슬라이드 전환 시작 시: 이전 활성 슬라이드의 bakery_item에서 'on' 클래스 제거
-            // 이렇게 하면 현재 보이던 슬라이드가 투명해지기 시작합니다.
             if (this.previousIndex !== undefined && this.slides[this.previousIndex]) {
                 const prevSlide = this.slides[this.previousIndex];
                 const prevBakeryItem = prevSlide.querySelector('.bakery_item');
@@ -382,8 +376,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         bakerySwiper.on('slideChangeTransitionEnd', function () {
-            // 슬라이드 전환 완료 시: 새로운 활성 슬라이드의 bakery_item에 'on' 클래스 추가
-            // 이렇게 하면 새로 보이는 슬라이드가 불투명해지기 시작합니다.
             if (this.slides.length > 0) {
                 const activeSlide = this.slides[this.activeIndex];
                 const activeBakeryItem = activeSlide.querySelector('.bakery_item');
@@ -393,7 +385,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        // bakeryTabs (베이커리 탭)에 대한 클릭 이벤트 리스너
         bakeryTabs.forEach((bakeryTab) => {
             bakeryTab.addEventListener("click", () => {
                 bakeryTabs.forEach((bt) => bt.classList.remove("on"));
@@ -405,10 +396,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 bakeryLists.forEach((bakeryList) => {
                     if (bakeryList.classList.contains(bakeryTabClass)) {
                         bakeryList.classList.add("on");
-                        bakerySwiper.update(); // 탭 활성화 시 Swiper 레이아웃 업데이트
+                        bakerySwiper.update();
 
-                        // 탭 변경 시 모든 bakery_item에서 'on' 클래스 제거 후,
-                        // 현재 활성화된 슬라이드에만 다시 'on' 추가 (초기화 로직과 유사)
                         bakerySwiper.slides.forEach((slide) => {
                             const item = slide.querySelector('.bakery_item');
                             if (item) {
@@ -422,7 +411,6 @@ document.addEventListener("DOMContentLoaded", function () {
                                 activeBakeryItem.classList.add('on');
                             }
                         }
-                        // (선택 사항) 탭 변경 시 첫 번째 슬라이드로 이동
                         bakerySwiper.slideTo(0);
                     } else {
                         bakeryList.classList.remove("on");
@@ -430,14 +418,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
             });
         });
-    } else {
-        console.warn("bakerySwiperInstance가 전역에서 초기화되지 않았습니다. index.html에서 window.bakerySwiperInstance = new Swiper(...) 와 같이 초기화되었는지 확인하세요.");
-        // 전역 인스턴스가 없을 경우, 이 부분에서 bakerySwiper를 초기화하는 폴백 로직을 추가할 수도 있지만,
-        // index.html과 중복 초기화가 될 수 있으므로 주의해야 합니다.
     }
-
-    // ===================================================================
-    // 베이커리 Swiper 관련 코드 끝
-    // ===================================================================
 
 });
