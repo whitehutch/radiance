@@ -463,11 +463,11 @@
                                     <h4 class="outline_sub">정식 오픈 이벤트</h4>
 
                                     <p class="outline_text">
-                                        여러분의 사랑과 관심으로 래디언스가 정식 오픈을 하게 되었습니다! 가오픈 기간 방문해주신 모든 분들께 감사드리며, 정식 오픈을 기념으로 SNS 리뷰를 남겨주시는 분들께 음료 한 잔을 무료로 드리고 있습니다.
+                                        여러분의 많은 사랑과 관심으로 래디언스가 정식 오픈을 하게 되었습니다! 정식 오픈을 기념으로 SNS 리뷰를 남겨주시는 분들께 음료 한 잔을 무료로 드리고 있습니다.
                                     </p>
 
                                     <p class="outline_text">
-                                        다시 한 번 래디언스를 향한 사랑과 방문에 감사드리며,<br>
+                                        래디언스를 향한 사랑과 방문에 감사드리며,<br>
                                         오늘도 당신의 찬연한 하루를 응원합니다.
                                     </p>
 
@@ -5746,7 +5746,7 @@
             speed: 1725,
             autoplay: {
                 delay: 5000,
-                disableOnInteraction: false
+                disableOnInteraction: false,
             },
             effect: "fade",
             loop: true,
@@ -5758,8 +5758,6 @@
                 el: '.banner_progressbar',
                 type: 'progressbar',
             },
-            observer: true,
-            observeParents: true,
         });
 
 
@@ -5771,11 +5769,8 @@
             loop: true,
             autoplay: {
                 delay: 5000,
-                disableOnInteraction: false
+                disableOnInteraction: false,
             },
-            observer: true,
-            observeParents: true,
-            watchSlidesProgress: true,
             pagination: {
                 el: '.notice_progressbar',
                 type: 'progressbar',
@@ -5787,10 +5782,6 @@
             spaceBetween: 0,
             speed: 1725,
             loop: true,
-            allowTouchMove: false,
-            observer: true,
-            observeParents: true,
-            watchSlidesProgress: true,
         });
 
         noticeBanner.controller.control = noticeBg;
