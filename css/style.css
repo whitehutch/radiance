@@ -475,7 +475,6 @@
     transition: 0.725s ease-in-out;
 }
 .notice_list.active { overflow-y: scroll !important; }
-.notice_list li:nth-child(2) {
 .list_wrap.active {
     flex-wrap: nowrap;
     overflow-y: scroll;
@@ -485,7 +484,7 @@
     border-bottom: 1px solid #ffffff;
     transition: 1.325s ease-in-out;
 }
-.notice_list li, notice_list.active li:nth-child(2) {
+.notice_list li, .notice_list.active li:nth-child(2) {
     border-bottom: 1px solid #e1e1e1;
     transition: 0.325s ease-in-out;
 }
