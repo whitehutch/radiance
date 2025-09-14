@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const moreBtn = document.querySelector(".notice_news .more_btn");
     const moreWrap = document.querySelector(".more_btn .more_wrap");
     const listWrap = document.querySelector(".notice_news .list_wrap");
+    const noticeList = document.querySelector(".notice_news .list_wrap .notice_list");
     const linearTop = document.querySelector(".news_list .linear_top");
     const linearBottom = document.querySelector(".news_list .linear_bottom");
     const newsOutline = document.querySelector(".news_outline");
@@ -18,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         moreBtn.classList.toggle("active");
         moreWrap.classList.toggle("active");
         listWrap.classList.toggle("active");
+        noticeList.classList.toggle("active");
         linearBottom.classList.toggle("active");
         newsOutline.classList.toggle("active");
 
@@ -41,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 let easedProgress = easeInOut(progress);
 
-                listWrap.scrollTop = start - (distance * easedProgress);
+                noticeList.scrollTop = start - (distance * easedProgress);
 
                 if (progress < 1) {
                     linearTop.style.opacity = "0";
@@ -53,21 +55,27 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    listWrap.addEventListener("scroll", function () {
-        if (listWrap.classList.contains("active")) {
-            const isAtTop = listWrap.scrollTop === 0;
-            const isAtBottom = listWrap.scrollHeight - listWrap.scrollTop === listWrap.clientHeight;
+    noticeList.addEventListener("scroll", function () {
+        if (noticeList.classList.contains("active")) {
+            const tolerance = 1;
+            const isAtTop = noticeList.scrollTop === 0;
+            const isAtBottom = (noticeList.scrollHeight - noticeList.scrollTop - noticeList.clientHeight) <= tolerance;
+
+            let topOpacity, bottomOpacity;
 
             if (isAtTop) {
-                linearTop.style.opacity = "0";
-                linearBottom.style.opacity = "1";
+                topOpacity = "0";
+                bottomOpacity = "1";
             } else if (isAtBottom) {
-                linearTop.style.opacity = "1";
-                linearBottom.style.opacity = "0";
+                topOpacity = "1";
+                bottomOpacity = "0";
             } else {
-                linearTop.style.opacity = "1";
-                linearBottom.style.opacity = "1";
+                topOpacity = "1";
+                bottomOpacity = "1";
             }
+
+            linearTop.style.opacity = topOpacity;
+            linearBottom.style.opacity = bottomOpacity;
         }
     });
 
