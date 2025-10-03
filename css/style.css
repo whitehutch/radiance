@@ -825,18 +825,35 @@
 
 
 /*      about      */
-.about {}
-.about_prologue {}
+.about {
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+}
+.about_prologue {
+    position: relative;
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
+}
 .parallax-bg {
     position: absolute;
     left: 0;
     top: 0;
-    width: 130%;
-    height: 100%;
+    width: 100%;
+    height: 198%;
     -webkit-background-size: cover;
     background-size: cover;
+    background-position: center;
     background-color: #131313;
     background-image: url("../images/about_bg01.png");
+    will-change: transform;
+}
+.about_prologue .swiper-slide {
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    height: 100dvh;
 }
 
 
@@ -868,6 +885,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
     background-color: #131313;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1334,7 +1352,7 @@
 /*      about_05      */
 
 .about_logo {
-    margin: 191px 0 0;
+    margin: 491px auto 0;
     width: 310px;
     height: 70px;
 }

@@ -5908,6 +5908,27 @@
             },
         });
 
+        let isAboutPrologueActive = false;
+
+        function handleAboutPrologueActive() {
+            const aboutSection = document.querySelector('.about_prologue');
+            const rect = aboutSection.getBoundingClientRect();
+
+            const partiallyVisible = rect.top < window.innerHeight && rect.bottom > 0;
+
+            if (partiallyVisible && !isAboutPrologueActive) {
+                isAboutPrologueActive = true;
+                mainBanner.autoplay?.stop();
+                noticeBanner.autoplay?.stop();
+                console.log('about_prologue 활성화됨 → 다른 Swiper 정지');
+            } else if (!partiallyVisible && isAboutPrologueActive) {
+                isAboutPrologueActive = false;
+                mainBanner.autoplay?.start();
+                noticeBanner.autoplay?.start();
+                console.log('about_prologue 비활성화됨 → 다른 Swiper 재시작');
+            }
+        }
+
     </script>
 
     <!-- Initialize Swiper -->
