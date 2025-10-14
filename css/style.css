@@ -825,37 +825,12 @@
 
 
 /*      about      */
+
 .about {
     width: 100%;
     height: 100vh;
     height: 100dvh;
 }
-.about_prologue {
-    position: relative;
-    height: 100vh;
-    height: 100dvh;
-    overflow: hidden;
-}
-.parallax-bg {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 198%;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-position: center;
-    background-color: #131313;
-    background-image: url("../images/about_bg01.png");
-    will-change: transform;
-}
-.about_prologue .swiper-slide {
-    position: relative;
-    z-index: 1;
-    height: 100vh;
-    height: 100dvh;
-}
-
 
 .about_wrap {
     position: relative;
@@ -993,9 +968,39 @@
 
 /*      about_01 ~ 02      */
 
-.about_light {
+.about_prologue {
+    position: relative;
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
+}
+
+.parallax-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 198%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-color: #131313;
+    background-image: url("../images/about_bg01.png");
+    will-change: transform;
+}
+
+.about_prologue .swiper-slide {
+    position: relative;
     z-index: 1;
-    position: fixed;
+    height: 100vh;
+    height: 100dvh;
+}
+
+
+
+.about_light {
+    z-index: 2;
+    position: absolute;
     top: 50%;
     left: 50%;
     width: 875px;
