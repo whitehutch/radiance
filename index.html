@@ -5892,6 +5892,31 @@
             touchStartPreventDefault: false,
             touchMoveStopPropagation: false,
             passiveListeners: true,
+            on: {
+                setTranslate(swiper, translate) {
+                    const introSlide = swiper.slides[0];
+                    const introHeight = introSlide.offsetHeight;
+                    const vh = window.innerHeight;
+
+                    // Swiper는 translate 값을 음수로 적용하므로 보정 필요
+                    if (swiper.activeIndex === 1 && translate < -introHeight) {
+                        swiper.wrapperEl.style.transform = `translate3d(0, -${introHeight}px, 0)`;
+                    }
+                },
+                slideChangeTransitionStart(swiper) {
+                    const introSlide = swiper.slides[0];
+                    const introHeight = introSlide.offsetHeight;
+                    const vh = window.innerHeight;
+
+                    // 첫 슬라이드 → 두 번째 슬라이드로 넘어갈 때
+                    if (swiper.activeIndex === 1) {
+                        swiper.wrapperEl.style.transition = "transform 1.25s ease";
+                        swiper.wrapperEl.style.transform = `translate3d(0, -${introHeight}px, 0)`;
+                    } else {
+                        swiper.wrapperEl.style.transition = "";
+                    }
+                },
+            },
         });
 
 

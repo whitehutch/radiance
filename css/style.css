@@ -1409,6 +1409,17 @@
 
 }
 
+.menu {
+    width: 100% !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+}
+.menu.swiper-wrapper {
+    max-height: 100vh !important;
+    max-height: 100dvh !important;
+}
+/*.menu.swiper-wrapper.swiper-slide { height: auto !important; }*/
+
 /*.linear_wrap {*/
 /*    position: absolute;*/
 /*    top: 0;*/
@@ -1433,7 +1444,7 @@
 .menu_intro {
     position: relative;
     width: 100%;
-    height: 560px;
+    height: 560px !important;
 }
 
 .intro {
