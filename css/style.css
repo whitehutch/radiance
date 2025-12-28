@@ -1576,7 +1576,8 @@
     z-index: 10;
     position: relative;
     width: 100%;
-    height: calc( 300vh - 160px );
+    height: 100vh;
+    height: 100dvh;
     background-color: #131313;
     box-shadow: 0 -10px 130px rgba( 255, 255, 255, 0.6 );
 }
@@ -1652,7 +1653,7 @@
     align-items: center;
     justify-content: center;
     gap: 11px;
-    margin: 49px 0 63px;
+    margin: 49px 0 96px;
     color: #ffffff;
     font-size: 13px;
     letter-spacing: 0.05rem;
@@ -1662,22 +1663,22 @@
 
 
 .best_logo {
-    width: 105px;
+    width: 115px;
     margin-left: 9px;
     padding: 0;
 }
 
-
-
-/*      menu best      */
-
 .best_tt {
-    margin: 31px 0 46px;
+    margin: 29px 0 41px;
     font-weight: 600;
     letter-spacing: 0.05rem;
     text-transform: uppercase;
 }
 .best_tt span { color: #b2ee41; }
+
+
+
+/*      menu best      */
 
 
 .best_list {
@@ -1772,21 +1773,33 @@
 
 
 .best_scroll {
-    z-index: 5;
+    z-index: 10;
+    position: absolute;
+    left: 50%;
+    bottom: 131px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 11px;
-    margin-bottom: 51px;
-    padding-top: 46px;
     color: #ffffff;
     font-size: 13px;
     letter-spacing: 0.05rem;
-    transition: 0.35s;
+    transform: translateX( -50% );
 }
 .best_scroll.active { margin-bottom: 41px; }
 .best_scroll p { padding-bottom: 2px; }
+
+
+
+/*      mnSwiper      */
+.mn_wrap {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+}
+
 
 
 
@@ -1801,6 +1814,14 @@
     overflow: hidden;
 }
 
+#drink_list {
+    mask-image:
+            linear-gradient(to left, black 0%, black 80%, transparent 100%),
+            linear-gradient(to right, black 0%, black 80%, transparent 100%);
+    -webkit-mask-composite: source-in;
+    mask-composite: intersect;
+}
+
 .drink_tab, .bakery_tab {
     position: relative;
     display: flex;
@@ -1808,7 +1829,8 @@
     justify-content: center;
     width: 100%;
 }
-.bakery_tab { margin-top: 151px; }
+.drink_tab, .bakery_tab { margin-top: 176px; }
+/*.bakery_tab { margin-top: 176px; }*/
 
 
 
@@ -1860,34 +1882,6 @@
 
 /*      drink list      */
 
-.list_linear {
-    z-index: 5;
-    position: absolute;
-    top: 230px;
-    width: 100vw;
-    height: 648px;
-    pointer-events: none;
-}
-
-.list_linear .ll_left, .list_linear .ll_right {
-    position: absolute;
-    top: 0;
-    width: 250px;
-    height: 100%;
-}
-
-.list_linear .ll_left {
-    left: 0;
-    background: linear-gradient( to left, rgba( 19, 19, 19, 0 ), rgba( 19, 19, 19, 1 ) 85% );
-}
-
-.list_linear .ll_right {
-    right: 0;
-    background: linear-gradient( to right, rgba( 19, 19, 19, 0 ), rgba( 19, 19, 19, 1 ) 85% );
-}
-
-
-
 .menu_list {
     position: relative;
     width: 1300px;
@@ -1909,6 +1903,8 @@
     opacity: 0;
     pointer-events: none;
 }
+
+
 .drink_list.active {
     opacity: 1;
     pointer-events: auto;
@@ -1932,8 +1928,9 @@
     height: 241px !important;
     cursor: pointer;
     background-color: rgba( 19, 19, 19, 0.96 );
+    filter: drop-shadow(0 -6px 7px rgba(255, 255, 255, 0.21));
+    box-shadow: 0 3px 16px rgba( 255, 255, 255, 0.26 ) inset !important;
 }
-
 
 
 .menu_hover {
@@ -1952,8 +1949,9 @@
     transform: translateX( -50% );
     opacity: 0;
     pointer-events: none;
-    transition: 0.425s ease-in-out;
+    transition: 0.525s ease-in-out;
 }
+.coffee_item:hover .menu_hover { opacity: 1; }
 
 
 
@@ -2185,7 +2183,7 @@
 }
 .bakery_item.swiper-slide-active .bk_wrap {
     opacity: 1;
-    transition: opacity 1.725s 0.125s ease-in-out;
+    transition: opacity 1.225s 0.125s ease-in-out;
 }
 
 

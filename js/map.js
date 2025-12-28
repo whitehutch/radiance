@@ -6,7 +6,25 @@ async function initMap() {
     const map = new google.maps.Map(document.getElementById("map"), {
         center: { lat: 35.158648, lng: 129.063918 },
         zoom: 19,
-        mapId: 'ed3bc29771171eed'
+        mapId: 'ed3bc29771171eed',
+        gestureHandling: 'none',
+        keyboardShortcuts: false,
+    });
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Control' || e.metaKey) {
+            map.setOptions({ gestureHandling: 'greedy' });
+        }
+    });
+
+    window.addEventListener('keyup', (e) => {
+        if (e.key === 'Control' || !e.metaKey) {
+            map.setOptions({ gestureHandling: 'none' });
+        }
+    });
+
+    window.addEventListener('blur', () => {
+        map.setOptions({ gestureHandling: 'none' });
     });
 
     const mapWrap = document.createElement("div");
@@ -44,6 +62,20 @@ async function initMap() {
             toggleHighlight(markerElement, property);
         });
     }
+
+    const stripTabIndex = () => {
+        mapEl.querySelectorAll('div[tabindex="0"][aria-label="지도"]').forEach(el => {
+            el.setAttribute('tabindex', '-1');
+            el.style.outline = 'none';
+            el.style.boxShadow = 'none';
+        });
+    };
+
+    stripTabIndex();
+
+    const mo = new MutationObserver(stripTabIndex);
+    mo.observe(mapEl, { childList: true, subtree: true });
+
 }
 
 function toggleHighlight(markerView, property) {
@@ -95,5 +127,18 @@ const properties = [
     }
 ];
 
+mapEl.addEventListener(
+    "wheel",
+    (e) => {
+        const isZoomGesture = e.ctrlKey || e.metaKey;
+        if (isZoomGesture) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+    },
+    { passive: false, capture: true }
+);
+
 initMap();
 setTimeout(replaceStreetViewIcons, 1000);
+
