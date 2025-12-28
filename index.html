@@ -776,9 +776,9 @@
                 <!--   menu    -->
                 <div class="swiper-slide section" id="menu">
 
-<!--                    <div class="linear_wrap">-->
-<!--                        <div class="menu_linear"></div>-->
-<!--                    </div>-->
+<!--                <div class="linear_wrap">-->
+<!--                    <div class="menu_linear"></div>-->
+<!--                </div>-->
 
                     <div class="swiper menu">
 
@@ -827,7 +827,7 @@
 
                             <div class="swiper-slide menu_bg">
 
-                                <div class="swiper">
+                                <div class="swiper mn_wrap">
 
                                     <div class="parallax-bg" data-swiper-parallax="-23%" >
 
@@ -888,67 +888,71 @@
 
                                             </div>
 
-                                            <div class="swiper best_swiper">
+                                            <div class="best_list">
 
-                                                <div class="swiper-wrapper">
+                                                <div class="swiper best_swiper">
 
-                                                    <div class="swiper-slide emb_d radius01">
+                                                    <div class="swiper-wrapper">
 
-                                                        <div class="best_wrap">
+                                                        <div class="swiper-slide emb_d radius01">
 
-                                                            <div class="best_img">
-                                                                <img src="./images/best_01.png" loading="lazy" alt="">
-                                                            </div>
+                                                            <div class="best_wrap">
 
-                                                            <div class="best_sub">
-                                                                <h5 class="best_title">obsidian veil</h5>
-                                                                <p class="best_sub_tt">black sesame einspanner</p>
-                                                                <p class="best_text">
-                                                                    깊고 고소한 흑임자 크림이 어우러져<br>
-                                                                    부드러운 밤의 감성을 담은 아인슈페너.
-                                                                </p>
-                                                            </div>
+                                                                <div class="best_img">
+                                                                    <img src="./images/best_01.png" loading="lazy" alt="">
+                                                                </div>
 
-                                                        </div>
+                                                                <div class="best_sub">
+                                                                    <h5 class="best_title">obsidian veil</h5>
+                                                                    <p class="best_sub_tt">black sesame einspanner</p>
+                                                                    <p class="best_text">
+                                                                        깊고 고소한 흑임자 크림이 어우러져<br>
+                                                                        부드러운 밤의 감성을 담은 아인슈페너.
+                                                                    </p>
+                                                                </div>
 
-                                                    </div>
-
-                                                    <div class="swiper-slide emb_d02 radius01">
-
-                                                        <div class="best_wrap">
-
-                                                            <div class="best_img">
-                                                                <img src="./images/best_02.png" loading="lazy" alt="">
-                                                            </div>
-
-                                                            <div class="best_sub">
-                                                                <h5 class="best_title">toasted bliss</h5>
-                                                                <p class="best_sub_tt">toffee nut latte</p>
-                                                                <p class="best_text">
-                                                                    견과류의 고소함과 달콤한 풍미가<br>
-                                                                    따뜻하게 어우러진 라떼.
-                                                                </p>
                                                             </div>
 
                                                         </div>
 
-                                                    </div>
+                                                        <div class="swiper-slide emb_d02 radius01">
 
-                                                    <div class="swiper-slide emb_d radius01">
+                                                            <div class="best_wrap">
 
-                                                        <div class="best_wrap">
+                                                                <div class="best_img">
+                                                                    <img src="./images/best_02.png" loading="lazy" alt="">
+                                                                </div>
 
-                                                            <div class="best_img">
-                                                                <img src="./images/best_03.png" loading="lazy" alt="">
+                                                                <div class="best_sub">
+                                                                    <h5 class="best_title">toasted bliss</h5>
+                                                                    <p class="best_sub_tt">toffee nut latte</p>
+                                                                    <p class="best_text">
+                                                                        견과류의 고소함과 달콤한 풍미가<br>
+                                                                        따뜻하게 어우러진 라떼.
+                                                                    </p>
+                                                                </div>
+
                                                             </div>
 
-                                                            <div class="best_sub">
-                                                                <h5 class="best_title">citrus bliss</h5>
-                                                                <p class="best_sub_tt">chocolate orange bianco</p>
-                                                                <p class="best_text">
-                                                                    초콜릿의 깊은 풍미와 오렌지의 상큼함이<br>
-                                                                    조화를 이룬 특별한 디저트 같은 음료.
-                                                                </p>
+                                                        </div>
+
+                                                        <div class="swiper-slide emb_d radius01">
+
+                                                            <div class="best_wrap">
+
+                                                                <div class="best_img">
+                                                                    <img src="./images/best_03.png" loading="lazy" alt="">
+                                                                </div>
+
+                                                                <div class="best_sub">
+                                                                    <h5 class="best_title">citrus bliss</h5>
+                                                                    <p class="best_sub_tt">chocolate orange bianco</p>
+                                                                    <p class="best_text">
+                                                                        초콜릿의 깊은 풍미와 오렌지의 상큼함이<br>
+                                                                        조화를 이룬 특별한 디저트 같은 음료.
+                                                                    </p>
+                                                                </div>
+
                                                             </div>
 
                                                         </div>
@@ -5942,25 +5946,33 @@
 
 
         const bestSwiper = new Swiper(".best_swiper", {
+            direction: "vertical",
             speed: 600,
             slidesPerView: 1,
-            spaceBetween: 0,
+            spaceBetween: -199,
             loop: false,
             autoplay: false,
             mousewheel: true,
             nested: true,
             allowTouchMove: true,
+            forceToAxis: true,
+            releaseOnEdges: false,
+            observer: true,
+            observeParents: true,
 
             on: {
                 init: function () {
                     this.slides.forEach(slide => {
-                        slide.style.transition = 'transform 0.6s ease, top 0.6s ease';
+                        slide.style.transition = 'transform 0.6s ease, opacity 0.6s ease, z-index 0s';
                         const wrap = slide.querySelector('.best_wrap');
                         if (wrap) wrap.style.transition = 'opacity 0.6s ease';
                     });
                     updateBestSlides(this);
                 },
                 slideChange: function () {
+                    updateBestSlides(this);
+                },
+                setTranslate: function() {
                     updateBestSlides(this);
                 }
             }
@@ -5978,8 +5990,7 @@
                 let newZIndex = 1;
                 let newOpacity = 0.1;
 
-                // activeIndex에 따라 scale, zIndex, opacity *그리고 top*을 설정합니다.
-                if (activeIndex === 0) { // 1번 활성
+                if (activeIndex === 0) {   // active 1
                     if (index === 0) {
                         newScale = 1; newZIndex = 3; newOpacity = 1;
                     } else if (index === 1) {
@@ -5987,7 +5998,7 @@
                     } else if (index === 2) {
                         newScale = 0.96; newZIndex = 1; newOpacity = 0.1;
                     }
-                } else if (activeIndex === 1) { // 2번 활성
+                } else if (activeIndex === 1) {   // active 2
                     if (index === 0) {
                         newScale = 0.98; newZIndex = 1; newOpacity = 0.25;
                     } else if (index === 1) {
@@ -5995,7 +6006,7 @@
                     } else if (index === 2) {
                         newScale = 0.98; newZIndex = 2; newOpacity = 0.25;
                     }
-                } else if (activeIndex === 2) { // 3번 활성
+                } else if (activeIndex === 2) {   // active 3
                     if (index === 0) {
                         newScale = 0.96; newZIndex = 1; newOpacity = 0.1;
                     } else if (index === 1) {
@@ -6008,6 +6019,59 @@
                 slide.style.transform = `scale(${newScale})`;
                 slide.style.zIndex = newZIndex;
                 wrap.style.opacity = newOpacity;
+            });
+        }
+
+
+        const mnSwiper = new Swiper(".mn_wrap", {
+            direction: "vertical",
+            speed: 1250,
+            slidesPerView: 1,
+            spaceBetween: 0,
+            nested: true,
+            freeMode: false,
+            mousewheel: {
+                forceToAxis: true,
+                releaseOnEdges: true,
+                sensitivity: 3,
+            },
+            touchStartPreventDefault: false,
+            touchMoveStopPropagation: false,
+            passiveListeners: true,
+            observer: true,
+            observeParents: true,
+        });
+
+
+        const bestEl = document.querySelector('.best_swiper');
+
+        function getAllSwipersExceptBest() {
+            const all = Array.from(document.querySelectorAll('.swiper'))
+                .map(el => el.swiper)
+                .filter(Boolean);
+
+            return all.filter(sw => sw !== bestSwiper);
+        }
+
+        function disableAllExceptBest() {
+            getAllSwipersExceptBest().forEach(sw => {
+                if (sw.mousewheel && sw.mousewheel.disable) sw.mousewheel.disable();
+            });
+        }
+        function enableAllExceptBest() {
+            getAllSwipersExceptBest().forEach(sw => {
+                if (sw.mousewheel && sw.mousewheel.enable) sw.mousewheel.enable();
+            });
+        }
+
+        if (bestEl) {
+            bestEl.addEventListener('mouseenter', () => {
+                if (bestSwiper.mousewheel?.enable) bestSwiper.mousewheel.enable();
+                disableAllExceptBest();
+            });
+
+            bestEl.addEventListener('mouseleave', () => {
+                enableAllExceptBest();
             });
         }
 
